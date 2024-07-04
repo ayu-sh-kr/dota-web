@@ -35,7 +35,7 @@ export class HeaderComponent extends BaseElement {
 
     render(): string {
         return HTML`
-            <div class="flex justify-between items-center px-2 py-2 font-dm sticky top-0 left-0 shadow-md">
+            <header class="flex justify-between items-center px-2 py-2 font-dm sticky top-0 left-0 shadow-md">
                 <div class="text-gray-900 font-extrabold text-xl"><a href="/">Logo</a></div>
                 <div class="md:flex justify-start gap-x-4 items-center hidden">
                     <input type="text" class="text-gray-900 text-lg focus:outline-none ring-2 ring-black focus:ring-purple-600 rounded-lg py-1 px-3" placeholder="Search docs">
@@ -50,7 +50,7 @@ export class HeaderComponent extends BaseElement {
                         <li><a href="${this.items[3].url}">${this.items[3].name}</a></li>
                     </ul>
                 </div>
-            </div>
+            </header>
         `
     }
 

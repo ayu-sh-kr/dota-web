@@ -19,7 +19,7 @@ export class HeroSectionComponent extends BaseElement {
 
     render(): string {
         return HTML`
-            <header class="flex flex-col items-center justify-center py-16 font-dm">
+            <div class="flex flex-col items-center justify-center py-16 font-dm">
                 <h1 
                     class="text-6xl sm:text-8xl font-extrabold text-gray-900 max-w-5xl text-wrap py-10 tracking-wide text-center">
                     Build. Customize. Distribute. <span class="bg-gradient-to-r from-purple-600 via-purple-600 to-purple-400 bg-clip-text text-transparent">Reuse.</span>
@@ -44,7 +44,7 @@ export class HeroSectionComponent extends BaseElement {
                         </span> 
                     </p> 
                 </div>
-            </header>
+            </div>
         `
     }
 

@@ -1,4 +1,5 @@
-import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
+import {BaseElement, BindEvent, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
+import '@dota/components/utils/icons.component.ts'
 
 @Component({
     selector: 'app-hero',
@@ -10,7 +11,11 @@ export class HeroSectionComponent extends BaseElement {
         super();
     }
 
-
+    @BindEvent({event: 'click', id: '#copy'})
+    copyText() {
+        const text = 'npm install @ayu-sh-kr/dota-core'
+        navigator.clipboard.writeText(text)
+    }
 
     render(): string {
         return HTML`
@@ -31,7 +36,13 @@ export class HeroSectionComponent extends BaseElement {
                 
                 <div class="flex py-10 justify-center sm:justify-between items-center gap-y-5 gap-x-10 flex-wrap">
                     <a href="/docs#get-started" class="text-2xl text-white bg-blue-500 rounded-3xl py-3 px-4">Get Started</a>
-                    <p class="text-gray-800 text-xl px-4 py-3 border rounded-3xl cursor-pointer">npm install @ayu-sh-kr/dota-core</p>
+                    <p  
+                        class="text-gray-800 text-xl px-4 py-3 border rounded-3xl flex items-center gap-x-2">
+                        npm install @ayu-sh-kr/dota-core 
+                        <span class="active:scale-95 cursor-pointer" id="copy"">
+                            <app-icon name="material-symbols:content-copy-rounded"/>
+                        </span> 
+                    </p> 
                 </div>
             </header>
         `

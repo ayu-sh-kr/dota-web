@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --animation-duration: 5000ms;
+}
+
+.toast-animate {
+    animation: toast-decrease ease-in-out var(--animation-duration);
+}
+
+.paused-animation {
+    animation-play-state: paused;
+}
+
+@keyframes toast-decrease {
+    0% {
+        @apply w-full
+    }
+
+    100% {
+        @apply w-0
+    }
+}

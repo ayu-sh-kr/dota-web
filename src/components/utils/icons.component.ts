@@ -10,7 +10,8 @@ export class IconsComponent extends BaseElement {
     @Property({name: 'name'})
     name!: string;
 
-    svg: string = '';
+    @Property({name: 'color'})
+    color: string = '#111827'
 
     constructor() {
         super();
@@ -18,14 +19,23 @@ export class IconsComponent extends BaseElement {
 
 
     async getSvg() {
-        let url = `https://api.iconify.design/${this.name}.svg?color=%23888888`;
+        let url = `https://api.iconify.design/${this.name}.svg?color=${this.color}`;
         const response = await fetch(url);
-        const svg = await response.text();
-        this.innerHTML = svg;
+        if(response.status === 200){
+            let text = await response.text();
+            if(text !== '404' ){
+                this.innerHTML = text;
+                // this.querySelector('svg')!.classList.add(`${this.color}`);
+            }
+        }
+        else {
+            console.warn('Invalid Icon Name')
+            this.innerHTML = '';
+        }
     }
 
     render(): string {
-        this.getSvg();
-        return HTML`${this.svg}`;
+        this.getSvg().then();
+        return HTML``;
     }
 }

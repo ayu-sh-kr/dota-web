@@ -62,7 +62,6 @@ export class NotificationComponent extends BaseElement {
     onMouseLeave() {
         this.isHovered = false;
         this.querySelector('#timer')!.classList.remove('paused-animation');
-        console.log(this.querySelector('#timer'))
         this.scheduleRemoval();
     }
 

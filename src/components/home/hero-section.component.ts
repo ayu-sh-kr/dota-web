@@ -1,5 +1,6 @@
 import {BaseElement, BindEvent, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
 import '@dota/components/utils/icons.component.ts'
+import {notificationService} from "@dota/components/utils/notification/notification.service.ts";
 
 @Component({
     selector: 'app-hero',
@@ -15,6 +16,9 @@ export class HeroSectionComponent extends BaseElement {
     copyText() {
         const text = 'npm install @ayu-sh-kr/dota-core'
         navigator.clipboard.writeText(text)
+            .then(() => {
+                notificationService.push({type: 'success', duration: 5000, message: 'Text Copied to Clipboard'})
+            })
     }
 
     render(): string {

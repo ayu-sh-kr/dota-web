@@ -19,19 +19,22 @@ export class IconsComponent extends BaseElement {
 
 
     async getSvg() {
-        let url = `https://api.iconify.design/${this.name}.svg?color=${this.color}`;
+        let url = `https://api.iconify.design/${this.name}.svg?color=%23${this.processColor()}`;
         const response = await fetch(url);
         if(response.status === 200){
             let text = await response.text();
             if(text !== '404' ){
                 this.innerHTML = text;
-                // this.querySelector('svg')!.classList.add(`${this.color}`);
             }
         }
         else {
             console.warn('Invalid Icon Name')
             this.innerHTML = '';
         }
+    }
+
+    processColor() {
+        return this.color.substring(1)
     }
 
     render(): string {

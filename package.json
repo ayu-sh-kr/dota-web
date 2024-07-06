@@ -13,7 +13,8 @@
     "vite": "^5.3.1"
   },
   "dependencies": {
-    "@ayu-sh-kr/dota-core": "^1.5.0",
+    "@ayu-sh-kr/dota-core": "^1.5.4",
+    "@types/dom-navigation": "^1.0.3",
     "@types/node": "^20.14.9",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",

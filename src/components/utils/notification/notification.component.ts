@@ -75,7 +75,7 @@ export class NotificationComponent extends BaseElement {
                         </span>
                         <div class="text-gray-900 text-lg">${this.message}</div>
                     </div>
-                    <span id="close" class="focus:scale-95 font-semibold cursor-pointer text-xl hover:bg-gray-300 rounded-lg transition-all duration-300">
+                    <span id="close" class="focus:scale-95 font-semibold cursor-pointer px-3">
                         <app-icon name="ic:twotone-close" color="#111827"></app-icon>
                     </span>
                     <span id="timer" style="--animation-duration: ${this.remainingTime + 'ms'}" class="toast-animate py-0.5 absolute bottom-0 ${notificationConfig.type[this.type].timer}"></span>

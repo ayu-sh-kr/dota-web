@@ -6,7 +6,7 @@ import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
 })
 export class HeaderComponent extends BaseElement {
 
-    items: Link[] =  [
+    items: Link[] = [
         {
             name: 'Documents',
             url: '/docs'
@@ -35,20 +35,19 @@ export class HeaderComponent extends BaseElement {
 
     render(): string {
         return HTML`
-            <header class="flex justify-between items-center px-2 py-2 font-dm sticky top-0 left-0 shadow-md">
-                <div class="text-gray-900 font-extrabold text-xl"><a href="/">Logo</a></div>
-                <div class="md:flex justify-start gap-x-4 items-center hidden">
-                    <input type="text" class="text-gray-900 text-lg focus:outline-none ring-2 ring-black focus:ring-purple-600 rounded-lg py-1 px-3" placeholder="Search docs">
-                    <span class="h-8 border-r-2 border-gray-900"></span>
-                    <ul class="flex items-center gap-x-4 font-semibold text-slate-700">
-                        <li><a href="${this.items[0].url}">${this.items[0].name}</a></li>
-                        <li><a href="${this.items[1].url}">${this.items[1].name}</a></li>
+            <header class="flex justify-between items-center px-2 py-3 font-dm sticky top-0 left-0 shadow-md">
+                <div class="text-gray-900 font-extrabold text-2xl w-1/6 px-5"><a href="/">Logo</a></div>
+                <div class="md:flex justify-center items-center hidden w-4/6">
+                    <ul class="flex justify-between items-center gap-x-5 text-gray-900 w-1/2">
+                        ${this.items.map((item) => {
+                            return `<li class="text-sm font-semibold hover:text-purple-600"><a href="${item.url}">${item.name}</a></li>`
+                        }).join('')}
                     </ul>
-                    <span class="h-8 border-r-2 border-gray-900"></span>
-                    <ul class="flex items-center gap-x-4 font-semibold text-slate-700">
-                        <li><a href="${this.items[2].url}">${this.items[2].name}</a></li>
-                        <li><a href="${this.items[3].url}">${this.items[3].name}</a></li>
-                    </ul>
+                </div>
+                <div class="w-1/6">
+                    <div class="flex items-center px-5 justify-end">
+                        <app-icon name="material-symbols:sunny-rounded" />
+                    </div>
                 </div>
             </header>
         `

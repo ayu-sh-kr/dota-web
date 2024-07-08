@@ -16,7 +16,6 @@ export class NotificationComponent extends BaseElement {
     @Property({name: 'message'})
     message!: string;
 
-    // Store the timeout identifier
     private removalTimeoutId?: number;
     private isHovered: boolean = false;
     private startTime!: number;

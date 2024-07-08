@@ -32,15 +32,18 @@ export class HeaderComponent extends BaseElement {
         super();
     }
 
-    @AfterInit()
-    afterViewInit() {
-        console.log(window.matchMedia('(prefers-color-scheme: dark)').matches)
-    }
-
     @BindEvent({event: 'click', id: '#dark-button'})
     handleDark() {
-        console.log('clicked')
-        toggleDark();
+        const iconContainer = this.querySelector('#dark-button');
+
+       if(iconContainer) {
+           if(toggleDark()) {
+               iconContainer.innerHTML = `<app-icon  name="material-symbols:dark-mode" color="text-purple-600" />`
+           }else {
+                iconContainer.innerHTML = `<app-icon  name="material-symbols:sunny-rounded" color="text-purple-600" />`
+           }
+       }
+
     }
 
 
@@ -58,7 +61,7 @@ export class HeaderComponent extends BaseElement {
                 <div class="w-1/6">
                     <div class="flex items-center px-5 justify-end">
                         <span id="dark-button" class="active:scale-95 cursor-pointer">
-                            <app-icon  name="material-symbols:sunny-rounded" />
+                            <app-icon  name="material-symbols:sunny-rounded" color="text-purple-600" />
                         </span>
                     </div>
                 </div>
@@ -75,6 +78,7 @@ export interface Link {
 
 function toggleDark() {
     const html = document.getElementsByTagName('html');
-    document.documentElement.classList.toggle('dark');
+    const value = document.documentElement.classList.toggle('dark');
     document.documentElement.classList.toggle('bg-slate-950')
+    return value;
 }

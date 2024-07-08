@@ -18,7 +18,7 @@ export class ErrorPage extends BaseElement {
     render(): string {
         return HTML`
         <div class="flex flex-col justify-center items-center h-screen font-dm">
-            <div class="font-semibold text-6xl text-gray-900">Error <span class="text-red-500">${this.status}</span></div>
+            <div class="font-semibold text-6xl text-gray-900 dark:text-gray-100">Error <span class="text-red-500">${this.status}</span></div>
             <div class="text-center font-light text-lg text-gray-900">
                 <span class="font-semibold text-sm">Path: </span> ${this.path},
                 <span class="font-semibold text-sm">Message: </span> ${this.message}

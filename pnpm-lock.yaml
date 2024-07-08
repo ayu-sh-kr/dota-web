@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ayu-sh-kr/dota-core':
-    specifier: ^1.5.4
-    version: 1.5.4
+    specifier: ^1.5.5
+    version: 1.5.5
   '@types/dom-navigation':
     specifier: ^1.0.3
     version: 1.0.3
@@ -39,8 +39,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /@ayu-sh-kr/dota-core@1.5.4:
-    resolution: {integrity: sha512-p7FrJTmsK5QU1QIYpoa2IhrJhK6frNxn9zAB+S64pZme6ZmWaAVQNK6OyJg6oH4WoH2nTLaaW4g9AiB+EWvk3g==}
+  /@ayu-sh-kr/dota-core@1.5.5:
+    resolution: {integrity: sha512-SaaunB2m2g2kgTJ8gRbAj77sBIwwrH3QtVeyk9U8EwqQ3iPhWP4aju1IUHHJEOxyabgGV5b3Mm+XjflDmf5hdg==}
     dependencies:
       reflect-metadata: 0.2.2
     dev: false

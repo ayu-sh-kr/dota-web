@@ -34,7 +34,6 @@ export class IconsComponent extends BaseElement {
 
                 if(svgElement) {
                     svgElement.setAttribute('fill', 'currentColor')
-                    console.log(svgElement)
                 }
             }
         }

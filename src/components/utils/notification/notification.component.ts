@@ -71,12 +71,12 @@ export class NotificationComponent extends BaseElement {
                 <div class="${notificationConfig.base}">
                     <div class="flex items-center gap-x-2 px-3">
                         <span class="${notificationConfig.type[this.type].color} text-lg">
-                            <app-icon name="${notificationConfig.type[this.type].icon}" color="${notificationConfig.type[this.type]["icon-color"]}"></app-icon>
+                            <app-icon name="${notificationConfig.type[this.type].icon}" color="${notificationConfig.type[this.type].color}"></app-icon>
                         </span>
-                        <div class="text-gray-900 text-lg">${this.message}</div>
+                        <div class="text-gray-900 dark:text-gray-100 text-lg">${this.message}</div>
                     </div>
                     <span id="close" class="focus:scale-95 font-semibold cursor-pointer px-3">
-                        <app-icon name="ic:twotone-close" color="#111827"></app-icon>
+                        <app-icon name="ic:twotone-close"></app-icon>
                     </span>
                     <span id="timer" style="--animation-duration: ${this.remainingTime + 'ms'}" class="toast-animate py-0.5 absolute bottom-0 ${notificationConfig.type[this.type].timer}"></span>
                 </div>
@@ -88,7 +88,7 @@ export class NotificationComponent extends BaseElement {
 
 
 export const notificationConfig = {
-    base: 'overflow-hidden relative flex items-center justify-between w-[400px] border font-dm py-3 rounded-xl bg-white shadow-lg',
+    base: 'overflow-hidden relative flex items-center justify-between w-[400px] font-dm py-3 rounded-xl shadow-lg bg-white dark:bg-slate-800',
     position: {
         'left-bottom': 'absolute bottom-10 left-10',
         'right-bottom': 'absolute bottom-10 right-10',
@@ -100,26 +100,22 @@ export const notificationConfig = {
         success: {
             color: 'text-green-600',
             icon: 'ic:baseline-check-box',
-            'icon-color': '#16A34A',
             timer: 'bg-green-600'
         },
         danger: {
             color: 'text-red-600',
             icon: 'ic:sharp-dangerous',
-            'icon-color': '#DC2626',
             timer: 'bg-red-600'
         },
         info: {
             color: 'text-blue-600',
             icon: 'ic:baseline-info',
-            'icon-color': '#2563EB',
             timer: 'bg-blue-600'
         },
         warn: {
             color: 'text-yellow-600',
             icon: 'ic:twotone-warning',
-            'icon-color': '#CA8A04',
             timer: 'bg-yellow-600'
         }
-    } as {[key: string]: {color: string, icon: string, 'icon-color': string, timer: string}}
+    } as {[key: string]: {color: string, icon: string, timer: string}}
 }

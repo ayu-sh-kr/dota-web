@@ -30,8 +30,18 @@ export class RoutesService {
     route(event: Event) {
         const target: HTMLAnchorElement = event.target as HTMLAnchorElement;
         const url: URL = new URL(target.href);
-        history.pushState({}, '', url.pathname)
+        const navigation: Navigation = window.navigation;
         this.render(url.pathname);
+    }
+
+    goBack() {
+        const navigation: Navigation = window.navigation;
+        navigation.back();
+    }
+
+    goForward() {
+        const navigation: Navigation = window.navigation;
+        navigation.forward();
     }
 
     render(path: string) {

@@ -29,7 +29,7 @@ export class FeatureComponent extends BaseElement {
         {
             icon: 'material-symbols:deployed-code',
             title: 'Cross Compatibility',
-            description: 'Web Components are browser standards and will work with any frameworks.'
+            description: 'Web Components are browser standards and will work with any frameworks. Easy to integrate with other frameworks'
         }
     ]
 
@@ -49,7 +49,7 @@ export class FeatureComponent extends BaseElement {
                                 </span>
                                 <div class="flex flex-col gap-y-2">
                                     <h1 class="text-lg font-semibold tracking-wide">${item.title}</h1>
-                                    <p class="text-xl text-gray-700 dark:text-gray-300 leading-loose">${item.description}</p>
+                                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">${item.description}</p>
                                 </div>
                             </div>`
                 }).join('')}

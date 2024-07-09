@@ -76,7 +76,7 @@ export interface Link {
     url: string
 }
 
-function toggleDark() {
+export function toggleDark() {
     const html = document.getElementsByTagName('html');
     const value = document.documentElement.classList.toggle('dark');
     document.documentElement.classList.toggle('bg-slate-950')

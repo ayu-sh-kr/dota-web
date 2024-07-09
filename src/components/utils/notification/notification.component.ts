@@ -66,7 +66,7 @@ export class NotificationComponent extends BaseElement {
 
     render(): string {
         return HTML`
-           <div class="absolute bottom-10 right-10 z-10">
+           <div class="absolute bottom-10 md:right-10 z-10">
                 <div class="${notificationConfig.base}">
                     <div class="flex items-center gap-x-2 px-3">
                         <span class="${notificationConfig.type[this.type].color} text-lg">
@@ -87,7 +87,7 @@ export class NotificationComponent extends BaseElement {
 
 
 export const notificationConfig = {
-    base: 'overflow-hidden relative flex items-center justify-between w-[400px] font-dm py-3 rounded-xl shadow-lg bg-white dark:bg-slate-800',
+    base: 'overflow-hidden relative flex items-center justify-between w-[350px] sm:w-[400px] font-dm py-3 rounded-xl shadow-lg bg-white dark:bg-slate-800',
     position: {
         'left-bottom': 'absolute bottom-10 left-10',
         'right-bottom': 'absolute bottom-10 right-10',

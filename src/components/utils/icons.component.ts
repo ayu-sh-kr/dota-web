@@ -13,6 +13,9 @@ export class IconsComponent extends BaseElement {
     @Property({name: 'color'})
     color!: string;
 
+    @Property({name: 'class'})
+    class!: string;
+
     constructor() {
         super();
     }
@@ -30,10 +33,21 @@ export class IconsComponent extends BaseElement {
             let text = await response.text();
             if(text !== '404' ){
                 this.querySelector('#svg')!.innerHTML = text;
-                const svgElement = this.querySelector('#svg svg path');
+
+                const svgElement = this.querySelector('#svg svg');
 
                 if(svgElement) {
-                    svgElement.setAttribute('fill', 'currentColor')
+                    if(this.class) {
+                        this.class.split(' ').forEach(str => {
+                            svgElement.classList.add(str);
+                        })
+                    }
+                }
+
+                const svgPath = this.querySelector('#svg svg path');
+
+                if(svgPath) {
+                    svgPath.setAttribute('fill', 'currentColor')
                 }
             }
         }
@@ -52,7 +66,7 @@ export class IconsComponent extends BaseElement {
 
     render(): string {
         return HTML`
-        <div id="svg" class="p-1.5 transition-all duration-300 ${this.processColor()} dark:bg-slate-950 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg flex items-center justify-center">
+        <div id="svg" class="p-1.5 transition-all duration-300 ${this.processColor()} hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg flex items-center justify-center">
             
         </div> 
         `;

@@ -1,4 +1,4 @@
-import {AfterInit, BaseElement, BindEvent, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
+import {BaseElement, BindEvent, Component, HTML} from "@ayu-sh-kr/dota-core";
 
 @Component({
     selector: 'app-header',
@@ -38,9 +38,9 @@ export class HeaderComponent extends BaseElement {
 
        if(iconContainer) {
            if(toggleDark()) {
-               iconContainer.innerHTML = `<app-icon  name="material-symbols:dark-mode" color="text-purple-600" />`
+               iconContainer.innerHTML = `<dota-icon  name="material-symbols:dark-mode" color="purple" variant="ghost" size="md" />`
            }else {
-                iconContainer.innerHTML = `<app-icon  name="material-symbols:sunny-rounded" color="text-purple-600" />`
+                iconContainer.innerHTML = `<dota-icon  name="material-symbols:sunny-rounded" color="purple" variant="ghost" size="md" />`
            }
        }
 
@@ -61,7 +61,7 @@ export class HeaderComponent extends BaseElement {
                 <div class="w-1/6">
                     <div class="flex items-center px-5 justify-end">
                         <span id="dark-button" class="active:scale-95 cursor-pointer">
-                            <app-icon  name="material-symbols:sunny-rounded" color="text-purple-600" />
+                            <dota-icon  name="material-symbols:sunny-rounded" color="purple" variant="ghost" size="md" />
                         </span>
                     </div>
                 </div>

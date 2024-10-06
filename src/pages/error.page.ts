@@ -1,4 +1,4 @@
-import {BaseElement, Component, HTML, Property} from "@ayu-sh-kr/dota-core/dist";
+import {BaseElement, Component, HTML, Property, String} from "@ayu-sh-kr/dota-core";
 
 @Component({
     selector: 'app-error',
@@ -6,14 +6,18 @@ import {BaseElement, Component, HTML, Property} from "@ayu-sh-kr/dota-core/dist"
 })
 export class ErrorPage extends BaseElement {
 
-    @Property({name: 'path'})
+    @Property({name: 'path', type: String})
     path!: string;
 
-    @Property({name: 'message'})
+    @Property({name: 'message', type: String})
     message!: string;
 
-    @Property({name: 'status'})
+    @Property({name: 'status', type: String})
     status!: number
+
+    constructor() {
+        super();
+    }
 
     render(): string {
         return HTML`

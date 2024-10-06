@@ -10,6 +10,10 @@ import '@dota/pages/error.page.ts'
 })
 export class AppComponent extends BaseElement {
 
+    constructor() {
+        super();
+    }
+
     render(): string {
         return HTML`<home-page></home-page>`
     }

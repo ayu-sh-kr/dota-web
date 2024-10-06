@@ -45,7 +45,7 @@ export class FeatureComponent extends BaseElement {
                 ${this.items.map(item => {
                     return `<div class="flex flex-col items-start justify-start gap-y-5 px-3">
                                 <span>
-                                    <app-icon name="${item.icon}" color="text-purple-600" class="h-10 w-10"></app-icon>
+                                    <dota-icon name="${item.icon}" color="purple" size="xl" variant="ghost" ></dota-icon>
                                 </span>
                                 <div class="flex flex-col gap-y-2">
                                     <h1 class="text-lg font-semibold tracking-wide">${item.title}</h1>

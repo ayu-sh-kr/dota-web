@@ -1,8 +1,10 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+import {Config} from "tailwindcss";
+
+export default<Partial<Config>> {
   darkMode: 'class',
   content: [
-      './src/**/*.{ts, js, html}'
+      './src/**/*.{ts, js, html}',
+      './node_modules/@ayu-sh-kr/dota-ui/**/*.{html,ts}'
   ],
   theme: {
     extend: {

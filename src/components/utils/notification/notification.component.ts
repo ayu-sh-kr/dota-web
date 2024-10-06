@@ -1,4 +1,14 @@
-import {BaseElement, BindEvent, Component, EventListener, HTML, Property} from "@ayu-sh-kr/dota-core/dist";
+import {
+    AfterInit,
+    BaseElement,
+    BindEvent,
+    Component,
+    HostListener,
+    HTML,
+    Number,
+    Property,
+    String
+} from "@ayu-sh-kr/dota-core";
 
 
 @Component({
@@ -7,13 +17,13 @@ import {BaseElement, BindEvent, Component, EventListener, HTML, Property} from "
 })
 export class NotificationComponent extends BaseElement {
 
-    @Property({name: 'type'})
+    @Property({name: 'type', type: String})
     type!: string;
 
-    @Property({name: 'duration'})
+    @Property({name: 'duration', type: Number})
     duration!: number;
 
-    @Property({name: 'message'})
+    @Property({name: 'message', type: String})
     message!: string;
 
     private removalTimeoutId?: number;
@@ -26,8 +36,8 @@ export class NotificationComponent extends BaseElement {
         this.remainingTime = 5000;
     }
 
-    connectedCallback() {
-        super.connectedCallback();
+    @AfterInit()
+    afterViewInit() {
         this.remainingTime = this.duration
         this.scheduleRemoval();
     }
@@ -46,7 +56,7 @@ export class NotificationComponent extends BaseElement {
         this.remove();
     }
 
-    @EventListener({name: 'mouseenter'})
+    @HostListener({event: 'mouseenter'})
     onMouseEnter() {
         this.isHovered = true;
         if(this.removalTimeoutId) {
@@ -57,7 +67,7 @@ export class NotificationComponent extends BaseElement {
         }
     }
 
-    @EventListener({name: 'mouseleave'})
+    @HostListener({event: 'mouseleave'})
     onMouseLeave() {
         this.isHovered = false;
         this.querySelector('#timer')!.classList.remove('paused-animation');
@@ -70,12 +80,12 @@ export class NotificationComponent extends BaseElement {
                 <div class="${notificationConfig.base}">
                     <div class="flex items-center gap-x-2 px-3">
                         <span class="${notificationConfig.type[this.type].color} text-lg">
-                            <app-icon name="${notificationConfig.type[this.type].icon}" color="${notificationConfig.type[this.type].color}"></app-icon>
+                            <dota-icon name="${notificationConfig.type[this.type].icon}" size="lg" color="${notificationConfig.type[this.type].color}" variant="ghost"></dota-icon>
                         </span>
                         <div class="text-gray-900 dark:text-gray-100 text-lg">${this.message}</div>
                     </div>
                     <span id="close" class="focus:scale-95 font-semibold cursor-pointer px-3">
-                        <app-icon name="ic:twotone-close"></app-icon>
+                        <dota-icon name="ic:twotone-close" color="gray" variant="ghost" size="md"></dota-icon>
                     </span>
                     <span id="timer" style="--animation-duration: ${this.remainingTime + 'ms'}" class="toast-animate py-0.5 absolute bottom-0 ${notificationConfig.type[this.type].timer}"></span>
                 </div>
@@ -97,22 +107,22 @@ export const notificationConfig = {
 
     type: {
         success: {
-            color: 'text-green-600',
+            color: 'green',
             icon: 'ic:baseline-check-box',
             timer: 'bg-green-600'
         },
         danger: {
-            color: 'text-red-600',
+            color: 'red',
             icon: 'ic:sharp-dangerous',
             timer: 'bg-red-600'
         },
         info: {
-            color: 'text-blue-600',
+            color: 'blue',
             icon: 'ic:baseline-info',
             timer: 'bg-blue-600'
         },
         warn: {
-            color: 'text-yellow-600',
+            color: 'yellow',
             icon: 'ic:twotone-warning',
             timer: 'bg-yellow-600'
         }

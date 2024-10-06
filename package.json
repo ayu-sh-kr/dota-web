@@ -9,15 +9,16 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "vite": "^5.3.1"
-  },
-  "dependencies": {
-    "@ayu-sh-kr/dota-core": "^1.5.5",
     "@types/dom-navigation": "^1.0.3",
     "@types/node": "^20.14.9",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1"
+  },
+  "dependencies": {
+    "@ayu-sh-kr/dota-core": "^1.6.13",
+    "@ayu-sh-kr/dota-ui": "^0.0.4"
   }
 }

@@ -1,4 +1,4 @@
-import {BaseElement, Component, HTML, Property, AfterInit} from "@ayu-sh-kr/dota-core/dist";
+import {BaseElement, Component, HTML, Property, AfterInit, String} from "@ayu-sh-kr/dota-core";
 
 
 @Component({
@@ -7,13 +7,13 @@ import {BaseElement, Component, HTML, Property, AfterInit} from "@ayu-sh-kr/dota
 })
 export class IconsComponent extends BaseElement {
 
-    @Property({name: 'name'})
+    @Property({name: 'name', type: String})
     name!: string;
 
-    @Property({name: 'color'})
+    @Property({name: 'color', type: String})
     color!: string;
 
-    @Property({name: 'class'})
+    @Property({name: 'class', type: String})
     class!: string;
 
     constructor() {

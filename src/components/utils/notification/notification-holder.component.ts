@@ -4,9 +4,13 @@ import '@dota/components/utils/notification/notification.component.ts'
 
 @Component({
     selector: 'notification-holder',
-    shadow: false
+    shadow: true
 })
 export class NotificationHolderComponent extends BaseElement {
+
+    constructor() {
+        super();
+    }
 
     render(): string {
         return HTML`

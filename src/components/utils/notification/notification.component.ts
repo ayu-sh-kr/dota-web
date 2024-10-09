@@ -15,7 +15,7 @@ import {
     selector: 'app-notification',
     shadow: false
 })
-export class NotificationComponent extends BaseElement {
+class NotificationComponent extends BaseElement {
 
     @Property({name: 'type', type: String})
     type!: string;
@@ -25,6 +25,15 @@ export class NotificationComponent extends BaseElement {
 
     @Property({name: 'message', type: String})
     message!: string;
+
+    @Property({name: 'color', type: String})
+    color!: NotificationColor
+
+    @Property({name: 'icon', type: String})
+    icon!: string
+
+    @Property({name: 'title', type: String})
+    title!: string
 
     private removalTimeoutId?: number;
     private isHovered: boolean = false;
@@ -52,14 +61,14 @@ export class NotificationComponent extends BaseElement {
     }
 
     @BindEvent({event: 'click', id: '#close'})
-    removeNode(){
+    removeNode() {
         this.remove();
     }
 
     @HostListener({event: 'mouseenter'})
     onMouseEnter() {
         this.isHovered = true;
-        if(this.removalTimeoutId) {
+        if (this.removalTimeoutId) {
             clearTimeout(this.removalTimeoutId)
             this.querySelector('#timer')!.classList.add('paused-animation');
             const elapsedTime = Date.now() - this.startTime;
@@ -75,19 +84,23 @@ export class NotificationComponent extends BaseElement {
     }
 
     render(): string {
+        const color = `${NotificationConfig.color[this.color] ?? NotificationConfig.color.none}`;
         return HTML`
-           <div class="absolute bottom-10 md:right-10 z-10">
-                <div class="${notificationConfig.base}">
+           <div class="z-10">
+                <div class="${NotificationConfig.base}">
                     <div class="flex items-center gap-x-2 px-3">
-                        <span class="${notificationConfig.type[this.type].color} text-lg">
-                            <dota-icon name="${notificationConfig.type[this.type].icon}" size="lg" color="${notificationConfig.type[this.type].color}" variant="ghost"></dota-icon>
+                        <span class="${color}} text-lg">
+                            <dota-icon name="${this.icon ?? 'material-symbols-light:notifications-active-rounded'}" size="lg" color="${this.color}" variant="ghost"></dota-icon>
                         </span>
-                        <div class="text-gray-900 dark:text-gray-100 text-lg">${this.message}</div>
+                        <div>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 font-medium">${this.title}</p>
+                            <div class="text-gray-900 dark:text-gray-100">${this.message}</div>
+                        </div>
                     </div>
                     <span id="close" class="focus:scale-95 font-semibold cursor-pointer px-3">
                         <dota-icon name="ic:twotone-close" color="gray" variant="ghost" size="md"></dota-icon>
                     </span>
-                    <span id="timer" style="--animation-duration: ${this.remainingTime + 'ms'}" class="toast-animate py-0.5 absolute bottom-0 ${notificationConfig.type[this.type].timer}"></span>
+                    <span id="timer" style="--animation-duration: ${this.remainingTime + 'ms'}" class="toast-animate ${color} py-0.5 absolute bottom-0 ${this.duration}"></span>
                 </div>
            </div>
         `
@@ -96,35 +109,32 @@ export class NotificationComponent extends BaseElement {
 }
 
 
-export const notificationConfig = {
+const NotificationConfig = {
     base: 'overflow-hidden relative flex items-center justify-between w-[350px] sm:w-[400px] font-dm py-3 rounded-xl shadow-lg bg-white dark:bg-slate-800',
-    position: {
-        'left-bottom': 'absolute bottom-10 left-10',
-        'right-bottom': 'absolute bottom-10 right-10',
-        'left-top': 'absolute top-10 left-10',
-        'right-top': 'absolute top-10 right-10'
-    },
-
-    type: {
-        success: {
-            color: 'green',
-            icon: 'ic:baseline-check-box',
-            timer: 'bg-green-600'
-        },
-        danger: {
-            color: 'red',
-            icon: 'ic:sharp-dangerous',
-            timer: 'bg-red-600'
-        },
-        info: {
-            color: 'blue',
-            icon: 'ic:baseline-info',
-            timer: 'bg-blue-600'
-        },
-        warn: {
-            color: 'yellow',
-            icon: 'ic:twotone-warning',
-            timer: 'bg-yellow-600'
-        }
-    } as {[key: string]: {color: string, icon: string, timer: string}}
+    duration: 5000,
+    color: {
+        green: 'bg-green-600',
+        emerald: 'bg-emerald-600',
+        cyan: 'bg-cyan-600',
+        purple: 'bg-purple-600',
+        blue: 'bg-blue-600',
+        indigo: 'bg-indigo-600',
+        sky: 'bg-sky-600',
+        red: 'bg-red-600',
+        rose: 'bg-rose-600',
+        yellow: 'bg-yellow-600',
+        orange: 'bg-orange-600',
+        pink: 'bg-pink-600',
+        gray: 'bg-gray-600',
+        zinc: 'bg-zinc-600',
+        brown: 'bg-brown-600',
+        fuchsia: 'bg-fuchsia-600',
+        amber: 'bg-amber-600',
+        lime: 'bg-lime-600',
+        none: 'bg-purple-600'
+    }
 }
+
+type NotificationColor = keyof typeof NotificationConfig.color;
+
+export {NotificationConfig, NotificationComponent, type NotificationColor}

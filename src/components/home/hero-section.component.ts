@@ -17,7 +17,7 @@ export class HeroSectionComponent extends BaseElement {
         const text = 'npm install @ayu-sh-kr/dota-core'
         navigator.clipboard.writeText(text)
             .then(() => {
-                notificationService.push({type: 'info', duration: 5000, message: 'Text Copied to Clipboard'})
+                notificationService.info({duration: 5000, message: 'Text Copied to Clipboard', title: 'Notification' })
             })
     }
 

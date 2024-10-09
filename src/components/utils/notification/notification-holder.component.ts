@@ -1,23 +1,45 @@
 import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
 import '@dota/components/utils/notification/notification.component.ts'
+import {Property, String} from "@ayu-sh-kr/dota-core";
+import {NotificationComponent} from "@dota/components/utils/notification/notification.component.ts";
 
 
 @Component({
     selector: 'notification-holder',
-    shadow: true
+    shadow: false
 })
-export class NotificationHolderComponent extends BaseElement {
+class NotificationHolderComponent extends BaseElement {
+
+    @Property({name: 'position', type: String})
+    position!: NotificationPosition
 
     constructor() {
         super();
     }
 
+
+    propagate(notification: NotificationComponent) {
+        const holder = this.querySelector('div[content="notification"]') as HTMLElement;
+        holder.appendChild(notification);
+    }
+
     render(): string {
         return HTML`
-        <div class="absolute bottom-0 right-0 w-fit">
-            <slot></slot>
+        <div content="notification" class="${PositionConfig[this.position ?? 'bottom-right']} w-fit flex flex-col gap-y-3">
+            
         </div>
         `
     }
 
 }
+
+const PositionConfig = {
+    'bottom-right': 'fixed bottom-10 right-10',
+    'bottom-left': 'fixed bottom-10 left-10',
+    'top-left': 'fixed top-10 left-10',
+    'top-right': 'fixed top-10 right-10'
+}
+
+type NotificationPosition = keyof typeof PositionConfig;
+
+export {type NotificationPosition, NotificationHolderComponent, PositionConfig}

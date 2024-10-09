@@ -1,9 +1,4 @@
 import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
-import '@dota/components/home/offer.component.ts'
-import '@dota/components/home/header.component.ts'
-import '@dota/components/home/hero-section.component.ts'
-import '@dota/components/utils/notification/notification.component.ts'
-import '@dota/components/home/feature.component.ts'
 
 @Component({
     selector: 'home-page',
@@ -21,7 +16,8 @@ export class HomePage extends BaseElement {
            <app-header></app-header>
            <app-hero></app-hero>
            <app-feature></app-feature>
-           <notification-holder id="dota-notification"></notification-holder>
+           <notification-holder id="dota-notification" position="bottom-right"></notification-holder>
+           
         `
     }
 

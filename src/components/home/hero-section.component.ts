@@ -25,7 +25,7 @@ export class HeroSectionComponent extends BaseElement {
         return HTML`
             <div class="flex flex-col items-center justify-center py-20 font-dm px-2">
                 <h1 
-                    class="text-6xl sm:text-8xl font-extrabold text-gray-900 dark:text-gray-100 max-w-5xl text-wrap py-10 tracking-wide text-center">
+                    class="text-5xl sm:text-7xl font-extrabold text-gray-900 dark:text-gray-100 max-w-5xl text-wrap py-10 leading-[3.25rem] tracking-wide text-center">
                     Build. Customize. Distribute. <span class="bg-gradient-to-r from-purple-600 via-purple-600 to-purple-400 bg-clip-text text-transparent">Reuse.</span>
                 </h1>
                 

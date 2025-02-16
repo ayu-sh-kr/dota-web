@@ -49,7 +49,7 @@ export class FeatureComponent extends BaseElement {
                                 </span>
                                 <div class="flex flex-col gap-y-2">
                                     <h1 class="text-lg font-semibold tracking-wide">${item.title}</h1>
-                                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">${item.description}</p>
+                                    <p class="sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">${item.description}</p>
                                 </div>
                             </div>`
                 }).join('')}

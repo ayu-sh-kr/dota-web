@@ -20,6 +20,5 @@
   "dependencies": {
     "@ayu-sh-kr/dota-core": "^1.6.13",
     "@ayu-sh-kr/dota-ui": "^0.0.4"
-  },
-  "packageManager": "pnpm@9.5.0"
+  }
 }

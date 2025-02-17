@@ -19,7 +19,6 @@ export class HomePage extends BaseElement {
            <code-section></code-section>
            <device-section></device-section>
            <notification-holder id="dota-notification" position="bottom-right"></notification-holder>
-           
         `
     }
 

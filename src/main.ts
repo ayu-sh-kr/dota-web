@@ -5,7 +5,13 @@ import {AppComponent} from "@dota/app.component.ts";
 import {RoutesService} from "@dota/service/routes.service.ts";
 import {bootstrap} from "@ayu-sh-kr/dota-core";
 import {DocPage, ErrorPage, HomePage} from "@dota/pages";
-import {FeatureComponent, HeaderComponent, HeroSectionComponent, OfferComponent} from "@dota/components/home";
+import {
+    CodeSectionComponent, DeviceSectionComponent,
+    FeatureComponent,
+    HeaderComponent,
+    HeroSectionComponent,
+    OfferComponent
+} from "@dota/components/home";
 import {IconsComponent} from "@ayu-sh-kr/dota-ui/dist";
 
 
@@ -20,7 +26,9 @@ bootstrap([
     ErrorPage,
     FeatureComponent,
     IconsComponent,
-    AppComponent
+    AppComponent,
+    CodeSectionComponent,
+    DeviceSectionComponent
 ])
 
 new RoutesService();
@@ -35,6 +43,8 @@ declare global {
         'app-notification': NotificationComponent
         'home-page': HomePage
         'doc-page': DocPage,
-        'app-root': AppComponent
+        'app-root': AppComponent,
+        'code-section': CodeSectionComponent,
+        'device-section': DeviceSectionComponent
     }
 }

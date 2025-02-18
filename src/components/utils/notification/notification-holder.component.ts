@@ -3,6 +3,12 @@ import '@dota/components/utils/notification/notification.component.ts'
 import {Property, String} from "@ayu-sh-kr/dota-core";
 import {NotificationComponent} from "@dota/components/utils/notification/notification.component.ts";
 
+const PositionConfig = {
+    'bottom-right': 'fixed bottom-10 right-10',
+    'bottom-left': 'fixed bottom-10 left-10',
+    'top-left': 'fixed top-10 left-10',
+    'top-right': 'fixed top-10 right-10'
+}
 
 @Component({
     selector: 'notification-holder',
@@ -31,13 +37,6 @@ class NotificationHolderComponent extends BaseElement {
         `
     }
 
-}
-
-const PositionConfig = {
-    'bottom-right': 'fixed bottom-10 right-10',
-    'bottom-left': 'fixed bottom-10 left-10',
-    'top-left': 'fixed top-10 left-10',
-    'top-right': 'fixed top-10 right-10'
 }
 
 type NotificationPosition = keyof typeof PositionConfig;

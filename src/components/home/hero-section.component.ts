@@ -1,5 +1,4 @@
-import {BaseElement, BindEvent, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
-import '@dota/components/utils/icons.component.ts'
+import {BaseElement, BindEvent, Component, HTML} from "@ayu-sh-kr/dota-core";
 import {notificationService} from "@dota/components/utils/notification/notification.service.ts";
 
 @Component({
@@ -38,13 +37,14 @@ export class HeroSectionComponent extends BaseElement {
                     </p>
                 </div>
                 
-                <div class="flex py-10 justify-center sm:justify-between items-center gap-y-5 gap-x-10 flex-wrap text-gray-100">
-                    <a href="/docs#get-started" class="text-2xl bg-blue-500 rounded-3xl py-3 px-4">Get Started</a>
-                    <p  
-                        class="lg:text-xl md:text-lg text-sm px-4 py-3 border rounded-3xl flex items-center gap-x-2 dark:text-gray-200 text-gray-800">
+                <div class="flex py-10 justify-center sm:justify-between items-center gap-y-5 gap-x-10 flex-wrap text-gray-100 md:text-xl text-lg">
+                    <get-started-button></get-started-button>
+                    <p  class="border lg:rounded-3xl md:rounded-2xl rounded-xl flex items-center gap-x-2 
+                    dark:text-gray-200 text-gray-800 md:py-3 md:px-4 py-1 px-2 md:text-xl sm:text-lg text-sm"
+                    >
                         npm install @ayu-sh-kr/dota-core 
                         <span class="active:scale-95 cursor-pointer" id="copy"">
-                            <app-icon name="material-symbols:content-copy-rounded"/>
+                            <dota-icon name="material-symbols:content-copy-rounded" color="purple" variant="ghost" size="md"/>
                         </span> 
                     </p> 
                 </div>

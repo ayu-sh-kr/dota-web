@@ -1,34 +1,50 @@
 import './style.css'
-import {NotificationHolderComponent} from "@dota/components/utils/notification/notification-holder.component.ts";
-import {NotificationComponent} from "@dota/components/utils/notification/notification.component.ts";
+
 import {AppComponent} from "@dota/app.component.ts";
 import {RoutesService} from "@dota/service/routes.service.ts";
 import {bootstrap} from "@ayu-sh-kr/dota-core";
 import {DocPage, ErrorPage, HomePage} from "@dota/pages";
 import {
     CodeSectionComponent, DeviceSectionComponent,
-    FeatureComponent,
+    FeatureComponent, GetStartedButtonComponent,
     HeaderComponent,
     HeroSectionComponent,
     OfferComponent
 } from "@dota/components/home";
 import {IconsComponent} from "@ayu-sh-kr/dota-ui/dist";
+import {
+    DarkModeButtonComponent,
+    GithubButtonComponent,
+    NotificationComponent,
+    NotificationHolderComponent
+} from "@dota/components/utils";
+
 
 
 bootstrap([
-    OfferComponent,
-    HeroSectionComponent,
+    // entry
+    AppComponent,
+
+    // utility component
     HeaderComponent,
     NotificationComponent,
     NotificationHolderComponent,
+    DarkModeButtonComponent,
+    GithubButtonComponent,
+    IconsComponent,
+
+    // home-page components
+    OfferComponent,
+    HeroSectionComponent,
+    FeatureComponent,
+    CodeSectionComponent,
+    DeviceSectionComponent,
+    GetStartedButtonComponent,
+
+    // pages
     HomePage,
     DocPage,
     ErrorPage,
-    FeatureComponent,
-    IconsComponent,
-    AppComponent,
-    CodeSectionComponent,
-    DeviceSectionComponent
 ])
 
 new RoutesService();
@@ -45,6 +61,9 @@ declare global {
         'doc-page': DocPage,
         'app-root': AppComponent,
         'code-section': CodeSectionComponent,
-        'device-section': DeviceSectionComponent
+        'device-section': DeviceSectionComponent,
+        'get-started-button': GetStartedButtonComponent,
+        'dark-mode-button': DarkModeButtonComponent,
+        'github-button': GithubButtonComponent
     }
 }

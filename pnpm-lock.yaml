@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@ayu-sh-kr/dota-core':
-        specifier: ^1.6.13
-        version: 1.6.13
+        specifier: ^1.6.14
+        version: 1.6.14
       '@ayu-sh-kr/dota-ui':
         specifier: ^0.0.4
         version: 0.0.4
@@ -43,8 +43,8 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@ayu-sh-kr/dota-core@1.6.13':
-    resolution: {integrity: sha512-5WFOgOuinbsGO6ienHS/tI+aEWqrjyqbFruvKhc5sodOzmPaV1/opeV6XgZZXMHb60wQDa7WmjbtB3PUlrSt7g==}
+  '@ayu-sh-kr/dota-core@1.6.14':
+    resolution: {integrity: sha512-8VGdFqDHkWsGlalruruLfLFj2baEOHHjQRLGl8yhE33DTzpV+UGOj8584HHmmsOMkMxhpDNLIhYutZu+ZN9b2Q==}
 
   '@ayu-sh-kr/dota-ui@0.0.4':
     resolution: {integrity: sha512-pwpFXjl3iyQj0od+J+R7HhRuDfSQ6GW6VT6COLm3QdxaYNKQA6FahqsiQeLHQwhGdIwQIWMoKzoG5x4Qp4dJHQ==}
@@ -859,13 +859,13 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@ayu-sh-kr/dota-core@1.6.13':
+  '@ayu-sh-kr/dota-core@1.6.14':
     dependencies:
       reflect-metadata: 0.2.2
 
   '@ayu-sh-kr/dota-ui@0.0.4':
     dependencies:
-      '@ayu-sh-kr/dota-core': 1.6.13
+      '@ayu-sh-kr/dota-core': 1.6.14
       '@floating-ui/dom': 1.6.11
       '@popperjs/core': 2.11.8
       '@types/node': 22.7.4

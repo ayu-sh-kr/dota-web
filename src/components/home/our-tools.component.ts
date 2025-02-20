@@ -15,9 +15,10 @@ export class OurToolsComponent extends BaseElement {
     // language=HTML
     return `
       <section class="mx-auto max-w-7xl px-3 py-2 mt-10">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-center mb-20">Our Tools</h1>
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
           <article
-              class="card-wrapper h-[180px]  mx-auto w-[340px] p-4 bg-white  rounded-lg shadow-md dark:text-gray-100 hover:scale-110 ease-in-out duration-300 hover:shadow-2xl">
+              class="card-wrapper  h-[200px] mx-auto w-[340px] p-4 bg-white  rounded-lg shadow-md dark:text-gray-100 hover:scale-110 ease-in-out duration-300 hover:shadow-2xl">
             <div class="card-content pt-6 flex flex-col gap-y-4 items-center">
               <p class="text-lg font-semibold pt-4">
                 Dota Core
@@ -29,7 +30,7 @@ export class OurToolsComponent extends BaseElement {
           </article>
 
           <article
-              class="card-wrapper h-[180px]  mx-auto w-[340px] p-4 bg-white  rounded-lg shadow-md dark:text-gray-100 hover:scale-110 ease-in-out duration-300 hover:shadow-2xl">
+              class="card-wrapper h-[200px]  mx-auto w-[340px] p-4 bg-white  rounded-lg shadow-md dark:text-gray-100 hover:scale-110 ease-in-out duration-300 hover:shadow-2xl">
             <div class="card-content delay-200 pt-6 flex flex-col gap-y-4 items-center">
               <p class="text-lg font-semibold pt-4">
                 Dota Rest
@@ -41,7 +42,7 @@ export class OurToolsComponent extends BaseElement {
           </article>
 
           <article
-              class="card-wrapper h-[180px] mx-auto w-[340px] p-4 bg-white  rounded-lg shadow-md dark:text-gray-100 hover:scale-110 ease-in-out duration-300 hover:shadow-2xl">
+              class="card-wrapper h-[200px] mx-auto w-[340px] p-4 bg-white  rounded-lg shadow-md dark:text-gray-100 hover:scale-110 ease-in-out duration-300 hover:shadow-2xl">
             <div class="card-content delay-500 pt-6 flex flex-col gap-y-4 items-center">
               <p class="text-lg font-semibold pt-4">
                 Dota UI

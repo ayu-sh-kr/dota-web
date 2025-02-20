@@ -22,8 +22,8 @@ export class CodeSectionComponent extends BaseElement {
                           Build custom UIs that work seamlessly across teams and projects.
                       </p>
                     </div>
-                    <img src="/images/code-snippet-1.png" alt="dot-ui-bg"
-                         class="rounded-lg mix-blend-darken min-w-[360px] max-w-[80%]"
+                    <img src="/images/hello-dota-img.png" alt="dot-ui-bg"
+                         class="rounded-lg  min-w-[360px] dark:invert-0"
                     />
                 </div>
             </section>

@@ -18,7 +18,9 @@ import {
     NotificationComponent,
     NotificationHolderComponent
 } from "@dota/components/utils";
-
+import {ReactiveSectionComponent} from "@dota/components/home/reactive-section.component.ts";
+import {HostListenerSectionComponent} from '@dota/components/home/hostlistener-section.component.ts'
+import {FooterComponent} from "@dota/components/utils/footer.component.ts";
 
 
 bootstrap([
@@ -41,6 +43,9 @@ bootstrap([
     DeviceSectionComponent,
     GetStartedButtonComponent,
     OurToolsComponent,
+    ReactiveSectionComponent,
+    HostListenerSectionComponent,
+    FooterComponent,
 
     // pages
     HomePage,

@@ -9,7 +9,7 @@ import {
     FeatureComponent, GetStartedButtonComponent,
     HeaderComponent,
     HeroSectionComponent,
-    OfferComponent
+    OfferComponent, OurToolsComponent
 } from "@dota/components/home";
 import {IconsComponent} from "@ayu-sh-kr/dota-ui/dist";
 import {
@@ -18,7 +18,6 @@ import {
     NotificationComponent,
     NotificationHolderComponent
 } from "@dota/components/utils";
-import { OurToolsComponent } from './components/home/our-tools.component';
 
 
 

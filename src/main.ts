@@ -18,6 +18,7 @@ import {
     NotificationComponent,
     NotificationHolderComponent
 } from "@dota/components/utils";
+import { OurToolsComponent } from './components/home/our-tools.component';
 
 
 
@@ -40,6 +41,7 @@ bootstrap([
     CodeSectionComponent,
     DeviceSectionComponent,
     GetStartedButtonComponent,
+    OurToolsComponent,
 
     // pages
     HomePage,
@@ -64,6 +66,7 @@ declare global {
         'device-section': DeviceSectionComponent,
         'get-started-button': GetStartedButtonComponent,
         'dark-mode-button': DarkModeButtonComponent,
-        'github-button': GithubButtonComponent
+        'github-button': GithubButtonComponent,
+        'our-tools': OurToolsComponent,
     }
 }

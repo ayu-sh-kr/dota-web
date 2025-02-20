@@ -22,7 +22,7 @@ export class OfferComponent extends BaseElement {
             >
                 <div class="text-lg text-white gap-x-4 hover:text-opacity-90 cursor-pointer flex">Write <span class="text-purple-600"> Reusable </span> HTML</div>
                 <span id="close" class="absolute right-10 focus:scale-95 cursor-pointer">
-                        <dota-icon name="ic:twotone-close" color="gray" variant="solid" size="md"></dota-icon>
+                        <dota-icon name="ic:twotone-close" color="gray" variant="soft" size="md"></dota-icon>
                 </span>
             </div>
         `

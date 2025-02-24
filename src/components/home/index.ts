@@ -6,6 +6,7 @@ import { CodeSectionComponent } from "@dota/components/home/code-section.compone
 import { DeviceSectionComponent } from "@dota/components/home/device-section.component.ts";
 import { GetStartedButtonComponent } from "@dota/components/home/utils/get-started-button.component.ts";
 import { OurToolsComponent } from "@dota/components/home/our-tools.component";
+import { HostListenerSectionComponent } from "@dota/components/home/hostlistener-section.component";
 export {
   HeaderComponent,
   HeroSectionComponent,
@@ -15,4 +16,5 @@ export {
   DeviceSectionComponent,
   GetStartedButtonComponent,
   OurToolsComponent,
+  HostListenerSectionComponent,
 };

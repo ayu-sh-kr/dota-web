@@ -21,6 +21,8 @@ import {
 import {ReactiveSectionComponent} from "@dota/components/home/reactive-section.component.ts";
 import {HostListenerSectionComponent} from '@dota/components/home/hostlistener-section.component.ts'
 import {FooterComponent} from "@dota/components/utils/footer.component.ts";
+import {LeftSidebarComponent} from "@dota/components/dashboard";
+import {DashboardPage} from "@dota/pages/dashboard.page.ts";
 
 
 bootstrap([
@@ -47,7 +49,11 @@ bootstrap([
     HostListenerSectionComponent,
     FooterComponent,
 
+    // dashboardComponents
+    LeftSidebarComponent,
+
     // pages
+    DashboardPage,
     HomePage,
     DocPage,
     ErrorPage,
@@ -63,7 +69,7 @@ declare global {
         'app-hero': HeroSectionComponent,
         'notification-holder': NotificationHolderComponent
         'app-notification': NotificationComponent
-        'home-page': HomePage
+        'home-page': HomePage,
         'doc-page': DocPage,
         'app-root': AppComponent,
         'code-section': CodeSectionComponent,
@@ -72,5 +78,7 @@ declare global {
         'dark-mode-button': DarkModeButtonComponent,
         'github-button': GithubButtonComponent,
         'our-tools': OurToolsComponent,
+        'left-sidebar': LeftSidebarComponent,
+        'dashboard-page':DashboardPage
     }
 }

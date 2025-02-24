@@ -15,7 +15,7 @@ export class OurToolsComponent extends BaseElement {
     // language=HTML
     return `
       <section class="mx-auto max-w-7xl px-3 py-2 mt-10">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-center mb-20">Our Tools</h1>
+        <h1 class="text-3xl sm:text-4xl font-extrabold font-adaptive text-center mb-20">Our Tools</h1>
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
           <article
               class="card-wrapper  h-[200px] mx-auto w-[340px] p-4 bg-white  rounded-lg shadow-md dark:text-gray-100 hover:scale-110 ease-in-out duration-300 hover:shadow-2xl">

@@ -14,7 +14,7 @@ export class DeviceSectionComponent extends BaseElement {
   render(): string {
     return HTML`
             <section class="font-dm mx-auto max-w-7xl px-6 py-10 pt-20">
-             <h1 class="text-3xl sm:text-4xl font-extrabold text-center ">A single component library for all of your frameworks.</h1>
+             <h1 class="text-3xl sm:text-4xl font-extrabold font-adaptive text-center ">A single component library for all of your frameworks.</h1>
                   <div class="grid grid-cols-1 max-lg:max-w-[400px] lg:grid-cols-3 justify-between place-items-center mt-20 gap-10 
                   bg-gradient-to-r from-gray-200 via-gray-50 to-gray-300
                    dark:bg-gradient-to-b dark:from-gray-700 dark:to-gray-900 hover:hue-rotate-15

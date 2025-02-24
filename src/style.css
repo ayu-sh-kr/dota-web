@@ -31,4 +31,8 @@
   .card-content {
     @apply absolute left-[1.5px] top-[1.5px] h-[calc(100%-3px)] bg-white w-[calc(100%-3px)] rounded-2xl dark:bg-gradient-to-b dark:from-slate-800 dark:to-slate-900;
   }
+
+  .font-adaptive {
+    @apply text-gray-900 dark:text-gray-50
+  }
 }

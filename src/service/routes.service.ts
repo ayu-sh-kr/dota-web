@@ -5,6 +5,7 @@ export class RoutesService {
 
     constructor() {
         this.init()
+        this.handleInitialNavigation();
     }
 
     init() {
@@ -23,8 +24,11 @@ export class RoutesService {
                 }
             })
         })
+    }
 
-
+    handleInitialNavigation() {
+        const url = new URL(window.location.href);
+        this.render(url.pathname);
     }
 
     route(event: Event) {

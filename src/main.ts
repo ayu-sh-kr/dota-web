@@ -21,6 +21,8 @@ import {
 import {ReactiveSectionComponent} from "@dota/components/home/reactive-section.component.ts";
 import {HostListenerSectionComponent} from '@dota/components/home/hostlistener-section.component.ts'
 import {FooterComponent} from "@dota/components/utils/footer.component.ts";
+import {DashboardPage} from "@dota/pages/dashboard.page.ts";
+import {LeftSidebarComponent} from "@dota/components/dashboard";
 
 
 bootstrap([
@@ -46,6 +48,12 @@ bootstrap([
     ReactiveSectionComponent,
     HostListenerSectionComponent,
     FooterComponent,
+
+    // dashboard components
+    LeftSidebarComponent,
+
+    // dashboard
+    DashboardPage,
 
     // pages
     HomePage,

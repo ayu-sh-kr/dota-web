@@ -30,20 +30,20 @@ export class DocPage extends BaseElement {
     // language=html
     return HTML`
       <app-header></app-header>
-      <section class="w-full grid grid-cols-8 p-5 gap-x-3 relative">
-        <aside class="lg:col-span-2 col-span-3 hidden md:block w-full py-1 px-2 border-r-2">
+      <section class="flex gap-4 relative">
+        <aside class="sticky top-14 h-[calc(100vh-50px)] hidden md:block w-72 bg-white p-4  dark:bg-gray-900 overflow-y-auto text-sm space-y-4 border-r custom-scrollbar">
           <doc-path file-path="Getting-Started.md"></doc-path>
           <doc-path file-path="Component-Registration.md"></doc-path>
           <doc-path file-path="Component-Definition.md"></doc-path>
           <doc-path file-path="Property-Binding.md"></doc-path>
         </aside>
-        <main class="lg:col-span-6 md:col-span-5 col-span-8 w-full">
+        <main class="flex-1 p-4">
           <doc-content file-path="${this.contentPath}"></doc-content>
         </main>
       </section>
       <footer-component></footer-component>
       <notification-holder id="dota-notification" position="bottom-right"></notification-holder>
-    `
+    `;
   }
 
 }

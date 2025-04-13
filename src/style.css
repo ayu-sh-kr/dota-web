@@ -55,4 +55,27 @@
       @apply w-0
     }
   }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 20px;
+  }
+  /* .custom-scrollbar::-webkit-scrollbar-track {
+    background: #ffffff;
+  } */
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #dadada;
+    border-radius: 50px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #b1b1b1;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
 }

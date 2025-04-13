@@ -26,6 +26,7 @@ export default <Partial<Config>>{
       },
       animation: {
         tilt: "tilt 10s infinite linear",
+        "border-spin": "border-spin 7s linear infinite",
       },
       keyframes: {
         tilt: {
@@ -46,9 +47,8 @@ export default <Partial<Config>>{
         },
       },
     },
-    animation: {
-      "border-spin": "border-spin 7s linear infinite",
-    },
   },
-  plugins: [],
+  plugins: [
+      require('@tailwindcss/typography')
+  ],
 };

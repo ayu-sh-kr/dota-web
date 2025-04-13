@@ -9,5 +9,6 @@ export default defineConfig({
         alias: {
             '@dota': resolve('./src')
         }
-    }
+    },
+    publicDir: 'public',
 })

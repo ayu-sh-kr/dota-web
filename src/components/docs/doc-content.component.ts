@@ -40,7 +40,7 @@ export class DocContentComponent extends BaseElement {
     render(): string {
         // language=html
         return `
-            <article class="prose md:prose-lg dark:prose-invert max-w-7xl mx-auto">
+            <article class="prose-sm dark:text-white max-w-7xl mx-auto">
                 ${this.content || 'Loading Docs'}
             </article>
         `;

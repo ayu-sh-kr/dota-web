@@ -18,7 +18,7 @@ import {
   NotificationComponent,
   NotificationHolderComponent
 } from "@dota/components/utils";
-import {DocContentComponent, DocPathComponent} from "@dota/components/docs";
+import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
 
 
 bootstrap([
@@ -48,6 +48,7 @@ bootstrap([
   // doc-page components
   DocPathComponent,
   DocContentComponent,
+  DocSectionComponent,
 
   // pages
   HomePage,

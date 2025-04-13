@@ -36,7 +36,7 @@ export class HeaderComponent extends BaseElement {
     render(): string {
         return HTML`
             <header class="flex z-50 justify-between items-center px-2 py-3 font-dm sticky top-0 left-0 shadow-md bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-                <div class="font-extrabold text-2xl w-1/6 px-5"><a href="/public">Logo</a></div>
+                <div class="font-extrabold text-2xl w-1/6 px-5"><a href="/">Dota</a></div>
                 <div class="md:flex justify-center items-center hidden w-4/6">
                     <ul class="flex justify-between items-center gap-x-5 w-1/2">
                         ${this.items.map((item) => {

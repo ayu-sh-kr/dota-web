@@ -41,20 +41,13 @@ export class RoutesService {
   }
 
   render(path: string) {
-    // Check if the path matches a documentation pattern
-    const docPathRegex = /^\/docs\/(.+)$/;
-    const docMatch = path.match(docPathRegex);
 
-    if (docMatch) {
-      // Extract the document name from the URL
-      const docName = docMatch[1];
-      // Append .md if it doesn't already have the extension
-      const docPath = docName.endsWith('.md') ? docName : `${docName}.md`;
-
+    if (path.includes('/docs')) {
       // Render the docs page with the specified document
       document.querySelector<AppComponent>('app-root')!.innerHTML = `<doc-page></doc-page>`;
       return;
     }
+
     document.querySelector<AppComponent>('app-root')!.innerHTML = routes[path] || `<app-error path="${path}" message="Page Not Found" status=404 />`;
   }
 

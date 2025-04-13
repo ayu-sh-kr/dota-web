@@ -15,6 +15,16 @@
   animation-play-state: paused;
 }
 
+@layer base {
+    ::selection {
+        @apply bg-purple-500 dark:bg-purple-600 text-white;
+    }
+
+    ::-moz-selection {
+        @apply bg-purple-500 dark:bg-purple-600 text-white;
+    }
+}
+
 @layer utilities {
   .card-wrapper {
     @apply relative overflow-hidden rounded-2xl  bg-white dark:bg-gradient-to-b dark:from-gray-700 dark:to-gray-900;
@@ -34,5 +44,15 @@
 
   .font-adaptive {
     @apply text-gray-900 dark:text-gray-50
+  }
+
+  @keyframes toast-decrease {
+    0% {
+      @apply w-full
+    }
+
+    100% {
+      @apply w-0
+    }
   }
 }

@@ -13,6 +13,9 @@ export const docConfigs: DocConfig[] = [
 
   {
     category: 'Guide',
-    paths: ['Component-Registration.md', 'Component-Definition.md', 'Property-Binding.md']
+    paths: [
+      'Component-Registration.md', 'Component-Definition.md',
+      'Property-Binding.md', 'Event-Binding.md', 'Event-Emitter.md',
+    ]
   }
 ]

@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@ayu-sh-kr/dota-core':
-        specifier: ^1.6.14
+        specifier: 1.6.14
         version: 1.6.14
       '@ayu-sh-kr/dota-rest':
         specifier: 1.1.3

@@ -3,7 +3,7 @@ import './style.css'
 import {AppComponent} from "@dota/app.component.ts";
 import {RoutesService} from "@dota/service/routes.service.ts";
 import {bootstrap} from "@ayu-sh-kr/dota-core";
-import {BlogPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
+import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
 import {
   CodeSectionComponent, DeviceSectionComponent,
   FeatureComponent, GetStartedButtonComponent,
@@ -13,13 +13,12 @@ import {
 } from "@dota/components/home";
 import {IconsComponent} from "@ayu-sh-kr/dota-ui/dist";
 import {
-  DarkModeButtonComponent,
+  DarkModeButtonComponent, FooterComponent,
   GithubButtonComponent,
   NotificationComponent,
   NotificationHolderComponent
 } from "@dota/components/utils";
-import {FooterComponent} from "@dota/components/utils/footer.component.ts";
-import {DocContentComponent, DocPathComponent} from "@dota/components/docs";
+import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
 
 
 bootstrap([
@@ -49,12 +48,14 @@ bootstrap([
   // doc-page components
   DocPathComponent,
   DocContentComponent,
+  DocSectionComponent,
 
   // pages
   HomePage,
   DocPage,
   ErrorPage,
-  BlogPage
+  BlogPage,
+  ChatPage
 ])
 
 new RoutesService();

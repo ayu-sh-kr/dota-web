@@ -3,11 +3,13 @@ import {NotificationComponent} from "@dota/components/utils/notification/notific
 import {NotificationHolderComponent} from "@dota/components/utils/notification/notification-holder.component.ts";
 import {GithubButtonComponent} from "@dota/components/utils/buttons/github-button.component.ts";
 import {DarkModeButtonComponent} from "@dota/components/utils/buttons/dark-mode-button.component.ts";
+import {FooterComponent} from "@dota/components/utils/footer.component.ts";
 
 export {
-    HeaderComponent,
-    GithubButtonComponent,
-    DarkModeButtonComponent,
-    NotificationComponent,
-    NotificationHolderComponent
+  HeaderComponent,
+  GithubButtonComponent,
+  DarkModeButtonComponent,
+  NotificationComponent,
+  NotificationHolderComponent,
+  FooterComponent
 }

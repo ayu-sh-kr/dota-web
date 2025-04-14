@@ -1,15 +1,14 @@
-import {BaseElement, Component, HostListener, Property, String} from "@ayu-sh-kr/dota-core";
-import {RoutesService} from "@dota/service/routes.service.ts";
-import {RouteUtils} from "@dota/utils/RouteUtils.ts";
+import { BaseElement, Component, HostListener, Property, String } from "@ayu-sh-kr/dota-core";
+import { RoutesService } from "@dota/service/routes.service.ts";
+import { RouteUtils } from "@dota/utils/RouteUtils.ts";
 
 @Component({
-  selector: 'doc-path',
+  selector: "doc-path",
   shadow: false,
 })
 export class DocPathComponent extends BaseElement {
-
   @Property({
-    name: 'file-path',
+    name: "file-path",
     type: String,
   })
   filePath!: string;
@@ -18,7 +17,7 @@ export class DocPathComponent extends BaseElement {
     super();
   }
 
-  @HostListener({event: 'click'})
+  @HostListener({ event: "click" })
   clickListener() {
     RoutesService.route(`/docs/${this.filePath}`);
   }
@@ -27,12 +26,13 @@ export class DocPathComponent extends BaseElement {
     const includes = RouteUtils.getCurrentEntry().includes(this.filePath);
     // language=html
     return `
-    <div class="cursor-pointer text-sm text-gray-600 dark:text-gray-300 py-1 px-2 ${includes ? 'text-purple-600 dark:text-purple-500' : ''}
-        hover:text-purple-600 dark:hover:text-purple-500 transition-all hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+    <div class="cursor-pointer text-sm text-[#67676c] dark:text-gray-300 py-2 px-2 transition-all hover:text-purple-500 duration-300 ease-in-out font-medium ${
+      includes ? "!text-purple-600 dark:!text-purple-500" : ""
+    }
+       "
     >
-      ${this.filePath.replace('.md', '').replace('-', ' ')}
+      ${this.filePath.replace(".md", "").replace("-", " ")}
     </div>
     `;
   }
-
 }

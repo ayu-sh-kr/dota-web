@@ -20,6 +20,7 @@ import {
   NotificationHolderComponent
 } from "@dota/components/utils";
 import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
+import {CounterComponent} from "@dota/components/example/CounterComponent.ts";
 
 
 bootstrap([
@@ -51,6 +52,9 @@ bootstrap([
   DocPathComponent,
   DocContentComponent,
   DocSectionComponent,
+
+  // example components
+  CounterComponent,
 
   // pages
   HomePage,

@@ -17,10 +17,10 @@ export class ClientSectionComponent extends BaseElement{
       <section id="clients" class="py-24 font-dm">
         <div class="mt-16 container mx-auto">
           <h1 class="text-3xl sm:text-4xl font-extrabold font-adaptive text-center mb-20"> Trusted by Industry Leaders</h1>
-          <div class="flex justify-between px-4 gap-14">
+          <div class="grid  place-items-center md:grid-cols-3 px-4 gap-14">
             ${testimonials.map((testimonial) => {
               return `
-              <article class="bg-white dark:bg-gray-800 shadow-md shadow-purple-200 dark:shadow-purple-500 p-6 rounded-xl">
+              <article class="bg-white max-w-sm dark:bg-gray-800 shadow-md shadow-purple-200 dark:shadow-purple-500 p-6 rounded-xl">
                     <div class="flex items-center mb-4">
                         <img
                             src=${testimonial.img}

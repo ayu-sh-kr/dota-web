@@ -15,7 +15,7 @@ export class ClientSectionComponent extends BaseElement{
     // language=html
     return `
       <section id="clients" class="py-24 font-dm">
-        <div class="mt-16 container mx-auto">
+        <div class="mt-16 max-w-7xl mx-auto">
           <h1 class="text-3xl sm:text-4xl font-extrabold font-adaptive text-center mb-20"> Trusted by Industry Leaders</h1>
           <div class="grid  place-items-center md:grid-cols-3 px-4 gap-14">
             ${testimonials.map((testimonial) => {

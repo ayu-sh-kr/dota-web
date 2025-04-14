@@ -30,7 +30,7 @@ export class DocSectionComponent extends BaseElement{
   render(): string {
     // language=html
     return `
-      <section class="flex gap-4 relative font-dm">
+      <section class="flex gap-4 relative font-dm w-full">
         <aside class="sticky top-14 h-[calc(100vh-50px)] hidden md:block w-72 bg-white p-4 dark:bg-gray-900 overflow-y-auto text-sm space-y-4 border-r custom-scrollbar">
           ${docConfigs.map(config => {
             // language=html
@@ -42,7 +42,7 @@ export class DocSectionComponent extends BaseElement{
             `
           }).join(" ")}
         </aside>
-        <main class="flex-1 p-4">
+        <main class="flex-1 p-4 w-full">
           <doc-content file-path="${this.contentPath}"></doc-content>
         </main>
       </section>

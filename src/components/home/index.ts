@@ -8,6 +8,7 @@ import { GetStartedButtonComponent } from "@dota/components/home/utils/get-start
 import { OurToolsComponent } from "@dota/components/home/our-tools.component";
 import { ReactiveSectionComponent } from "@dota/components/home/reactive-section.component.ts";
 import { HostListenerSectionComponent } from "@dota/components/home/hostlistener-section.component.ts";
+import {ClientSectionComponent} from "@dota/components/home/client-section.component.ts";
 
 export {
   HeaderComponent,
@@ -19,5 +20,6 @@ export {
   GetStartedButtonComponent,
   OurToolsComponent,
   ReactiveSectionComponent,
-  HostListenerSectionComponent
+  HostListenerSectionComponent,
+  ClientSectionComponent
 };

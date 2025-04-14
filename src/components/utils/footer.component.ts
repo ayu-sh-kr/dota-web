@@ -18,8 +18,8 @@ export class FooterComponent extends BaseElement{
                         <!-- Logo and Copyright -->
                         <div>
 <!--                            <img src="logo.png" alt="Stencil Logo" class="h-6 mx-auto md:mx-0">-->
-                            <p class="text-gray-500 text-sm mt-2">&copy; 2025 | <a href="#" class="text-blue-600 hover:underline">MIT License</a></p>
-                            <p class="text-gray-500 text-sm">A project by <a href="#" class="text-blue-600 hover:underline">Dota</a></p>
+                            <p class="text-gray-500 text-sm mt-2">&copy; 2025 | <a href="#" class="text-purple-600 hover:underline">MIT License</a></p>
+                            <p class="text-gray-500 text-sm">A project by <a href="#" class="text-purple-600 hover:underline">Dota</a></p>
                         </div>
 
                         <!-- Overview -->

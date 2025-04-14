@@ -5,6 +5,7 @@ import {RoutesService} from "@dota/service/routes.service.ts";
 import {bootstrap} from "@ayu-sh-kr/dota-core";
 import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
 import {
+  ClientSectionComponent,
   CodeSectionComponent, DeviceSectionComponent,
   FeatureComponent, GetStartedButtonComponent,
   HeaderComponent,
@@ -43,6 +44,7 @@ bootstrap([
   OurToolsComponent,
   ReactiveSectionComponent,
   HostListenerSectionComponent,
+  ClientSectionComponent,
   FooterComponent,
 
   // doc-page components

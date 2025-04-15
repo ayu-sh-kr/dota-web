@@ -21,6 +21,7 @@ import {
 } from "@dota/components/utils";
 import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
 import {CounterComponent} from "@dota/components/example/CounterComponent.ts";
+import {AiFormComponent} from "@dota/components/chat";
 
 
 bootstrap([
@@ -55,6 +56,9 @@ bootstrap([
 
   // example components
   CounterComponent,
+
+  // chat components
+  AiFormComponent,
 
   // pages
   HomePage,

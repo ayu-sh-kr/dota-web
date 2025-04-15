@@ -18,6 +18,7 @@ export class ChatPage extends BaseElement {
   @BindEvent({event: 'onMessageEvent', id: '#ai-form'})
   listenUserMessage(event: CustomEvent<MessageRecord>) {
     this.messages.push(event.detail)
+    this.updateHTML()
   }
 
   render(): string {
@@ -45,8 +46,16 @@ export class ChatPage extends BaseElement {
             <h2 class="text-2xl text-neutral-800 dark:text-neutral-200 mb-3">Welcome to AI Chat</h2>
             <p class="text-neutral-600">Convert your Ideas into Code with our Dota AI</p>
           </div>
+          
+          <message-box id="message-box">
+            <message-card message-type="USER" message="Ram ram ndsjkkfjd fnjsd jkfdsnf kjdfndsjf bnbndsjkfnsjkd njdsj fsdfksdbfj sdfsdjfk bsdbkfksfbsdbf "></message-card>
+            <message-card message-type="SERVER" message="Ram ram fjndjn fjnfjlfljjdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn"></message-card>
+            ${this.messages.map(({type,message},idx)=> {
+              return `<message-card message-type="${type}" message="${message}"></message-card>`
+            }).join(" ")}
+          </message-box>
 
-          <div id="chat-messages" class="space-y-6">
+          <div id="chat-messages" class="space-y-6 mt-4">
             <div class="flex items-start space-x-4 relative group">
               <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
                 <img src="https://cdn-icons-png.flaticon.com/512/15917/15917116.png" alt="dota-bot"
@@ -55,14 +64,7 @@ export class ChatPage extends BaseElement {
               <ai-form id="ai-form" is-loading="false" class="w-full"></ai-form>
             </div>
 
-            <div class="flex items-start space-x-4 justify-end">
-              <div class="flex-1 bg-neutral-700 rounded-lg p-4 shadow-sm">
-                <p class="text-white">Can you help me with my question?</p>
-              </div>
-              <img src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=456" alt="User"
-                   class="w-8 h-8 rounded-full"/>
-            </div>
-          </div>
+          
         </div>
       </main>
     `;

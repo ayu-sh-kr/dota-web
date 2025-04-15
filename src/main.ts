@@ -83,5 +83,17 @@ declare global {
     'dark-mode-button': DarkModeButtonComponent,
     'github-button': GithubButtonComponent,
     'our-tools': OurToolsComponent,
+    'reactive-section': ReactiveSectionComponent,
+    'host-listener-section': HostListenerSectionComponent,
+    'client-section': ClientSectionComponent,
+    'doc-path': DocPathComponent,
+    'doc-content': DocContentComponent,
+    'doc-section': DocSectionComponent,
+    'feature-component': FeatureComponent,
+    'footer-component': FooterComponent,
+    'error-page': ErrorPage,
+    'blog-page': BlogPage,
+    'chat-page': ChatPage,
+    'counter-component': CounterComponent,
   }
 }

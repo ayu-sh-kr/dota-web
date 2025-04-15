@@ -32,7 +32,7 @@ export class DocContentComponent extends BaseElement {
       typographer: true,
     }).use(highlightjs);
 
-    const content = await this.docLoaderService.loadDoc(this.filePath);
+    const content = await this.docLoaderService.loadDoc(this.filePath.replace("/", ""));
     this.content = md.render(content)
     this.updateHTML();
   }

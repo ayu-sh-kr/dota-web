@@ -1,21 +1,21 @@
-import {BaseElement, Component} from "@ayu-sh-kr/dota-core/dist";
-import {AfterInit, Property, String} from "@ayu-sh-kr/dota-core";
-import { type MessageType } from "@dota/pages/chat.page.ts";
+import {AfterInit, BaseElement, Component, Property, String} from "@ayu-sh-kr/dota-core";
+import {type MessageType} from "@dota/pages/chat.page.ts";
+import {MarkdownService} from "@dota/service/markdown.service.ts";
 
 @Component({
-  selector:"message-card",
-  shadow:false
+  selector: "message-card",
+  shadow: false
 })
-export class MessageCardComponent extends BaseElement{
+export class MessageCardComponent extends BaseElement {
   @Property({
-    type:String,
-    name:"message-type"
+    type: String,
+    name: "message-type"
   })
-  type!:  MessageType
+  type!: MessageType
 
   @Property({
-    type:String,
-    name:"message"
+    type: String,
+    name: "message"
   })
   message!: string
 
@@ -23,24 +23,28 @@ export class MessageCardComponent extends BaseElement{
     super();
   }
 
+
   @AfterInit()
   afterViewInit() {
-    const messageStyleConfigElement = messageStyleConfig[this.type];
-
-    this.classList.add(...messageStyleConfigElement.split(" "))
-
+    const result = this.type === "USER" ? ["self-end", "max-w-[45%]"] : ["self-start", "max-w-[50%]"];
+    this.classList.add(...result);
   }
 
+  escapeHtml(html: string): string {
+    return MarkdownService.renderMarkdown(html);
+  }
 
-  render(){
-  //   language=html
+  render() {
+    //   language=html
     return `
-        <div>${this.message}</div>
+      <div class="prose-sm prose-slate dark:prose-invert h-fit rounded-md p-2 ${messageStyleConfig[this.type]}">
+        ${this.escapeHtml(this.message)}
+      </div>
     `
   }
 }
 
 const messageStyleConfig = {
-  "USER": "self-end bg-purple-400 p-2 max-w-[45%] break-all dark:text-white dark:bg-purple-900 rounded-md",
-  "SERVER": "self-start bg-purple-100 p-2 max-w-[50%] dark:text-gray-300 dark:bg-slate-800 text-slate-700 w-full break-all rounded-md"
+  "USER": "bg-purple-400 dark:text-white dark:bg-purple-900",
+  "SERVER": "bg-purple-100 dark:text-gray-300 dark:bg-slate-800 text-slate-700"
 }

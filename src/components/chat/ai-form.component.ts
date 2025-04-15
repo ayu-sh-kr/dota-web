@@ -60,8 +60,8 @@ export class AiFormComponent extends BaseElement {
                     rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"
                 >
                 </div>` : ''}
-        <form id="chat-form" class="relative w-full bg-white rounded-lg p-4 shadow-sm">
-          <input name="user-input" type="text" class="w-full outline-none"
+        <form id="chat-form" class="relative w-full bg-white dark:bg-slate-800 rounded-lg p-4 shadow-sm">
+          <input name="user-input" type="text" class="w-full outline-none bg-transparent "
                  placeholder="Hello! How can I assist you today?"/>
         </form>
       </div>

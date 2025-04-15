@@ -9,7 +9,6 @@ export class DocPage extends BaseElement {
 
   constructor() {
     super();
-    this.contentPath = 'Getting-Started.md'
   }
 
   render(): string {

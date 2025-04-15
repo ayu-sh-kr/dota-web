@@ -40,6 +40,7 @@ export class AiFormComponent extends BaseElement {
           type: 'USER',
         }, this);
         const message = await this.openApiService.chatCompletion(userMessage);
+        console.log(message);
         this.messageEvent.emit({
           message: message,
           type: 'SERVER',

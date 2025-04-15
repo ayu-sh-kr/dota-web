@@ -5,6 +5,14 @@ export default <Partial<Config>>{
   content: ["./src/**/*.{ts, js, html}", "./node_modules/@ayu-sh-kr/dota-ui/**/*.{html,ts}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "gradient-moving":
+          "linear-gradient(to right, #800080, #E1CD86, #BBCB92, #71C2EF, #3BFFFF, #DD7DDF, #E1CD86, #BBCB92, #71C2EF, #3BFFFF)",
+      },
+      backgroundSize: {
+        "200": "200% 100%",
+      },
+
       fontFamily: {
         helvetica: ["Helvetica", "Arial", "sans-serif"],
         dm: ["DM Sans", "sans-serif"],
@@ -27,6 +35,7 @@ export default <Partial<Config>>{
       animation: {
         tilt: "tilt 10s infinite linear",
         "border-spin": "border-spin 7s linear infinite",
+        "gradient-x": "gradientX 1s linear infinite",
       },
       keyframes: {
         tilt: {
@@ -40,6 +49,12 @@ export default <Partial<Config>>{
             transform: "rotate(-0.6deg)",
           },
         },
+        gradientX: {
+          "0%": { backgroundPositionX: "0%" },
+          "50%": { backgroundPositionX: "-50%" },
+          "100%": { backgroundPositionX: "-100%" },
+          
+        },
         "border-spin": {
           "100%": {
             transform: "rotate(-360deg)",
@@ -48,7 +63,5 @@ export default <Partial<Config>>{
       },
     },
   },
-  plugins: [
-      require('@tailwindcss/typography')
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };

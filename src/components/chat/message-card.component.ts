@@ -46,7 +46,7 @@ export class MessageCardComponent extends BaseElement {
     //   language=html
     return `
       <div class="flex items-center gap-2">
-        ${this.type==="SERVER" ?"<img src='https://static.thenounproject.com/png/415507-200.png' class='size-8 self-start' alt='server-message-dota-bot'/>":""}
+        ${this.type==="SERVER" ?"<img src='https://icon-library.com/images/bot-icon/bot-icon-29.jpg' class='size-8 self-start' alt='server-message-dota-bot'/>":""}
         <div class="prose-sm prose-slate dark:prose-invert h-fit rounded-md p-2  ${messageStyleConfig[this.type]}">
           ${this.escapeHtml(this.message)}
         </div>
@@ -56,6 +56,6 @@ export class MessageCardComponent extends BaseElement {
 }
 
 const messageStyleConfig = {
-  "USER": "bg-purple-400 dark:text-white dark:bg-purple-900",
+  "USER": "bg-purple-400 dark:text-white dark:bg-purple-900 text-gray-50",
   "SERVER": "bg-white dark:text-gray-300 dark:bg-slate-800 text-slate-700"
 }

@@ -2,7 +2,7 @@ import {BaseElement, Component} from "@ayu-sh-kr/dota-core/dist";
 import {Property,Number} from "@ayu-sh-kr/dota-core";
 
 @Component({
-  selector:"loader-component",
+  selector:"app-loader",
   shadow:false
 })
 export class LoaderComponent extends BaseElement{
@@ -20,7 +20,7 @@ export class LoaderComponent extends BaseElement{
   render(): string {
     // language=html
     return `
-        <img src="/images/animated-loader.svg" alt="dota-loader" class="size-${this.size??8}"/>
+      <img src="/images/animated-loader.svg" alt="dota-loader" class="size-${this.size ?? 8}"/>
     `;
   }
 

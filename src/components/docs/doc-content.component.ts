@@ -35,7 +35,7 @@ export class DocContentComponent extends BaseElement {
     // language=html
     return `
       <article class="prose prose-purple dark:prose-invert max-w-7xl mx-auto">
-        ${this.content}
+        ${this.content || ''}
       </article>
     `;
   }

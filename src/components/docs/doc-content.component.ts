@@ -1,8 +1,5 @@
 import {AfterInit, BaseElement, Component, Property, String} from "@ayu-sh-kr/dota-core";
 import {DocLoaderService} from "@dota/service/doc-loader.service.ts";
-import markdownit from 'markdown-it';
-import highlightjs from 'markdown-it-highlightjs';
-import 'highlight.js/styles/github-dark.css';
 import {WithLoading} from "@dota/utils/DecoratorUtils.ts";
 import {MarkdownService} from "@dota/service/markdown.service.ts";
 

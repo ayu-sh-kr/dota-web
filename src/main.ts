@@ -3,7 +3,7 @@ import './style.css'
 import {AppComponent} from "@dota/app.component.ts";
 import {RoutesService} from "@dota/service/routes.service.ts";
 import {bootstrap} from "@ayu-sh-kr/dota-core";
-import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage, LoaderPage} from "@dota/pages";
+import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage, LoaderSectionComponent} from "@dota/pages";
 import {
   ClientSectionComponent,
   CodeSectionComponent, DeviceSectionComponent,
@@ -30,9 +30,6 @@ bootstrap([
   // entry
   AppComponent,
 
-  //common component
-  LoaderComponent,
-
   // utility component
   HeaderComponent,
   NotificationComponent,
@@ -41,6 +38,8 @@ bootstrap([
   GithubButtonComponent,
   IconsComponent,
   AiButtonComponent,
+  LoaderComponent,
+  LoaderSectionComponent,
 
   // home-page components
   OfferComponent,
@@ -75,7 +74,6 @@ bootstrap([
   ErrorPage,
   BlogPage,
   ChatPage,
-  LoaderPage
 ])
 
 new RoutesService();

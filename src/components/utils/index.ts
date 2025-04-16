@@ -5,6 +5,7 @@ import {GithubButtonComponent} from "@dota/components/utils/buttons/github-butto
 import {DarkModeButtonComponent} from "@dota/components/utils/buttons/dark-mode-button.component.ts";
 import {FooterComponent} from "@dota/components/utils/footer.component.ts";
 import {AiButtonComponent} from "@dota/components/utils/buttons/ai-button.component.ts";
+import {LoaderComponent} from "@dota/components/common/loader.component.ts";
 
 export {
   HeaderComponent,
@@ -13,5 +14,6 @@ export {
   DarkModeButtonComponent,
   NotificationComponent,
   NotificationHolderComponent,
-  FooterComponent
+  FooterComponent,
+  LoaderComponent
 }

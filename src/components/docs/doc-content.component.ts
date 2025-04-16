@@ -3,6 +3,8 @@ import {DocLoaderService} from "@dota/service/doc-loader.service.ts";
 import markdownit from 'markdown-it';
 import highlightjs from 'markdown-it-highlightjs';
 import 'highlight.js/styles/github-dark.css';
+import {WithLoading} from "@dota/utils/DecoratorUtils.ts";
+import {MarkdownService} from "@dota/service/markdown.service.ts";
 
 @Component({
   selector: 'doc-content',
@@ -25,15 +27,10 @@ export class DocContentComponent extends BaseElement {
   }
 
   @AfterInit()
+  @WithLoading()
   async afterViewInit() {
-    const md = markdownit({
-      html: true,
-      linkify: true,
-      typographer: true,
-    }).use(highlightjs);
-
     const content = await this.docLoaderService.loadDoc(this.filePath.replace("/", ""));
-    this.content = md.render(content)
+    this.content = MarkdownService.renderMarkdown(content)
     this.updateHTML();
   }
 
@@ -41,7 +38,7 @@ export class DocContentComponent extends BaseElement {
     // language=html
     return `
       <article class="prose prose-purple dark:prose-invert max-w-7xl mx-auto">
-        ${this.content || 'Loading Docs'}
+        ${this.content}
       </article>
     `;
   }

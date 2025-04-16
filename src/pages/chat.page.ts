@@ -1,6 +1,7 @@
-import {BaseElement, BindEvent, Component} from "@ayu-sh-kr/dota-core";
+import {AfterInit, BaseElement, BindEvent, Component} from "@ayu-sh-kr/dota-core";
 import {OpenAIService} from "@dota/service/OpenAIService.ts";
 import {MessageBoxComponent} from "@dota/components/chat";
+import {LocalStorageService} from "@dota/service/local-storage.service.ts";
 
 @Component({
   selector: "chat-page",
@@ -15,11 +16,22 @@ export class ChatPage extends BaseElement {
   constructor() {
     super();
     this.openApiService = new OpenAIService("deepseek/deepseek-r1-distill-llama-8b")
+    this.messages = []
+  }
+
+  @AfterInit()
+  afterViewInit() {
+    this.messages = LocalStorageService.getList<MessageRecord>("message");
+    this.updateMessageBox();
   }
 
   @BindEvent({event: 'onMessageEvent', id: '#ai-form'})
   listenUserMessage(event: CustomEvent<MessageRecord>) {
-    this.messages.push(event.detail)
+    this.messages = LocalStorageService.pushToList<MessageRecord>("message", event.detail);
+    this.updateMessageBox();
+  }
+
+  private updateMessageBox() {
     const messageBox = this.querySelector<MessageBoxComponent>("#message-box");
     if (messageBox) {
       messageBox.messages = this.messages;

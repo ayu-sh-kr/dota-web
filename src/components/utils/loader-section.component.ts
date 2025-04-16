@@ -1,5 +1,4 @@
 import {BaseElement, Component} from "@ayu-sh-kr/dota-core/dist";
-import {LoaderComponent} from "@dota/components/utils/loader.component.ts";
 import {Boolean, Property} from "@ayu-sh-kr/dota-core";
 
 @Component({

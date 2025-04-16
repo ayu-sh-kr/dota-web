@@ -34,18 +34,14 @@ export class ChatPage extends BaseElement {
       <main id="chat-main" class="flex-1 h-full">
         <div class="container mx-auto px-4 py-6 max-w-3xl">
           <div id="welcome-message" class="text-center mb-8">
-            <h2 class="text-2xl text-neutral-800 dark:text-neutral-200 mb-3">Welcome to AI Chat</h2>
-            <p class="text-neutral-600">Convert your Ideas into Code with our Dota AI</p>
+            <h2 class="text-2xl md:text-4xl font-semibold text-neutral-800 dark:text-neutral-200 mb-3">Welcome to <span class="text-purple-500">Dota AI</span> Chat</h2>
+            <p class="text-neutral-600 text-lg font-medium">Convert your Ideas into Code with our Dota AI </p>
           </div>
           
           <message-box id="message-box"></message-box>
 
           <div id="chat-messages" class="space-y-6 mt-4">
             <div class="flex items-start space-x-4 relative group">
-              <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/15917/15917116.png" alt="dota-bot"
-                     class="size-5 invert"/>
-              </div>
               <ai-form id="ai-form" is-loading="${this.isLoading}" class="w-full"></ai-form>
             </div>
         </div>

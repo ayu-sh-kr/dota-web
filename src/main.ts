@@ -14,6 +14,7 @@ import {
 } from "@dota/components/home";
 import {IconsComponent} from "@ayu-sh-kr/dota-ui/dist";
 import {
+  AiButtonComponent,
   DarkModeButtonComponent, FooterComponent,
   GithubButtonComponent,
   NotificationComponent,
@@ -35,6 +36,7 @@ bootstrap([
   DarkModeButtonComponent,
   GithubButtonComponent,
   IconsComponent,
+  AiButtonComponent,
 
   // home-page components
   OfferComponent,

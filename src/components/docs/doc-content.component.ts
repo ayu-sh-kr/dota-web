@@ -29,6 +29,7 @@ export class DocContentComponent extends BaseElement {
     const content = await this.docLoaderService.loadDoc(this.filePath.replace("/", ""));
     this.content = MarkdownService.renderMarkdown(content)
     this.updateHTML();
+    window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
   render(): string {

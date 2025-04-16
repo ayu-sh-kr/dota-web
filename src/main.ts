@@ -18,7 +18,7 @@ import {
   DarkModeButtonComponent, FooterComponent,
   GithubButtonComponent,
   NotificationComponent,
-  NotificationHolderComponent
+  NotificationHolderComponent, ScrollBottomButtonComponent
 } from "@dota/components/utils";
 import {LoaderComponent} from "@dota/components/utils"
 import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
@@ -40,6 +40,7 @@ bootstrap([
   AiButtonComponent,
   LoaderComponent,
   LoaderSectionComponent,
+  ScrollBottomButtonComponent,
 
   // home-page components
   OfferComponent,

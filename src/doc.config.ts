@@ -21,7 +21,7 @@ export const docConfigs: DocConfig[] = [
   {
     category: 'Concepts',
     paths: [
-     'Decorators.md',
+     'Core.md', 'Decorators.md',
     ]
   }
 ]

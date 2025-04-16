@@ -3,5 +3,6 @@ import {ErrorPage} from "@dota/pages/error.page.ts";
 import {HomePage} from "@dota/pages/home.page.ts";
 import {BlogPage} from "@dota/pages/blog.page.ts";
 import {ChatPage} from "@dota/pages/chat.page.ts";
+import {LoaderPage} from "@dota/pages/loader.page.ts";
 
-export {DocPage, ErrorPage, HomePage, BlogPage, ChatPage}
+export {DocPage, ErrorPage, HomePage, BlogPage, ChatPage, LoaderPage}

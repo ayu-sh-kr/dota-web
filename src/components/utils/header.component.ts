@@ -48,13 +48,7 @@ export class HeaderComponent extends BaseElement {
                     <div class="flex items-center px-5 gap-x-3 justify-end">
                         <github-button></github-button>
                         <dark-mode-button></dark-mode-button>
-                     <div class="shadow-md  dark:shadow-white rounded-lg px-3 py-2">
-                        <div class="bg-gradient-moving bg-clip-text text-transparent bg-[length:200%] animate-gradient-x">
-                        <a href="/chat">
-                            Ai
-                        </a>
-                         </div
-                     </div>
+                        <ai-button></ai-button>
                     </div>
                 </div>
             </header>

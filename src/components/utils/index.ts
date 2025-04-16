@@ -7,6 +7,7 @@ import {FooterComponent} from "@dota/components/utils/footer.component.ts";
 import {AiButtonComponent} from "@dota/components/utils/buttons/ai-button.component.ts";
 import {LoaderComponent} from "@dota/components/utils/loader.component.ts";
 import {LoaderSectionComponent} from "@dota/components/utils/loader-section.component.ts";
+import {ScrollBottomButtonComponent} from "@dota/components/utils/buttons/scroll-bottom-button.component.ts";
 
 export {
   HeaderComponent,
@@ -17,5 +18,6 @@ export {
   NotificationHolderComponent,
   FooterComponent,
   LoaderComponent,
-  LoaderSectionComponent
+  LoaderSectionComponent,
+  ScrollBottomButtonComponent,
 }

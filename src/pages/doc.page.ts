@@ -17,7 +17,7 @@ export class DocPage extends BaseElement {
       <app-header></app-header>
       <doc-section></doc-section>
       <footer-component></footer-component>
-      <notification-holder id="dota-notification" position="bottom-right"></notification-holder>
+      <scroll-bottom-button></scroll-bottom-button>
     `;
   }
 }

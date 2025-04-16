@@ -17,5 +17,11 @@ export const docConfigs: DocConfig[] = [
       'Component-Registration.md', 'Component-Definition.md',
       'Property-Binding.md', 'Event-Binding.md', 'Event-Emitter.md', 'Reactivity.md',
     ]
+  },
+  {
+    category: 'Concepts',
+    paths: [
+     'Decorators.md',
+    ]
   }
 ]

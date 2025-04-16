@@ -27,9 +27,9 @@ export class FooterComponent extends BaseElement{
                             <h3 class="font-semibold text-gray-900 dark:text-white">Overview</h3>
                             <ul class="mt-2 space-y-2 dark:text-white">
                                 <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Introduction</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Getting Started</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Component API</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Guides</a></li>
+                                <li><a href="/docs/Getting-Started.md" class="text-gray-600 dark:text-gray-300 hover:underline">Getting Started</a></li>
+                                <li><a href="/docs/Component-Registration.md" class="text-gray-600 dark:text-gray-300 hover:underline">Component API</a></li>
+                                <li><a href="/docs/Guides.md" class="text-gray-600 dark:text-gray-300 hover:underline">Guides</a></li>
                                 <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">FAQ</a></li>
                             </ul>
                         </div>

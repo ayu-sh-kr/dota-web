@@ -93,8 +93,8 @@ class NotificationComponent extends BaseElement {
                             <dota-icon name="${this.icon ?? 'material-symbols-light:notifications-active-rounded'}" size="lg" color="${this.color}" variant="ghost"></dota-icon>
                         </span>
                         <div>
-                            <p class="text-sm text-gray-600 dark:text-gray-300 font-medium">${this.title}</p>
-                            <div class="text-gray-900 dark:text-gray-100">${this.message}</div>
+                            <p class="text-xs text-gray-600 dark:text-gray-300 font-semibold">${this.title}</p>
+                            <div class="text-sm text-gray-800 dark:text-gray-200">${this.message}</div>
                         </div>
                     </div>
                     <span id="close" class="focus:scale-95 font-semibold cursor-pointer px-3">

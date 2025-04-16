@@ -15,6 +15,7 @@ export default <Partial<Config>>{
 
       fontFamily: {
         helvetica: ["Helvetica", "Arial", "sans-serif"],
+        montserrat:"Montserrat",
         dm: ["DM Sans", "sans-serif"],
         akstic: ["Akstic", "serif"],
         sans: ["Inter var", "sans-serif"],

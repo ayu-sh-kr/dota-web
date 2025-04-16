@@ -7,6 +7,13 @@ import {MarkdownService} from "@dota/service/markdown.service.ts";
   shadow: false
 })
 export class MessageCardComponent extends BaseElement {
+
+  @Property({
+    name: 'key',
+    type: String,
+  })
+  key!: string;
+
   @Property({
     type: String,
     name: "message-type"
@@ -31,6 +38,7 @@ export class MessageCardComponent extends BaseElement {
   }
 
   escapeHtml(html: string): string {
+    if(!html) return "";
     return MarkdownService.renderMarkdown(html);
   }
 

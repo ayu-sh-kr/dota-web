@@ -33,7 +33,7 @@ export class MessageBoxComponent extends BaseElement {
   render() {
     // language=html
     return `
-      <section class="h-[60vh] overflow-y-auto custom-scrollbar p-4 bg-slate-100 dark:bg-slate-900 rounded-lg flex flex-col gap-4 ">
+      <section class="h-[55vh] shadow-md dark:shadow-[0px_0px_12px_rgba(147,51,234,0.8)] overflow-y-auto custom-scrollbar p-4 bg-slate-100 dark:bg-slate-900 rounded-lg flex flex-col gap-4 ">
         ${this.messages.map(({type, message}, index) => {
           // language=html
           return `
@@ -45,6 +45,8 @@ export class MessageBoxComponent extends BaseElement {
                 </message-card>
             `
         }).join(" ")}
+        ${this.messages.length===0?
+      "<div class='h-full flex items-center justify-center'> <p class='text-4xl font-medium text-center !leading-[3rem] dark:text-gray-400 !font-montserrat'>Explore the true power of Our Dota library with Our <span class='text-purple-500 underline underline-offset-4'>Dota AI</span></p> </div>":""}
       </section>
     `
   }

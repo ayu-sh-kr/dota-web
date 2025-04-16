@@ -16,9 +16,9 @@ export class OpenAIService {
       })
       .handler((response) => {
         if(!response.ok) {
-          notificationService.warning({
-            title: "Error",
-            message: `Error: ${response.status} ${response.statusText}`,
+          notificationService.danger({
+            title: "API Error",
+            message: `Failed to fetch response from API.`,
             duration: 5000,
           });
           return;

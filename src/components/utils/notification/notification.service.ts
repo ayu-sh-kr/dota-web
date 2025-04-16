@@ -59,7 +59,6 @@ class NotificationService {
     }
 
 
-
     private propagateNotification(notification: NotificationComponent) {
         document.querySelector<NotificationHolderComponent>('#dota-notification')!
             .propagate(notification);

@@ -14,6 +14,7 @@ import {
 } from "@dota/components/home";
 import {IconsComponent} from "@ayu-sh-kr/dota-ui/dist";
 import {
+  AiButtonComponent,
   DarkModeButtonComponent, FooterComponent,
   GithubButtonComponent,
   NotificationComponent,
@@ -21,6 +22,7 @@ import {
 } from "@dota/components/utils";
 import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
 import {CounterComponent} from "@dota/components/example/CounterComponent.ts";
+import {AiFormComponent, MessageBoxComponent, MessageCardComponent} from "@dota/components/chat";
 
 
 bootstrap([
@@ -34,6 +36,7 @@ bootstrap([
   DarkModeButtonComponent,
   GithubButtonComponent,
   IconsComponent,
+  AiButtonComponent,
 
   // home-page components
   OfferComponent,
@@ -55,6 +58,12 @@ bootstrap([
 
   // example components
   CounterComponent,
+
+  // chat components
+  MessageCardComponent,
+  MessageBoxComponent,
+  AiFormComponent,
+
 
   // pages
   HomePage,

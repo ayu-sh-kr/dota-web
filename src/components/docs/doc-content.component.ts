@@ -26,6 +26,7 @@ export class DocContentComponent extends BaseElement {
   @AfterInit()
   @WithLoading()
   async afterViewInit() {
+    const timer = await new Promise(resolve => setTimeout(resolve, 5000));
     const content = await this.docLoaderService.loadDoc(this.filePath.replace("/", ""));
     this.content = MarkdownService.renderMarkdown(content)
     this.updateHTML();

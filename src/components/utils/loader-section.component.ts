@@ -20,7 +20,7 @@ export class LoaderSectionComponent extends BaseElement{
   render(): string {
     //language=html
     return `
-      <section class="${this.isLoading ? 'fixed' : 'hidden'} z-50 top-0 left-0 h-screen bg-black/50 w-full flex items-center justify-center">
+      <section class="${this.isLoading ? 'fixed' : 'hidden'} z-50 top-0 left-0 h-full bg-black/10 w-full flex items-center justify-center">
         <app-loader></app-loader>
       </section>
     `;

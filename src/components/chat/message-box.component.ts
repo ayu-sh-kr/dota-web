@@ -33,7 +33,7 @@ export class MessageBoxComponent extends BaseElement {
   render() {
     // language=html
     return `
-      <section class="h-[55vh] shadow-md dark:shadow-[0px_0px_12px_rgba(147,51,234,0.8)] overflow-y-auto custom-scrollbar p-4 bg-slate-100 dark:bg-slate-900 rounded-lg flex flex-col gap-4 ">
+      <section class="h-[55vh] w-full shadow-md dark:shadow-[0px_0px_12px_rgba(147,51,234,0.8)] overflow-y-auto custom-scrollbar p-4 bg-slate-100 dark:bg-slate-900 rounded-lg flex flex-col gap-4 ">
         ${this.messages.map(({type, message}, index) => {
           // language=html
           return `

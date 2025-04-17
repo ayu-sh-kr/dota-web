@@ -1,6 +1,5 @@
 import {BaseElement, Component} from "@ayu-sh-kr/dota-core/dist";
 import {HostListener} from "@ayu-sh-kr/dota-core";
-import {NavigationRouterService} from "@dota/service/routes.service.ts";
 import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
 
 

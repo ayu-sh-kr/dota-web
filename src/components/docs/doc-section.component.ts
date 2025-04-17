@@ -1,6 +1,5 @@
 import { BaseElement, Component, Property, String } from "@ayu-sh-kr/dota-core";
 import { docConfigs } from "@dota/doc.config.ts";
-import { NavigationRouterService } from "@dota/service/routes.service.ts";
 import { RouteUtils } from "@dota/utils/RouteUtils.ts";
 import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
 

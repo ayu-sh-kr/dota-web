@@ -1,5 +1,4 @@
 import {RestClient} from "@ayu-sh-kr/dota-rest";
-import {NavigationRouterService} from "@dota/service/routes.service.ts";
 import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
 
 

@@ -14,6 +14,9 @@ importers:
       '@ayu-sh-kr/dota-rest':
         specifier: 1.1.3
         version: 1.1.3
+      '@ayu-sh-kr/dota-router':
+        specifier: ^0.0.2
+        version: 0.0.2
       '@ayu-sh-kr/dota-ui':
         specifier: ^0.0.4
         version: 0.0.4
@@ -69,6 +72,9 @@ packages:
 
   '@ayu-sh-kr/dota-rest@1.1.3':
     resolution: {integrity: sha512-WpPgXX7fR4QH9l2vwi4xJxhdbH7x3qUhv1x06hRM4km5DpWmmhwY7IMSoeuCCQYvBPF37uZeFXAgxrruBZ1cUg==}
+
+  '@ayu-sh-kr/dota-router@0.0.2':
+    resolution: {integrity: sha512-u54uAUJMvESCZVD4PjhycLwNsNsf0WrjWMKdkxeh2LwF7BXutRFNiUVW7RhsN6fINLFDoheSCZnRcfIy+bJeUg==}
 
   '@ayu-sh-kr/dota-ui@0.0.4':
     resolution: {integrity: sha512-pwpFXjl3iyQj0od+J+R7HhRuDfSQ6GW6VT6COLm3QdxaYNKQA6FahqsiQeLHQwhGdIwQIWMoKzoG5x4Qp4dJHQ==}
@@ -946,6 +952,11 @@ snapshots:
       reflect-metadata: 0.2.2
 
   '@ayu-sh-kr/dota-rest@1.1.3': {}
+
+  '@ayu-sh-kr/dota-router@0.0.2':
+    dependencies:
+      '@ayu-sh-kr/dota-core': 1.6.14
+      reflect-metadata: 0.2.2
 
   '@ayu-sh-kr/dota-ui@0.0.4':
     dependencies:

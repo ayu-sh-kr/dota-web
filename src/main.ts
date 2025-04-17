@@ -1,7 +1,6 @@
 import './style.css'
 
 import {AppComponent} from "@dota/app.component.ts";
-import {NavigationRouterService} from "@dota/service/routes.service.ts";
 import {bootstrap} from "@ayu-sh-kr/dota-core";
 import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
 import {
@@ -24,6 +23,8 @@ import {LoaderComponent} from "@dota/components/utils"
 import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
 import {CounterComponent} from "@dota/components/example/CounterComponent.ts";
 import {AiFormComponent, MessageBoxComponent, MessageCardComponent} from "@dota/components/chat";
+import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
+import {routesConfig} from "@dota/routes.config.ts";
 import {ResourcePage} from "@dota/pages/resource.page.ts";
 import {ResourceComponent} from "@dota/components/resource";
 
@@ -84,7 +85,17 @@ bootstrap([
   ResourcePage
 ])
 
-new NavigationRouterService();
+new DomNavigationRouter(
+  routesConfig,
+  {
+    path: '/error',
+    component: ErrorPage,
+  },
+  {
+    path: '/',
+    component: HomePage,
+  }
+)
 
 
 declare global {

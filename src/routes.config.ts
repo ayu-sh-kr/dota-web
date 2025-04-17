@@ -1,6 +1,8 @@
-// import 'reflect-metadata';
-import {BlogPage, ChatPage, DocPage, HomePage, ResourcePage} from "@dota/pages";
+import 'reflect-metadata';
+import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage, ResourcePage} from "@dota/pages";
 import {AppComponent} from "@dota/app.component.ts";
+import {BaseElement} from "@ayu-sh-kr/dota-core/dist";
+import {RouteConfig} from "@ayu-sh-kr/dota-router";
 
 export const routes = {
   '/': HomePage,
@@ -10,7 +12,7 @@ export const routes = {
   '/resources':ResourcePage,
 } as { [key: string]: Object }
 
-export type Route<T> = {
+export type Route<T extends HTMLElement> = {
   path: string,
   component: T | (new (...args: any[]) => T),
   default?: boolean,
@@ -18,20 +20,27 @@ export type Route<T> = {
   navigate?: (path: string) => void,
 }
 
-export const routesConfig: Route<Object>[] = [
+export const routesConfig: RouteConfig<BaseElement>[] = [
   {
     path: '/',
     component: HomePage,
     default: true,
   },
   {
-    path:'/resource',
+    path:'/resources',
     component:ResourcePage,
   },
 
   {
     path: '/docs',
     component: DocPage,
+    render: (path: string) => {
+      if (path.includes('/docs')) {
+        // Render the docs page with the specified document
+        document.querySelector<AppComponent>('app-root')!.innerHTML = `<doc-page></doc-page>`;
+        return;
+      }
+    },
     children: [
       {
         path: '/Getting-Started.md',
@@ -82,14 +91,7 @@ export const routesConfig: Route<Object>[] = [
         path: '/Decorators.md',
         component: DocPage,
       },
-    ],
-    navigate: (path: string) => {
-      if (path.includes('/docs')) {
-        // Render the docs page with the specified document
-        document.querySelector<AppComponent>('app-root')!.innerHTML = `<doc-page></doc-page>`;
-        return;
-      }
-    }
+    ]
   },
 
   {
@@ -100,5 +102,10 @@ export const routesConfig: Route<Object>[] = [
   {
     path: '/chat',
     component: ChatPage
+  },
+
+  {
+    path: '/error',
+    component: ErrorPage,
   }
 ];

@@ -27,7 +27,7 @@ export const routesConfig: RouteConfig<BaseElement>[] = [
     default: true,
   },
   {
-    path:'/resource',
+    path:'/resources',
     component:ResourcePage,
   },
 

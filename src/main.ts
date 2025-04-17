@@ -3,7 +3,7 @@ import './style.css'
 import {AppComponent} from "@dota/app.component.ts";
 import {NavigationRouterService} from "@dota/service/routes.service.ts";
 import {bootstrap} from "@ayu-sh-kr/dota-core";
-import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage, LoaderSectionComponent} from "@dota/pages";
+import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
 import {
   ClientSectionComponent,
   CodeSectionComponent, DeviceSectionComponent,
@@ -16,7 +16,7 @@ import {IconsComponent} from "@ayu-sh-kr/dota-ui/dist";
 import {
   AiButtonComponent,
   DarkModeButtonComponent, FooterComponent,
-  GithubButtonComponent,
+  GithubButtonComponent, LoaderSectionComponent,
   NotificationComponent,
   NotificationHolderComponent, ScrollBottomButtonComponent
 } from "@dota/components/utils";
@@ -24,6 +24,8 @@ import {LoaderComponent} from "@dota/components/utils"
 import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
 import {CounterComponent} from "@dota/components/example/CounterComponent.ts";
 import {AiFormComponent, MessageBoxComponent, MessageCardComponent} from "@dota/components/chat";
+import {ResourcePage} from "@dota/pages/resource.page.ts";
+import {ResourceComponent} from "@dota/components/resource";
 
 
 bootstrap([
@@ -60,6 +62,10 @@ bootstrap([
   DocContentComponent,
   DocSectionComponent,
 
+
+  // resource-page components
+  ResourceComponent,
+
   // example components
   CounterComponent,
 
@@ -75,6 +81,7 @@ bootstrap([
   ErrorPage,
   BlogPage,
   ChatPage,
+  ResourcePage
 ])
 
 new NavigationRouterService();

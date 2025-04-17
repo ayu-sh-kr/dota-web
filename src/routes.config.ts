@@ -1,12 +1,13 @@
-import 'reflect-metadata';
-import {BlogPage, ChatPage, DocPage, HomePage} from "@dota/pages";
+// import 'reflect-metadata';
+import {BlogPage, ChatPage, DocPage, HomePage, ResourcePage} from "@dota/pages";
 import {AppComponent} from "@dota/app.component.ts";
 
 export const routes = {
   '/': HomePage,
   '/docs': DocPage,
   '/blogs': BlogPage,
-  '/chat': ChatPage
+  '/chat': ChatPage,
+  '/resources':ResourcePage,
 } as { [key: string]: Object }
 
 export type Route<T> = {
@@ -22,6 +23,10 @@ export const routesConfig: Route<Object>[] = [
     path: '/',
     component: HomePage,
     default: true,
+  },
+  {
+    path:'/resource',
+    component:ResourcePage,
   },
 
   {

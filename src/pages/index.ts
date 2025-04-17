@@ -3,6 +3,6 @@ import {ErrorPage} from "@dota/pages/error.page.ts";
 import {HomePage} from "@dota/pages/home.page.ts";
 import {BlogPage} from "@dota/pages/blog.page.ts";
 import {ChatPage} from "@dota/pages/chat.page.ts";
-import {LoaderSectionComponent} from "@dota/components/utils/loader-section.component.ts";
+import {ResourcePage} from "@dota/pages/resource.page.ts";
 
-export {DocPage, ErrorPage, HomePage, BlogPage, ChatPage, LoaderSectionComponent}
+export {DocPage, ErrorPage, HomePage, BlogPage, ChatPage,ResourcePage}

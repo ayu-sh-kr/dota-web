@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
+import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage, ResourcePage} from "@dota/pages";
 import {AppComponent} from "@dota/app.component.ts";
 import {BaseElement} from "@ayu-sh-kr/dota-core/dist";
 import {RouteConfig} from "@ayu-sh-kr/dota-router";
@@ -8,7 +8,8 @@ export const routes = {
   '/': HomePage,
   '/docs': DocPage,
   '/blogs': BlogPage,
-  '/chat': ChatPage
+  '/chat': ChatPage,
+  '/resources':ResourcePage,
 } as { [key: string]: Object }
 
 export type Route<T extends HTMLElement> = {
@@ -24,6 +25,10 @@ export const routesConfig: RouteConfig<BaseElement>[] = [
     path: '/',
     component: HomePage,
     default: true,
+  },
+  {
+    path:'/resource',
+    component:ResourcePage,
   },
 
   {

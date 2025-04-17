@@ -13,7 +13,7 @@ export class ErrorPage extends BaseElement {
     message!: string;
 
     @Property({name: 'status', type: String})
-    status!: number
+    status: number = 404
 
     constructor() {
         super();
@@ -22,11 +22,12 @@ export class ErrorPage extends BaseElement {
     render(): string {
         return HTML`
         <div class="flex flex-col justify-center items-center h-screen font-dm">
-            <div class="font-semibold text-6xl text-gray-900 dark:text-gray-100">Error <span class="text-red-500">${this.status}</span></div>
+            <div class="font-semibold text-6xl text-gray-900 dark:text-gray-100">Error <span class="text-red-500">${this.status || 404}</span></div>
             <div class="text-center font-light text-lg text-gray-900">
                 <span class="font-semibold text-sm">Path: </span> ${this.path},
                 <span class="font-semibold text-sm">Message: </span> ${this.message}
             </div>
+            <a href="/" class="px-3 py-1 text-center rounded-md no-underline bg-purple-500 text-gray-100">Home</a>
         </div>
         `
     }

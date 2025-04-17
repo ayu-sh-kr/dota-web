@@ -26,6 +26,9 @@ importers:
       markdown-it-highlightjs:
         specifier: ^4.2.0
         version: 4.2.0
+      reflect-metadata:
+        specifier: ^0.2.2
+        version: 0.2.2
     devDependencies:
       '@tailwindcss/typography':
         specifier: ^0.5.16

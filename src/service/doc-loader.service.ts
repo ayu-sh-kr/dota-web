@@ -1,5 +1,5 @@
 import {RestClient} from "@ayu-sh-kr/dota-rest";
-import {RoutesService} from "@dota/service/routes.service.ts";
+import {NavigationRouterService} from "@dota/service/routes.service.ts";
 
 
 export class DocLoaderService {
@@ -12,7 +12,7 @@ export class DocLoaderService {
       .handler((response) => {
         console.log(response)
         if(!response.ok) {
-          RoutesService.route('/error')
+          NavigationRouterService.route('/error')
         }
       })
       .build();

@@ -1,7 +1,9 @@
 import {routes} from "@dota/routes.config.ts";
 import {AppComponent} from "@dota/app.component.ts";
+import {RouterService} from "../../app";
+import {ComponentConfig} from "@ayu-sh-kr/dota-core";
 
-export class RoutesService {
+export class NavigationRouterService implements RouterService {
 
   constructor() {
     this.init()
@@ -48,7 +50,16 @@ export class RoutesService {
       return;
     }
 
-    document.querySelector<AppComponent>('app-root')!.innerHTML = routes[path] || `<app-error path="${path}" message="Page Not Found" status=404 />`;
+    const route = routes[path];
+    if (route && Reflect.hasOwnMetadata('Component', route)) {
+      const config: ComponentConfig = Reflect.getOwnMetadata('Component', route);
+      const appRoot = document.querySelector<AppComponent>('app-root');
+      if (appRoot) {
+        appRoot.innerHTML = `<${config.selector}></${config.selector}>`;
+      }
+    } else {
+      document.querySelector<AppComponent>('app-root')!.innerHTML = `<app-error path="${path}" message="Page Not Found" status=404 />`;
+    }
   }
 
   static route(path: string) {
@@ -63,4 +74,5 @@ export class RoutesService {
     // Trigger navigation using the Navigation API
     window.navigation.navigate(navigationDestination.url);
   }
+
 }

@@ -2,6 +2,7 @@ import {routes} from "@dota/routes.config.ts";
 import {AppComponent} from "@dota/app.component.ts";
 import {RouterService} from "../../app";
 import {ComponentConfig} from "@ayu-sh-kr/dota-core";
+import 'reflect-metadata';
 
 export class NavigationRouterService implements RouterService {
 

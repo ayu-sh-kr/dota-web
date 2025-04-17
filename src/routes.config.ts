@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
 import {AppComponent} from "@dota/app.component.ts";
 import {BaseElement} from "@ayu-sh-kr/dota-core/dist";
-import {RouteConfig} from "@ayu-sh-kr/dota-router/dist/types/Types";
+import {RouteConfig} from "@ayu-sh-kr/dota-router";
 
 export const routes = {
   '/': HomePage,

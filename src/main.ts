@@ -1,7 +1,7 @@
 import './style.css'
 
 import {AppComponent} from "@dota/app.component.ts";
-import {RoutesService} from "@dota/service/routes.service.ts";
+import {NavigationRouterService} from "@dota/service/routes.service.ts";
 import {bootstrap} from "@ayu-sh-kr/dota-core";
 import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage, LoaderSectionComponent} from "@dota/pages";
 import {
@@ -77,7 +77,7 @@ bootstrap([
   ChatPage,
 ])
 
-new RoutesService();
+new NavigationRouterService();
 
 
 declare global {

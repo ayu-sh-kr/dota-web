@@ -1,5 +1,5 @@
 import { BaseElement, Component, HostListener, Property, String } from "@ayu-sh-kr/dota-core";
-import { RoutesService } from "@dota/service/routes.service.ts";
+import { NavigationRouterService } from "@dota/service/routes.service.ts";
 import { RouteUtils } from "@dota/utils/RouteUtils.ts";
 
 @Component({
@@ -19,7 +19,7 @@ export class DocPathComponent extends BaseElement {
 
   @HostListener({ event: "click" })
   clickListener() {
-    RoutesService.route(`/docs/${this.filePath}`);
+    NavigationRouterService.route(`/docs/${this.filePath}`);
   }
 
   render(): string {

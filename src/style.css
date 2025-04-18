@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
     --animation-duration: 5000ms;
 }
@@ -85,6 +84,9 @@
         scrollbar-width: none; /* Firefox */
     }
 
+    code {
+        @apply custom-scrollbar
+    }
 
 }
 

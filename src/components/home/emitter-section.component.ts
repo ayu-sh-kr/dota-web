@@ -1,4 +1,4 @@
-import {AfterInit, BaseElement, Component, Property, String} from "@ayu-sh-kr/dota-core";
+import {BaseElement, Component} from "@ayu-sh-kr/dota-core";
 
 @Component({
   selector: "emitter-section",
@@ -8,11 +8,6 @@ export class EmitterSectionComponent extends BaseElement {
 
   constructor() {
     super();
-  }
-
-  @AfterInit()
-  afterViewInit() {
-    // Initialize component after it's added to the DOM
   }
 
   render() {
@@ -27,7 +22,8 @@ export class EmitterSectionComponent extends BaseElement {
             <h4 class="text-gray-700 dark:text-gray-300 font-semibold">Event Emitter</h4>
             <h2 class="ld:text-5xl md:text-4xl text-3xl font-extrabold tracking-wide text-gray-950 dark:text-gray-100">Custom Event Support.</h2>
             <p class="text-gray-600 dark:text-gray-400 font-light lg:text-2xl md:text-xl text-lg">
-              Event Emitters <span class="text-purple-500 font-semibold italic">@Emitter</span> are a core part of Dota-Core and are used to handle events in a decoupled way. They allow you to emit events, making it easy to emit custom events and listen for them in different parts of your code.
+              Event Emitters <span class="text-purple-500 font-semibold italic">@Emitter</span> are a core part of Dota-Core and are used to handle events in a decoupled way. 
+              They allow you to emit events, making it easy to emit custom events and listen for them in different parts of your code.
             </p>
           </div>
         </div>

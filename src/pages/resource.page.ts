@@ -19,7 +19,8 @@ export class ResourcePage extends BaseElement {
     // language=html
     return `
       <app-header></app-header>
-      <resource-component></resource-component>
+      <resource-section></resource-section>
+      <footer-component></footer-component>
 `
   }
 }

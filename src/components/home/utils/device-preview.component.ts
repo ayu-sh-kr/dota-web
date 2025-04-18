@@ -49,3 +49,10 @@ export class DevicePreviewComponent extends BaseElement {
     `
   }
 }
+
+export const FrameworkStyleConfig = {
+  react: "framework-logo hover:drop-shadow-[0px_10px_15px_rgba(34,211,238,0.8)]",
+  angular: "framework-logo hover:drop-shadow-[0px_10px_15px_rgba(220,38,38,0.8)]",
+  vue: "framework-logo hover:drop-shadow-[0px_10px_15px_rgba(22,163,74,0.8)]",
+  solid: "framework-logo hover:drop-shadow-[0px_10px_15px_rgba(147,51,234,0.8)]",
+}

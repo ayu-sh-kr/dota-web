@@ -24,6 +24,12 @@ export class DevicePreviewComponent extends BaseElement {
   })
   color!: string;
 
+  @Property({
+    name: 'shadow-color',
+    type: String
+  })
+  shadowColor!: string;
+
   constructor() {
     super();
   }
@@ -37,7 +43,7 @@ export class DevicePreviewComponent extends BaseElement {
     // language=html
     return `
       <div class="flex flex-col justify-center items-center gap-y-3">
-        <img src="${this.image}" alt="dota-react" class="framework-logo hover:drop-shadow-[0px_10px_15px_rgba(34,211,238,0.8)]"/>
+        <img src="${this.image}" alt="dota-react" class="${this.shadowColor}"/>
         <dota-button color="${this.color}" variant="soft" round="md">${this.label}</dota-button>
       </div>
     `

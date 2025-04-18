@@ -1,4 +1,4 @@
-import {AfterInit, BaseElement, Component, Property, String} from "@ayu-sh-kr/dota-core";
+import { BaseElement, Component, Emitter, EventEmitter, HostListener, Property, String} from "@ayu-sh-kr/dota-core";
 
 @Component({
   selector: "resource-path",
@@ -6,18 +6,28 @@ import {AfterInit, BaseElement, Component, Property, String} from "@ayu-sh-kr/do
 })
 export class ResourcePathComponent extends BaseElement {
 
-  constructor() {
-    super();
-  }
   @Property({
     name:"title",
     type:String
   })
   title!:string
 
-  @AfterInit()
-  afterViewInit() {
-    // Initialize component after it's added to the DOM
+  @Property({
+    name:"path",
+    type:String
+  })
+  path!:string
+
+  @Emitter()
+  pathChange!: EventEmitter<string>
+
+  constructor() {
+    super();
+  }
+
+  @HostListener({event:"click"})
+  hostClickListener() {
+    this.pathChange.emit(this.path);
   }
 
   render() {

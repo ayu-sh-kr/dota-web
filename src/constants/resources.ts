@@ -1,24 +1,26 @@
-export const resources   = [
+export const resources: Resource[] = [
   {
-    title:"Dota Ecosystem",
-    path:""
-  },
-  {
-    title:"Design Systems",
-    path:""
-  },{
-    title:"UI libraries",
-    path:""
-  },{
-    title:"Component built with Dota",
-    path:""
+    title: "Dota Ecosystem",
+    path: "Dota-Ecosystem.md"
   },
 
   {
-    title:"Plugins",
-    path:""
-  },{
-    title:"Starter Templates",
-    path:""
+    title: "Design Systems",
+    path: "Design-Systems.md"
   },
-]
+
+  {
+    title: "UI libraries",
+    path: "UI-Libraries.md"
+  },
+
+  {
+    title: "Starter Templates",
+    path: "Starter-Templates.md"
+  },
+];
+
+export type Resource = {
+  title: string;
+  path: string;
+}

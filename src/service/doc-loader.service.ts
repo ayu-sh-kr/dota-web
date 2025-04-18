@@ -1,5 +1,6 @@
 import {RestClient} from "@ayu-sh-kr/dota-rest";
 import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
+import {WithLoading} from "@dota/utils/DecoratorUtils.ts";
 
 
 export class DocLoaderService {
@@ -27,6 +28,7 @@ export class DocLoaderService {
     return response.text();
   }
 
+  @WithLoading()
   async loadResource(path: string): Promise<string> {
     const response = await this.restClient.get()
       .uri(`/materials/${path}`)

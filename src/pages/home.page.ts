@@ -12,7 +12,7 @@ export class HomePage extends BaseElement {
 
     render(): string {
         return HTML`
-           <app-offer></app-offer>
+           <app-offer visible="true"></app-offer>
            <app-header></app-header>
            <app-hero></app-hero>
            <app-feature></app-feature>

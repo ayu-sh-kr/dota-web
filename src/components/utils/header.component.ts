@@ -1,4 +1,4 @@
-import { BaseElement, Component, HTML } from "@ayu-sh-kr/dota-core";
+import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core";
 
 @Component({
   selector: "app-header",
@@ -61,9 +61,3 @@ export interface Link {
   url: string;
 }
 
-export function toggleDark() {
-  const html = document.getElementsByTagName("html");
-  const value = document.documentElement.classList.toggle("dark");
-  document.documentElement.classList.toggle("bg-slate-950");
-  return value;
-}

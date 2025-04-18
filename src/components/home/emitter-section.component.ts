@@ -20,7 +20,7 @@ export class EmitterSectionComponent extends BaseElement {
     return `
       <section class="font-dm mx-auto max-w-7xl px-3 py-20">
         <div class="grid md:grid-cols-2 gap-x-20 gap-y-10 place-items-center justify-items-center">
-          <img src="/images/code-snippet-4.png" alt="dota-reactive"
+          <img src="/images/code-snippet-4.jpg" alt="dota-reactive"
                class="rounded-lg  min-w-[360px] h-full max-h-[90%] order-2 lg:order-1"
           />
           <div class="space-y-5 order-1 lg:order-2">

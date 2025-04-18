@@ -22,7 +22,10 @@ export class ErrorPage extends BaseElement {
   render(): string {
     // language=html
     return HTML`
-      <div class="flex flex-col justify-center items-center h-screen font-dm gap-y-6">
+      <div class="relative flex flex-col justify-center items-center h-screen font-dm gap-y-2 md:gap-y-4 lg:gap-y-6 p-3">
+        <span class="absolute top-4 right-4">
+          <dark-mode-button></dark-mode-button>
+        </span>
 <!--        <svg rpl="" fill="#dadada" height="60" icon-name="meme-fill" viewBox="0 0 20 20" width="60"-->
 <!--             xmlns="http://www.w3.org/2000/svg">-->
 <!--          <path-->
@@ -31,7 +34,7 @@ export class ErrorPage extends BaseElement {
         <dota-icon class="scale-150" name="emojione-monotone:confounded-face" color="purple" variant="ghost" size="2xl"></dota-icon>
         <h1 class="text-5xl sm:text-7xl py-4 text-center font-semibold text-purple-600">404</h1>
         <p class="text-center text-2xl sm:text-3xl text-gray-500 dark:text-gray-100 font-medium">Page Not Found</p>
-        <p class="text-lg font-medium dark:text-gray-200">The document you're looking for doesn't exist or has been
+        <p class="max-sm:text-sm lg:text-lg font-medium text-gray-900 dark:text-gray-200">The document you're looking for doesn't exist or has been
           moved to another location.</p>
         <div class="items-center flex gap-2">
           <a href="/" class="bg-purple-600 text-white flex items-center gap-1 px-5 py-3 rounded-lg">

@@ -1,4 +1,4 @@
-import {AfterInit, BaseElement, Component, Property, String, WindowListener} from "@ayu-sh-kr/dota-core";
+import {AfterInit, BaseElement, Component, Property, String} from "@ayu-sh-kr/dota-core";
 import {DocLoaderService} from "@dota/service/doc-loader.service.ts";
 import {MarkdownService} from "@dota/service/markdown.service.ts";
 

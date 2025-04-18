@@ -51,10 +51,12 @@ export class FooterComponent extends BaseElement{
                         <div class="max-md:-ml-9">
                             <h3 class="font-semibold text-gray-900 dark:text-white">Community</h3>
                             <ul class="mt-2 space-y-2">
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Blog</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">GitHub</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">X</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Discord</a></li>
+                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="discord"><dota-icon name="mdi:discord" color="gray" variant="ghost" size="lg"/></a>
+                                    </li>
+                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="twitter"><dota-icon name="ix:x-logo" color="gray" variant="ghost" size="md"/></a></li>
+                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="github"><dota-icon name="octicon:mark-github-24" color="gray" variant="ghost" size="md"/></a></li>
+                              <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline inline-flex" title="blog">Blog <dota-icon name="ix:document-code-filled" color="gray" variant="ghost" size="md"/></a>
+                              </li>
                             </ul>
                         </div>
                     </div>

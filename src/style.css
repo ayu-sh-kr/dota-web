@@ -32,6 +32,11 @@
         @apply relative overflow-hidden rounded-2xl  bg-white dark:bg-gradient-to-b dark:from-gray-700 dark:to-gray-900;
     }
 
+    .framework-logo{
+        @apply size-24 lg:size-36 transform transition-all duration-300 ease-in-out hover:translate-y-[-10px] hover:scale-110 drop-shadow-[0px_15px_25px_rgba(68,68,68,0.15)] dark:drop-shadow-[0px_15px_25px_rgba(68,68,68,.4)] ;
+    }
+
+
     /* Gradient */
     .card-wrapper::before {
         background: conic-gradient(rgba(244, 114, 182, 0.4) 0deg, rgba(192, 132, 252, 0.8) 0deg, transparent 80deg);
@@ -81,6 +86,8 @@
     }
 
 
-
-
 }
+
+
+
+

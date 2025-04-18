@@ -5,13 +5,13 @@ import {bootstrap} from "@ayu-sh-kr/dota-core";
 import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
 import {
   ClientSectionComponent,
-  CodeSectionComponent, DeviceSectionComponent, EmitterSectionComponent,
+  CodeSectionComponent, DevicePreviewComponent, DeviceSectionComponent, EmitterSectionComponent,
   FeatureComponent, GetStartedButtonComponent,
   HeaderComponent,
   HeroSectionComponent, HostListenerSectionComponent,
   OfferComponent, OurToolsComponent, ReactiveSectionComponent
 } from "@dota/components/home";
-import {IconsComponent} from "@ayu-sh-kr/dota-ui/dist";
+import {IconsComponent, ButtonComponent} from "@ayu-sh-kr/dota-ui/dist";
 import {
   AiButtonComponent,
   DarkModeButtonComponent, FooterComponent,
@@ -44,6 +44,8 @@ bootstrap([
   LoaderComponent,
   LoaderSectionComponent,
   ScrollBottomButtonComponent,
+  DevicePreviewComponent,
+  ButtonComponent,
 
   // home-page components
   OfferComponent,

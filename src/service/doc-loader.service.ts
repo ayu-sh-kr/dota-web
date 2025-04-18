@@ -26,4 +26,13 @@ export class DocLoaderService {
 
     return response.text();
   }
+
+  async loadResource(path: string): Promise<string> {
+    const response = await this.restClient.get()
+      .uri(`/materials/${path}`)
+      .retrieve()
+      .toResponse();
+
+    return response.text();
+  }
 }

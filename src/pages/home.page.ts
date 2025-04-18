@@ -19,6 +19,7 @@ export class HomePage extends BaseElement {
            <code-section></code-section>
            <reactive-dota></reactive-dota>
            <hostlistener-section></hostlistener-section>
+           <emitter-section></emitter-section>
            <device-section></device-section>
            <our-tools></our-tools>
            <client-section></client-section>

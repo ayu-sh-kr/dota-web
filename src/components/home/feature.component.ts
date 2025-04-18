@@ -40,7 +40,7 @@ export class FeatureComponent extends BaseElement {
 
     render(): string {
         return HTML`
-        <section class="py-10 px-3">
+        <section class="font-dm mx-auto max-w-7xl px-3 py-2 mt-10">
             <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 font-dm text-gray-900 dark:text-gray-100 gap-5">
                 ${this.items.map(item => {
                     return `<div class="flex flex-col items-start justify-start gap-y-5 px-3">

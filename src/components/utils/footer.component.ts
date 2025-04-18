@@ -50,12 +50,26 @@ export class FooterComponent extends BaseElement{
                         <!-- Community -->
                         <div class="max-md:-ml-9">
                             <h3 class="font-semibold text-gray-900 dark:text-white">Community</h3>
-                            <ul class="mt-2 space-y-2">
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="discord"><dota-icon name="mdi:discord" color="gray" variant="ghost" size="lg"/></a>
-                                    </li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="twitter"><dota-icon name="ix:x-logo" color="gray" variant="ghost" size="md"/></a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="github"><dota-icon name="octicon:mark-github-24" color="gray" variant="ghost" size="md"/></a></li>
-                              <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline inline-flex" title="blog">Blog <dota-icon name="ix:document-code-filled" color="gray" variant="ghost" size="md"/></a>
+                            <ul class="mt-2 flex gap-2 items-center">
+                                <li>
+                                  <a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="discord">
+                                    <dota-icon name="mdi:discord" color="slate" variant="ghost" size="md"/>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="twitter">
+                                    <dota-icon name="mdi:twitter" color="slate" variant="ghost" size="md"/>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="github">
+                                    <dota-icon name="mdi:github" color="slate" variant="ghost" size="md"/>
+                                  </a>
+                                </li>
+                              <li>
+                                <a href="#" class="text-gray-600 dark:text-gray-300 hover:underline inline-flex pt-1.5" title="blog">
+                                  <dota-icon name="mdi:blogger" color="slate" variant="ghost" size="md"/>
+                                </a>
                               </li>
                             </ul>
                         </div>

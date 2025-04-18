@@ -5,7 +5,7 @@ import {bootstrap} from "@ayu-sh-kr/dota-core";
 import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
 import {
   ClientSectionComponent,
-  CodeSectionComponent, DeviceSectionComponent,
+  CodeSectionComponent, DeviceSectionComponent, EmitterSectionComponent,
   FeatureComponent, GetStartedButtonComponent,
   HeaderComponent,
   HeroSectionComponent, HostListenerSectionComponent,
@@ -55,6 +55,7 @@ bootstrap([
   OurToolsComponent,
   ReactiveSectionComponent,
   HostListenerSectionComponent,
+  EmitterSectionComponent,
   ClientSectionComponent,
   FooterComponent,
 

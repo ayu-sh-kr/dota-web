@@ -3,22 +3,7 @@ import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage, ResourcePage} from "@d
 import {AppComponent} from "@dota/app.component.ts";
 import {BaseElement} from "@ayu-sh-kr/dota-core/dist";
 import {RouteConfig} from "@ayu-sh-kr/dota-router";
-
-export const routes = {
-  '/': HomePage,
-  '/docs': DocPage,
-  '/blogs': BlogPage,
-  '/chat': ChatPage,
-  '/resources':ResourcePage,
-} as { [key: string]: Object }
-
-export type Route<T extends HTMLElement> = {
-  path: string,
-  component: T | (new (...args: any[]) => T),
-  default?: boolean,
-  children?: Route<T>[],
-  navigate?: (path: string) => void,
-}
+import {docRoutes} from "@dota/doc.config.ts";
 
 export const routesConfig: RouteConfig<BaseElement>[] = [
   {
@@ -41,57 +26,7 @@ export const routesConfig: RouteConfig<BaseElement>[] = [
         return;
       }
     },
-    children: [
-      {
-        path: '/Getting-Started.md',
-        component: DocPage,
-      },
-
-      {
-        path: '/Guides.md',
-        component: DocPage,
-      },
-
-      {
-        path: '/Component-Definition.md',
-        component: DocPage,
-      },
-
-      {
-        path: '/Component-Registration.md',
-        component: DocPage,
-      },
-
-      {
-        path: '/Property-Binding.md',
-        component: DocPage,
-      },
-
-      {
-        path: '/Event-Binding.md',
-        component: DocPage,
-      },
-
-      {
-        path: '/Event-Emitter.md',
-        component: DocPage,
-      },
-
-      {
-        path: '/Core.md',
-        component: DocPage,
-      },
-
-      {
-        path: '/Reactivity.md',
-        component: DocPage,
-      },
-
-      {
-        path: '/Decorators.md',
-        component: DocPage,
-      },
-    ]
+    children: docRoutes
   },
 
   {

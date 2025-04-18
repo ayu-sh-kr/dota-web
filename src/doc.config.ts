@@ -1,3 +1,6 @@
+import {DocPage} from "@dota/pages";
+import {RouteConfig} from "@ayu-sh-kr/dota-router";
+import {BaseElement} from "@ayu-sh-kr/dota-core/dist";
 
 
 export interface DocConfig {
@@ -21,7 +24,66 @@ export const docConfigs: DocConfig[] = [
   {
     category: 'Concepts',
     paths: [
-     'Core.md', 'Decorators.md',
+     'Core.md', 'Decorators.md', 'Life-Cycle.md'
+    ]
+  },
+
+  {
+    category: 'Tools',
+    paths: [
+      'Rest-Client.md', 'Router.md'
     ]
   }
+]
+
+export const docRoutes: RouteConfig<BaseElement>  = [
+  {
+    path: '/Getting-Started.md',
+    component: DocPage,
+  },
+
+  {
+    path: '/Guides.md',
+    component: DocPage,
+  },
+
+  {
+    path: '/Component-Definition.md',
+    component: DocPage,
+  },
+
+  {
+    path: '/Component-Registration.md',
+    component: DocPage,
+  },
+
+  {
+    path: '/Property-Binding.md',
+    component: DocPage,
+  },
+
+  {
+    path: '/Event-Binding.md',
+    component: DocPage,
+  },
+
+  {
+    path: '/Event-Emitter.md',
+    component: DocPage,
+  },
+
+  {
+    path: '/Core.md',
+    component: DocPage,
+  },
+
+  {
+    path: '/Reactivity.md',
+    component: DocPage,
+  },
+
+  {
+    path: '/Decorators.md',
+    component: DocPage,
+  },
 ]

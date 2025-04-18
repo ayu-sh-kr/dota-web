@@ -45,6 +45,7 @@ bootstrap([
   LoaderSectionComponent,
   ScrollBottomButtonComponent,
   DevicePreviewComponent,
+  ButtonComponent,
 
   // home-page components
   OfferComponent,

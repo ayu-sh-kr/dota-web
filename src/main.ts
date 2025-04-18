@@ -26,7 +26,7 @@ import {AiFormComponent, MessageBoxComponent, MessageCardComponent} from "@dota/
 import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
 import {routesConfig} from "@dota/routes.config.ts";
 import {ResourcePage} from "@dota/pages/resource.page.ts";
-import {ResourceComponent, ResourcePathComponent} from "@dota/components/resource";
+import {ResourceSectionComponent, ResourcePathComponent, ResourceContentComponent} from "@dota/components/resource";
 
 
 bootstrap([
@@ -68,8 +68,9 @@ bootstrap([
 
 
   // resource-page components
-  ResourceComponent,
   ResourcePathComponent,
+  ResourceContentComponent,
+  ResourceSectionComponent,
 
   // example components
   CounterComponent,

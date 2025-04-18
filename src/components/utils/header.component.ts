@@ -1,4 +1,4 @@
-import { BaseElement, Component, HTML } from "@ayu-sh-kr/dota-core";
+import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core";
 
 @Component({
   selector: "app-header",
@@ -33,7 +33,9 @@ export class HeaderComponent extends BaseElement {
 
   render(): string {
     return HTML`
-            <header class="flex z-50 justify-between items-center px-2 py-3 font-dm sticky top-0 left-0 shadow-md bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+            <header class="flex z-50 justify-between items-center px-2 py-3 font-dm sticky top-0 left-0 
+                    shadow-md bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 max-w-7xl mx-auto"
+            >
                 <div class="font-extrabold text-2xl w-1/6 px-5"><a href="/">Dota</a></div>
                 <div class="md:flex justify-center items-center hidden w-4/6">
                     <ul class="flex justify-between items-center gap-x-5 w-1/2">
@@ -61,9 +63,3 @@ export interface Link {
   url: string;
 }
 
-export function toggleDark() {
-  const html = document.getElementsByTagName("html");
-  const value = document.documentElement.classList.toggle("dark");
-  document.documentElement.classList.toggle("bg-slate-950");
-  return value;
-}

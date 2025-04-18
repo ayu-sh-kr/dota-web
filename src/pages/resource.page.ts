@@ -1,4 +1,4 @@
-import {AfterInit, BaseElement, Component, Property, String} from "@ayu-sh-kr/dota-core";
+import {BaseElement, Component} from "@ayu-sh-kr/dota-core";
 
 @Component({
   selector: "resource-page",
@@ -10,16 +10,12 @@ export class ResourcePage extends BaseElement {
     super();
   }
 
-  @AfterInit()
-  afterViewInit() {
-    // Initialize component after it's added to the DOM
-  }
-
   render() {
     // language=html
     return `
       <app-header></app-header>
-      <resource-component></resource-component>
+      <resource-section></resource-section>
+      <footer-component></footer-component>
 `
   }
 }

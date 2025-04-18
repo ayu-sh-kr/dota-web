@@ -9,6 +9,7 @@ import { OurToolsComponent } from "@dota/components/home/our-tools.component";
 import { ReactiveSectionComponent } from "@dota/components/home/reactive-section.component.ts";
 import { HostListenerSectionComponent } from "@dota/components/home/hostlistener-section.component.ts";
 import {ClientSectionComponent} from "@dota/components/home/client-section.component.ts";
+import {EmitterSectionComponent} from "@dota/components/home/emitter-section.component"
 import {DevicePreviewComponent} from "@dota/components/home/utils/device-preview.component.ts";
 
 export {
@@ -22,6 +23,7 @@ export {
   OurToolsComponent,
   ReactiveSectionComponent,
   HostListenerSectionComponent,
+  EmitterSectionComponent,
   ClientSectionComponent,
   DevicePreviewComponent
 };

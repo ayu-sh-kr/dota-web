@@ -5,7 +5,7 @@ import {bootstrap} from "@ayu-sh-kr/dota-core";
 import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
 import {
   ClientSectionComponent,
-  CodeSectionComponent, DevicePreviewComponent, DeviceSectionComponent,
+  CodeSectionComponent, DevicePreviewComponent, DeviceSectionComponent, EmitterSectionComponent,
   FeatureComponent, GetStartedButtonComponent,
   HeaderComponent,
   HeroSectionComponent, HostListenerSectionComponent,
@@ -26,7 +26,7 @@ import {AiFormComponent, MessageBoxComponent, MessageCardComponent} from "@dota/
 import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
 import {routesConfig} from "@dota/routes.config.ts";
 import {ResourcePage} from "@dota/pages/resource.page.ts";
-import {ResourceComponent} from "@dota/components/resource";
+import {ResourceComponent, ResourcePathComponent} from "@dota/components/resource";
 
 
 bootstrap([
@@ -57,6 +57,7 @@ bootstrap([
   OurToolsComponent,
   ReactiveSectionComponent,
   HostListenerSectionComponent,
+  EmitterSectionComponent,
   ClientSectionComponent,
   FooterComponent,
 
@@ -68,6 +69,7 @@ bootstrap([
 
   // resource-page components
   ResourceComponent,
+  ResourcePathComponent,
 
   // example components
   CounterComponent,

@@ -50,11 +50,27 @@ export class FooterComponent extends BaseElement{
                         <!-- Community -->
                         <div class="max-md:-ml-9">
                             <h3 class="font-semibold text-gray-900 dark:text-white">Community</h3>
-                            <ul class="mt-2 space-y-2">
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Blog</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">GitHub</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">X</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Discord</a></li>
+                            <ul class="mt-2 flex gap-2 items-center">
+                                <li>
+                                  <a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="discord">
+                                    <dota-icon name="mdi:discord" color="slate" variant="ghost" size="md"/>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="twitter">
+                                    <dota-icon name="mdi:twitter" color="slate" variant="ghost" size="md"/>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" class="text-gray-600 dark:text-gray-300 hover:underline" title="github">
+                                    <dota-icon name="mdi:github" color="slate" variant="ghost" size="md"/>
+                                  </a>
+                                </li>
+                              <li>
+                                <a href="#" class="text-gray-600 dark:text-gray-300 hover:underline inline-flex pt-1.5" title="blog">
+                                  <dota-icon name="mdi:blogger" color="slate" variant="ghost" size="md"/>
+                                </a>
+                              </li>
                             </ul>
                         </div>
                     </div>

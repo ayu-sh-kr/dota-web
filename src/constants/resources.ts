@@ -10,9 +10,6 @@ export const resources   = [
     title:"UI libraries",
     path:""
   },{
-    title:"Dota Ecosystem",
-    path:""
-  },{
     title:"Component built with Dota",
     path:""
   },

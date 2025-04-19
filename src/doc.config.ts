@@ -36,7 +36,7 @@ export const docConfigs: DocConfig[] = [
   }
 ]
 
-export const docRoutes: RouteConfig<BaseElement>  = [
+export const docRoutes: RouteConfig<BaseElement>[]  = [
   {
     path: '/Getting-Started.md',
     component: DocPage,

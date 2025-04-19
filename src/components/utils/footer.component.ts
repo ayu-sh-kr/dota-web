@@ -13,11 +13,10 @@ export class FooterComponent extends BaseElement{
     render():string{
         // language=HTML
         return HTML`
-            <footer class="font-dm mx-auto max-w-7xl px-3 py-20 mt-20">
+            <footer class="font-dm mx-auto max-w-7xl px-3 lg:py-16 md:py-12 sm:py-8 py-6 mt-20">
                     <div class="px-5 grid grid-cols-2 md:grid-cols-4 place-content-between justify-items-center gap-4 ">
                         <!-- Logo and Copyright -->
                         <div>
-<!--                            <img src="logo.png" alt="Stencil Logo" class="h-6 mx-auto md:mx-0">-->
                             <p class="text-gray-500 text-sm mt-2">&copy; 2025 | <a href="#" class="text-purple-600 hover:underline">MIT License</a></p>
                             <p class="text-gray-500 text-sm">A project by <a href="#" class="text-purple-600 hover:underline">Dota</a></p>
                         </div>
@@ -38,12 +37,12 @@ export class FooterComponent extends BaseElement{
                         <div >
                             <h3 class="font-semibold text-gray-900 dark:text-white">Docs</h3>
                             <ul class="mt-2 space-y-2">
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Framework Integrations</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Static Site Generation</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Config</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Output Targets</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Testing</a></li>
-                                <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:underline">Core Compiler API</a></li>
+                                <li><a href="/resources" class="text-gray-600 dark:text-gray-300 hover:underline">Framework Integrations</a></li>
+                                <li><a href="/resources" class="text-gray-600 dark:text-gray-300 hover:underline">Static Site Generation</a></li>
+                                <li><a href="/resources" class="text-gray-600 dark:text-gray-300 hover:underline">Config</a></li>
+                                <li><a href="/resources" class="text-gray-600 dark:text-gray-300 hover:underline">Output Targets</a></li>
+                                <li><a href="/resources" class="text-gray-600 dark:text-gray-300 hover:underline">Testing</a></li>
+                                <li><a href="/resources" class="text-gray-600 dark:text-gray-300 hover:underline">Core Compiler API</a></li>
                             </ul>
                         </div>
 
@@ -74,7 +73,7 @@ export class FooterComponent extends BaseElement{
                             </ul>
                         </div>
                     </div>
-              <div class="text-center relative bottom-0 [&>a]:text-purple-500 font-medium"> Made with &#129505; &nbsp; | &nbsp; By <a href="/">Ayush</a> & <a href="">Deepanshu</a></div>
+                    <self-end></self-end>
             </footer>
         `
     }

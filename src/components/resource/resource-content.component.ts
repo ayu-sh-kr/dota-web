@@ -37,7 +37,7 @@ export class ResourceContentComponent extends BaseElement {
   render() {
     // language=html
     return `
-      <article class="prose dark:prose-invert max-w-3xl mx-auto p-3">
+      <article class="prose dark:prose-invert text-lg font-medium">
         ${this.content || ''}
       </article>
     `

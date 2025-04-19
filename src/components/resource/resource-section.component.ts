@@ -32,7 +32,7 @@ export class ResourceSectionComponent extends BaseElement {
           to help you get more out of <span class="text-purple-600">Dota
           </span>
         </h1>
-        <div class="flex gap-10 items-center sm:items-start max-w-[85%] mx-auto px-4 gap-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 place-items-center md:place-items-start justify-items-center max-w-6xl mx-auto">
           <div class="flex flex-col gap-4">
             ${resources.map((item) => `<resource-path title="${item.title}" path="${item.path}"></resource-path>`).join(" ")}
           </div>

@@ -22,7 +22,7 @@ export const routesConfig: RouteConfig<BaseElement>[] = [
     render: (path: string) => {
       if (path.includes('/docs')) {
         // Render the docs page with the specified document
-        document.querySelector<AppComponent>('app-root')!.innerHTML = `<doc-page></doc-page>`;
+        document.querySelector<AppComponent>('#app-root')!.innerHTML = `<doc-page></doc-page>`;
         return;
       }
     },

@@ -17,7 +17,7 @@ import {
   DarkModeButtonComponent, FooterComponent,
   GithubButtonComponent, HamBurgerButtonComponent, LoaderSectionComponent,
   NotificationComponent,
-  NotificationHolderComponent, ScrollBottomButtonComponent
+  NotificationHolderComponent, ScrollBottomButtonComponent, SelfEndComponent
 } from "@dota/components/utils";
 import {LoaderComponent} from "@dota/components/utils"
 import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
@@ -47,6 +47,7 @@ bootstrap([
   DevicePreviewComponent,
   ButtonComponent,
   HamBurgerButtonComponent,
+  SelfEndComponent,
 
   // home-page components
   OfferComponent,

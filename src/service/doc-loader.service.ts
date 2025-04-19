@@ -11,7 +11,6 @@ export class DocLoaderService {
     this.restClient = RestClient.builder()
       .timeout(10000)
       .handler((response) => {
-        console.log(response)
         if(!response.ok) {
           DomNavigationRouter.route('/error')
         }

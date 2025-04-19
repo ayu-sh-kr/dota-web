@@ -16,9 +16,7 @@ export class ResourceSectionComponent extends BaseElement {
   handlePathChange(event: CustomEvent<string>) {
     const resourceContentComponent = this.querySelector<ResourceContentComponent>("resource-content");
     if (resourceContentComponent) {
-      console.log(`Changing resource path to: ${event.detail}`);
       resourceContentComponent.setAttribute("resource-path", event.detail);
-      resourceContentComponent.connectedCallback();
     }
   }
 

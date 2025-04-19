@@ -1,4 +1,4 @@
-import {AfterInit, BaseElement, Component, Property, String} from "@ayu-sh-kr/dota-core";
+import {AfterInit, BaseElement, Component, Property, String, Watcher} from "@ayu-sh-kr/dota-core";
 import {DocLoaderService} from "@dota/service/doc-loader.service.ts";
 import {MarkdownService} from "@dota/service/markdown.service.ts";
 
@@ -24,7 +24,11 @@ export class ResourceContentComponent extends BaseElement {
 
   @AfterInit()
   async afterViewInit() {
-    console.log(`Loading resource content from path: ${this.resourcePath}`);
+    await this.updateContent()
+  }
+
+  @Watcher('resourcePath')
+  async updateContent() {
     const content = await this.docService.loadResource(this.resourcePath);
     this.content = MarkdownService.renderMarkdown(content);
     this.updateHTML();

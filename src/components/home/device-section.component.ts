@@ -20,8 +20,8 @@ export class DeviceSectionComponent extends BaseElement {
           all of your frameworks.
         </h1>
         <div class="grid grid-cols-2 md:grid-cols-4 place-items-center gap-10 ">
-          <device-preview label="React" image="/images/react-img.png" color="blue" shadow-color="${FrameworkStyleConfig.react}"></device-preview>
-          <device-preview label="Angular" image="/images/angular-img.png" color="pink" shadow-color="${FrameworkStyleConfig.angular}"></device-preview>
+          <device-preview label="React" image="/images/react-img.png" color="sky" shadow-color="${FrameworkStyleConfig.react}"></device-preview>
+          <device-preview label="Angular" image="/images/angular-img.png" color="rose" shadow-color="${FrameworkStyleConfig.angular}"></device-preview>
           <device-preview label="Vue" image="/images/vue-img.png" color="emerald" shadow-color="${FrameworkStyleConfig.vue}"></device-preview>
           <device-preview label="Solid" image="/images/solid-logo.png" color="purple" shadow-color="${FrameworkStyleConfig.solid}"></device-preview>
         </div>

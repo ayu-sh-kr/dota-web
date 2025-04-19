@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@ayu-sh-kr/dota-core':
-        specifier: 1.6.14
-        version: 1.6.14
+        specifier: ^1.6.16
+        version: 1.6.16
       '@ayu-sh-kr/dota-rest':
         specifier: 1.1.3
         version: 1.1.3
       '@ayu-sh-kr/dota-router':
-        specifier: ^0.0.6
-        version: 0.0.6
+        specifier: ^0.0.7
+        version: 0.0.7
       '@ayu-sh-kr/dota-ui':
         specifier: ^0.0.4
         version: 0.0.4
@@ -67,14 +67,14 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@ayu-sh-kr/dota-core@1.6.14':
-    resolution: {integrity: sha512-8VGdFqDHkWsGlalruruLfLFj2baEOHHjQRLGl8yhE33DTzpV+UGOj8584HHmmsOMkMxhpDNLIhYutZu+ZN9b2Q==}
+  '@ayu-sh-kr/dota-core@1.6.16':
+    resolution: {integrity: sha512-e0vpKY2cQW2nmhfqTnFLnaN9LAzKn7SDTCXRg6C5POCU3eta3nKkc5fb92d60ABUwg3Vx8dFQ/I//j/MdjSnCw==}
 
   '@ayu-sh-kr/dota-rest@1.1.3':
     resolution: {integrity: sha512-WpPgXX7fR4QH9l2vwi4xJxhdbH7x3qUhv1x06hRM4km5DpWmmhwY7IMSoeuCCQYvBPF37uZeFXAgxrruBZ1cUg==}
 
-  '@ayu-sh-kr/dota-router@0.0.6':
-    resolution: {integrity: sha512-e8QdHzrAZ88EIc/u4xqoRINfDW49p7IqKohYQL8KKEZOekV2iX3Y9N5NrT0pi41hX/h19RKCAGlvdROi6CqGxQ==}
+  '@ayu-sh-kr/dota-router@0.0.7':
+    resolution: {integrity: sha512-xhKMx436fgVMCcW3KPUTEN8AWXund4AAA7HMHS894Zdje39kVxsqetBWxq4hXDCTxbutUQFM4oQKXbuddGdBew==}
 
   '@ayu-sh-kr/dota-ui@0.0.4':
     resolution: {integrity: sha512-pwpFXjl3iyQj0od+J+R7HhRuDfSQ6GW6VT6COLm3QdxaYNKQA6FahqsiQeLHQwhGdIwQIWMoKzoG5x4Qp4dJHQ==}
@@ -947,20 +947,20 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@ayu-sh-kr/dota-core@1.6.14':
+  '@ayu-sh-kr/dota-core@1.6.16':
     dependencies:
       reflect-metadata: 0.2.2
 
   '@ayu-sh-kr/dota-rest@1.1.3': {}
 
-  '@ayu-sh-kr/dota-router@0.0.6':
+  '@ayu-sh-kr/dota-router@0.0.7':
     dependencies:
-      '@ayu-sh-kr/dota-core': 1.6.14
+      '@ayu-sh-kr/dota-core': 1.6.16
       reflect-metadata: 0.2.2
 
   '@ayu-sh-kr/dota-ui@0.0.4':
     dependencies:
-      '@ayu-sh-kr/dota-core': 1.6.14
+      '@ayu-sh-kr/dota-core': 1.6.16
       '@floating-ui/dom': 1.6.11
       '@popperjs/core': 2.11.8
       '@types/node': 22.7.4

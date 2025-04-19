@@ -74,6 +74,7 @@ export class FooterComponent extends BaseElement{
                             </ul>
                         </div>
                     </div>
+              <div class="text-center relative bottom-0 [&>a]:text-purple-500 font-medium"> Made with &#129505; &nbsp; | &nbsp; By <a href="/">Ayush</a> & <a href="">Deepanshu</a></div>
             </footer>
         `
     }

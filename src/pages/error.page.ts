@@ -55,6 +55,8 @@ export class ErrorPage extends BaseElement {
             Documentation
           </a>
         </div>
+        
+        <footer class="absolute bottom-2 [&>a]:text-purple-500 font-medium"> Made with &#129505; &nbsp; | &nbsp; By <a href="/">Ayush</a> & <a href="">Deepanshu</a></footer>
       </div>
     `
   }

@@ -1,4 +1,4 @@
-import {AfterInit, BaseElement, Component, Property, String} from "@ayu-sh-kr/dota-core";
+import { AfterInit, BaseElement, Component } from "@ayu-sh-kr/dota-core";
 
 @Component({
   selector: "community-component",
@@ -8,11 +8,6 @@ export class CommunityComponent extends BaseElement {
 
   constructor() {
     super();
-  }
-
-  @AfterInit()
-  afterViewInit() {
-    // Initialize component after it's added to the DOM
   }
 
   render() {

@@ -1,5 +1,5 @@
 // blog-preview.component.ts
-import { BaseElement, Component, HTML, Property, String } from "@ayu-sh-kr/dota-core";
+import { BaseElement, Component, Property, String } from "@ayu-sh-kr/dota-core";
 
 @Component({
     selector: 'blog-preview',

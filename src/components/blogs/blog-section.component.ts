@@ -1,5 +1,5 @@
 // blog-section.component.ts
-import { BaseElement, Component } from "@ayu-sh-kr/dota-core";
+import {BaseElement, Component} from "@ayu-sh-kr/dota-core";
 import {type Blog} from "@dota/configs/blogs.config.ts";
 
 @Component({
@@ -75,7 +75,9 @@ export class BlogSectionComponent extends BaseElement {
   render(): string {
     return `
         <section class="font-dm mx-auto max-w-7xl px-3 py-8">
-            <section-header header="Blogs By The Team Dota"></section-header>
+            <section-header>
+                Blogs by the <span class="text-purple-600 dark:text-purple-500">Team Dota</span>
+            </section-header>
             <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 ${this.blogPosts.map(post => `
                     <blog-preview 

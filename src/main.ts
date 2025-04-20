@@ -11,7 +11,7 @@ import {
   HeroSectionComponent, HostListenerSectionComponent,
   OfferComponent, OurToolsComponent, ReactiveSectionComponent
 } from "@dota/components/home";
-import {IconsComponent, ButtonComponent} from "@ayu-sh-kr/dota-ui/dist";
+import {IconsComponent, ButtonComponent, PopoverComponent} from "@ayu-sh-kr/dota-ui";
 import {
   AiButtonComponent,
   DarkModeButtonComponent,
@@ -48,6 +48,7 @@ bootstrap([
   DarkModeButtonComponent,
   GithubButtonComponent,
   IconsComponent,
+  PopoverComponent,
   AiButtonComponent,
   LoaderComponent,
   LoaderSectionComponent,

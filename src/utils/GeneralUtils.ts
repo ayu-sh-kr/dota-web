@@ -39,4 +39,8 @@ export class GeneralUtils {
     }
   }
 
+  static scrollToTop(behavior: 'smooth' | 'instant' = 'smooth') {
+    window.scrollTo({ top: 0, behavior: behavior });
+  }
+
 }

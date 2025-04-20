@@ -1,4 +1,5 @@
-import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core";
+import {AfterInit, BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core";
+import {GeneralUtils} from "@dota/utils/GeneralUtils.ts";
 
 
 @Component({
@@ -9,6 +10,11 @@ export class DocPage extends BaseElement {
 
   constructor() {
     super();
+  }
+
+  @AfterInit()
+  afterViewInit() {
+    GeneralUtils.scrollToTop('instant')
   }
 
   render(): string {

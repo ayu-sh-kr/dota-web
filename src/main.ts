@@ -31,10 +31,10 @@ import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/
 import {CounterComponent} from "@dota/components/example/CounterComponent.ts";
 import {AiFormComponent, MessageBoxComponent, MessageCardComponent} from "@dota/components/chat";
 import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
-import {routesConfig} from "@dota/routes.config.ts";
+import {routesConfig} from "@dota/configs/routes.config.ts";
 import {ResourcePage} from "@dota/pages/resource.page.ts";
 import {ResourceSectionComponent, ResourcePathComponent, ResourceContentComponent} from "@dota/components/resource";
-import {BlogPreviewComponent, BlogSectionComponent} from "@dota/components/blogs";
+import {BlogIconComponent, BlogPreviewComponent, BlogSectionComponent} from "@dota/components/blogs";
 
 
 bootstrap([
@@ -87,6 +87,7 @@ bootstrap([
   // blog components
   BlogSectionComponent,
   BlogPreviewComponent,
+  BlogIconComponent,
 
   // example components
   CounterComponent,

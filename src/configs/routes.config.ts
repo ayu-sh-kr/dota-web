@@ -3,7 +3,7 @@ import {BlogPage, ChatPage, CommunityPage, DocPage, ErrorPage, HomePage, Resourc
 import {AppComponent} from "@dota/app.component.ts";
 import {BaseElement} from "@ayu-sh-kr/dota-core/dist";
 import {RouteConfig} from "@ayu-sh-kr/dota-router";
-import {docRoutes} from "@dota/doc.config.ts";
+import {docRoutes} from "@dota/configs/doc.config.ts";
 
 export const routesConfig: RouteConfig<BaseElement>[] = [
   {

@@ -1,4 +1,5 @@
 import {AfterInit, BaseElement, Component} from "@ayu-sh-kr/dota-core";
+import {GeneralUtils} from "@dota/utils/GeneralUtils.ts";
 
 @Component({
   selector: "community-page",
@@ -12,7 +13,7 @@ export class CommunityPage extends BaseElement {
 
   @AfterInit()
   afterViewInit() {
-    // Initialize component after it's added to the DOM
+    GeneralUtils.scrollToTop('instant');
   }
 
   render() {

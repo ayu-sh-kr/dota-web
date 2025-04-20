@@ -57,14 +57,18 @@ export class NavigationSidebarComponent extends BaseElement {
   handleScreenSize() {
     if (window.innerWidth >= 768) { // Tailwind's 'md' breakpoint is 768px
       this.visible = false;
-      this.handleVisibility();
+      document.body.classList.remove('overflow-hidden')
     }
   }
 
 
   @Watcher('visible')
   handleVisibility(){
-    document.body.classList.toggle('overflow-hidden')
+    if(this.visible) {
+      document.body.classList.add('overflow-hidden')
+    } else {
+      document.body.classList.remove('overflow-hidden')
+    }
   }
 
 

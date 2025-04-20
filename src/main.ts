@@ -11,7 +11,7 @@ import {
   HeroSectionComponent, HostListenerSectionComponent,
   OfferComponent, OurToolsComponent, ReactiveSectionComponent
 } from "@dota/components/home";
-import {IconsComponent, ButtonComponent, PopoverComponent} from "@ayu-sh-kr/dota-ui";
+import {IconsComponent, ButtonComponent, PopoverComponent, AvatarComponent} from "@ayu-sh-kr/dota-ui";
 import {
   AiButtonComponent,
   DarkModeButtonComponent,
@@ -35,7 +35,7 @@ import {routesConfig} from "@dota/configs/routes.config.ts";
 import {ResourcePage} from "@dota/pages/resource.page.ts";
 import {ResourceSectionComponent, ResourcePathComponent, ResourceContentComponent} from "@dota/components/resource";
 import {BlogIconComponent, BlogPreviewComponent, BlogSectionComponent} from "@dota/components/blogs";
-import {CommunityComponent} from "@dota/components/community";
+import {CommunityCardComponent, CommunityComponent} from "@dota/components/community";
 import {NavigationSidebarComponent} from "@dota/components/sidebar";
 
 
@@ -60,6 +60,7 @@ bootstrap([
   HamBurgerButtonComponent,
   SelfEndComponent,
   PageWrapperComponent,
+  AvatarComponent,
 
   // home-page components
   OfferComponent,
@@ -92,6 +93,7 @@ bootstrap([
 
   // community component
   CommunityComponent,
+  CommunityCardComponent,
 
   // blog components
   BlogSectionComponent,

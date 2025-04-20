@@ -18,8 +18,8 @@ importers:
         specifier: ^0.0.7
         version: 0.0.7
       '@ayu-sh-kr/dota-ui':
-        specifier: ^0.0.6
-        version: 0.0.6
+        specifier: 0.0.7
+        version: 0.0.7
       highlight.js:
         specifier: ^11.11.1
         version: 11.11.1
@@ -76,8 +76,8 @@ packages:
   '@ayu-sh-kr/dota-router@0.0.7':
     resolution: {integrity: sha512-xhKMx436fgVMCcW3KPUTEN8AWXund4AAA7HMHS894Zdje39kVxsqetBWxq4hXDCTxbutUQFM4oQKXbuddGdBew==}
 
-  '@ayu-sh-kr/dota-ui@0.0.6':
-    resolution: {integrity: sha512-WgI/1JXjMmWX5iTT5YmL9aHSpDb6HiGGs1GsZLCm8+J0fETANn/0oTra/IC3TmRKwcPwEpNyx9xMwOpTY/94Wg==}
+  '@ayu-sh-kr/dota-ui@0.0.7':
+    resolution: {integrity: sha512-Ttr7ZE/p7Up11kiGb5BGE4Sr0EXTcmbCllzCf7YuklLBRRJ6+xUMJjKR6WbJbWFmSXzJ4m1NZUOzUMl0ZXUrVw==}
 
   '@esbuild/aix-ppc64@0.25.2':
     resolution: {integrity: sha512-wCIboOL2yXZym2cgm6mlA742s9QeJ8DjGVaL39dLN4rRwrOgOyYSnOaFPhKZGLb2ngj4EyfAFjsNJwPXZvseag==}
@@ -940,7 +940,7 @@ snapshots:
       '@ayu-sh-kr/dota-core': 1.6.16
       reflect-metadata: 0.2.2
 
-  '@ayu-sh-kr/dota-ui@0.0.6':
+  '@ayu-sh-kr/dota-ui@0.0.7':
     dependencies:
       '@ayu-sh-kr/dota-core': 1.6.16
 

@@ -11,6 +11,7 @@ import {ScrollBottomButtonComponent} from "@dota/components/utils/buttons/scroll
 import {HamBurgerButtonComponent} from "@dota/components/utils/buttons/ham-burger-button.component.ts";
 import {SelfEndComponent} from "@dota/components/utils/self-end.component.ts";
 import {PageWrapperComponent} from "@dota/components/utils/page-wrapper.component.ts";
+import {SectionHeaderComponent} from "@dota/components/utils/section-header.component.ts";
 
 export {
   HeaderComponent,
@@ -25,5 +26,6 @@ export {
   ScrollBottomButtonComponent,
   HamBurgerButtonComponent,
   SelfEndComponent,
-  PageWrapperComponent
+  PageWrapperComponent,
+  SectionHeaderComponent
 }

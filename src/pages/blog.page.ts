@@ -1,4 +1,4 @@
-import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
+import {BaseElement, Component} from "@ayu-sh-kr/dota-core/dist";
 
 @Component({
     selector: 'blog-page',
@@ -12,9 +12,13 @@ export class BlogPage extends BaseElement {
 
     render(): string {
         // language=html
-        return HTML`
-            <app-header/>
-        `;
+        return `
+            <app-header></app-header>
+            <page-wrapper>
+              <blog-section></blog-section>
+            </page-wrapper>
+            <footer-component></footer-component>
+        `
     }
 
 }

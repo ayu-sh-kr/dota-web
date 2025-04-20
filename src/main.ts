@@ -14,10 +14,17 @@ import {
 import {IconsComponent, ButtonComponent} from "@ayu-sh-kr/dota-ui/dist";
 import {
   AiButtonComponent,
-  DarkModeButtonComponent, FooterComponent,
-  GithubButtonComponent, HamBurgerButtonComponent, LoaderSectionComponent,
+  DarkModeButtonComponent,
+  FooterComponent,
+  GithubButtonComponent,
+  HamBurgerButtonComponent,
+  LoaderSectionComponent,
   NotificationComponent,
-  NotificationHolderComponent, PageWrapperComponent, ScrollBottomButtonComponent, SelfEndComponent
+  NotificationHolderComponent,
+  PageWrapperComponent,
+  ScrollBottomButtonComponent,
+  SectionHeaderComponent,
+  SelfEndComponent
 } from "@dota/components/utils";
 import {LoaderComponent} from "@dota/components/utils"
 import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
@@ -27,6 +34,7 @@ import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
 import {routesConfig} from "@dota/routes.config.ts";
 import {ResourcePage} from "@dota/pages/resource.page.ts";
 import {ResourceSectionComponent, ResourcePathComponent, ResourceContentComponent} from "@dota/components/resource";
+import {BlogPreviewComponent, BlogSectionComponent} from "@dota/components/blogs";
 
 
 bootstrap([
@@ -63,6 +71,7 @@ bootstrap([
   EmitterSectionComponent,
   ClientSectionComponent,
   FooterComponent,
+  SectionHeaderComponent,
 
   // doc-page components
   DocPathComponent,
@@ -74,6 +83,10 @@ bootstrap([
   ResourcePathComponent,
   ResourceContentComponent,
   ResourceSectionComponent,
+
+  // blog components
+  BlogSectionComponent,
+  BlogPreviewComponent,
 
   // example components
   CounterComponent,

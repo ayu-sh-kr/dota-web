@@ -1,4 +1,4 @@
-import { AfterInit, BaseElement, Component } from "@ayu-sh-kr/dota-core";
+import { BaseElement, Component } from "@ayu-sh-kr/dota-core";
 
 @Component({
   selector: "community-component",
@@ -42,7 +42,7 @@ export class CommunityComponent extends BaseElement {
               to create a toolkit that makes development smoother, faster, and more enjoyable.
               I wanted to provide well-crafted, reusable components that not only save time but also empower developers to build amazing,
               high-quality applications with consistency and ease.
-              <br></br>
+              <br/>
               But this library is more than just a collection of components—it’s a growing ecosystem shaped by the ideas,
               feedback, and contributions of developers like you. Every improvement, every enhancement,
               and every piece of documentation is driven by a shared passion for clean, efficient, and scalable UI development.

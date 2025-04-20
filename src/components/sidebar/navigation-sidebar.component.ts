@@ -3,7 +3,6 @@ import {
   BaseElement,
   Component,
   Property,
-  String,
   Boolean,
   Watcher,
   WindowListener, BindEvent

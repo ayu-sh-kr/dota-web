@@ -1,5 +1,17 @@
-import {AfterInit, BaseElement, Component, Property, String, Boolean, Watcher} from "@ayu-sh-kr/dota-core";
+import {
+  AfterInit,
+  BaseElement,
+  Component,
+  Property,
+  String,
+  Boolean,
+  Watcher,
+  WindowListener, BindEvent
+} from "@ayu-sh-kr/dota-core";
 import {Link} from "@dota/components/utils/header.component.ts";
+
+
+
 @Component({
   selector: "navigation-sidebar",
   shadow: false
@@ -31,7 +43,8 @@ export class NavigationSidebarComponent extends BaseElement {
     name:"visible",
     type:Boolean
   })
-  visible:boolean=false
+  visible:boolean = false;
+
   constructor() {
     super();
   }
@@ -40,18 +53,37 @@ export class NavigationSidebarComponent extends BaseElement {
   afterViewInit() {
 
   }
+
+  @WindowListener({event: 'resize'})
+  handleScreenSize() {
+    if (window.innerWidth >= 768) { // Tailwind's 'md' breakpoint is 768px
+      this.visible = false;
+      this.handleVisibility();
+    }
+  }
+
+
   @Watcher('visible')
   handleVisibility(){
     document.body.classList.toggle('overflow-hidden')
   }
 
+
+  @BindEvent({
+    event: 'click',
+    id: '#close-button'
+  })
+  handleCloseClick() {
+    this.visible = false;
+  }
+
   render() {
     // language=html
     return `
-      <div class="fixed ${ this.visible ? "block" : "hidden" } p-4 bg-white top-0 left-0 dark:bg-slate-900 h-screen  w-full z-50">
+      <div class="fixed ${ this.visible ? "block" : "hidden" } md:hidden p-4 bg-white top-0 left-0 dark:bg-slate-900 h-screen  w-full z-50">
         <div class="relative h-full">
-             <button class="absolute top-4 right-4">
-               <dota-icon name="gridicons:cross-small" size="md" variant="ghost"></dota-icon>
+             <button id="close-button" class="absolute top-4 right-4">
+               <dota-icon name="gridicons:cross-small" size="md" color="gray" variant="soft"></dota-icon>
               </button>
             <ul class="flex flex-col items-center justify-center gap-6 h-full">
               ${this.items.map((item) => {

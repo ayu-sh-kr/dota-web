@@ -27,7 +27,6 @@ export class DocLoaderService {
     return response.text();
   }
 
-  @WithLoading()
   async loadResource(path: string): Promise<string> {
     const response = await this.restClient.get()
       .uri(`/materials/${path}`)

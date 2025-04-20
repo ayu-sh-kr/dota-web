@@ -1,4 +1,5 @@
 import {BaseElement, Component} from "@ayu-sh-kr/dota-core/dist";
+import {AfterInit} from "@ayu-sh-kr/dota-core";
 
 @Component({
     selector: 'blog-page',
@@ -8,6 +9,11 @@ export class BlogPage extends BaseElement {
 
     constructor() {
         super();
+    }
+
+    @AfterInit()
+    afterViewInit() {
+      window.scrollTo({top: 0, behavior: 'instant'});
     }
 
     render(): string {

@@ -1,4 +1,5 @@
-import {BaseElement, Component} from "@ayu-sh-kr/dota-core";
+import {AfterInit, BaseElement, Component} from "@ayu-sh-kr/dota-core";
+import {GeneralUtils} from "@dota/utils/GeneralUtils.ts";
 
 @Component({
   selector: "resource-page",
@@ -8,6 +9,11 @@ export class ResourcePage extends BaseElement {
 
   constructor() {
     super();
+  }
+
+  @AfterInit()
+  afterViewInit() {
+    GeneralUtils.scrollToTop('instant')
   }
 
   render() {

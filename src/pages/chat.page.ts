@@ -2,6 +2,7 @@ import {AfterInit, BaseElement, BindEvent, Component} from "@ayu-sh-kr/dota-core
 import {OpenAIService} from "@dota/service/OpenAIService.ts";
 import {MessageBoxComponent} from "@dota/components/chat";
 import {LocalStorageService} from "@dota/service/local-storage.service.ts";
+import {GeneralUtils} from "@dota/utils/GeneralUtils.ts";
 
 @Component({
   selector: "chat-page",
@@ -21,6 +22,7 @@ export class ChatPage extends BaseElement {
 
   @AfterInit()
   afterViewInit() {
+    GeneralUtils.scrollToTop('instant');
     this.messages = LocalStorageService.getList<MessageRecord>("message");
     this.updateMessageBox();
   }

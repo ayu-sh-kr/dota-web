@@ -58,6 +58,7 @@ export class HeaderComponent extends BaseElement {
                       </div>
                 </nav>
             </header>
+            <navigation-sidebar visible="false"></navigation-sidebar>
         `;
   }
 }

@@ -2,7 +2,7 @@ import './style.css'
 
 import {AppComponent} from "@dota/app.component.ts";
 import {bootstrap} from "@ayu-sh-kr/dota-core";
-import {BlogPage, ChatPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
+import {BlogPage, ChatPage, CommunityPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
 import {
   ClientSectionComponent,
   CodeSectionComponent, DevicePreviewComponent, DeviceSectionComponent, EmitterSectionComponent,
@@ -17,7 +17,7 @@ import {
   DarkModeButtonComponent, FooterComponent,
   GithubButtonComponent, HamBurgerButtonComponent, LoaderSectionComponent,
   NotificationComponent,
-  NotificationHolderComponent, ScrollBottomButtonComponent, SelfEndComponent
+  NotificationHolderComponent, PageWrapperComponent, ScrollBottomButtonComponent, SelfEndComponent
 } from "@dota/components/utils";
 import {LoaderComponent} from "@dota/components/utils"
 import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
@@ -48,6 +48,7 @@ bootstrap([
   ButtonComponent,
   HamBurgerButtonComponent,
   SelfEndComponent,
+  PageWrapperComponent,
 
   // home-page components
   OfferComponent,
@@ -89,7 +90,8 @@ bootstrap([
   ErrorPage,
   BlogPage,
   ChatPage,
-  ResourcePage
+  ResourcePage,
+  CommunityPage
 ])
 
 new DomNavigationRouter(

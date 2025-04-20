@@ -4,5 +4,6 @@ import {HomePage} from "@dota/pages/home.page.ts";
 import {BlogPage} from "@dota/pages/blog.page.ts";
 import {ChatPage} from "@dota/pages/chat.page.ts";
 import {ResourcePage} from "@dota/pages/resource.page.ts";
+import {CommunityPage} from "@dota/pages/community.page.ts";
 
-export {DocPage, ErrorPage, HomePage, BlogPage, ChatPage,ResourcePage}
+export {DocPage, ErrorPage, HomePage, BlogPage, ChatPage, ResourcePage, CommunityPage}

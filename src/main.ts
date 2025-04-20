@@ -36,6 +36,7 @@ import {ResourcePage} from "@dota/pages/resource.page.ts";
 import {ResourceSectionComponent, ResourcePathComponent, ResourceContentComponent} from "@dota/components/resource";
 import {BlogIconComponent, BlogPreviewComponent, BlogSectionComponent} from "@dota/components/blogs";
 import {CommunityComponent} from "@dota/components/community";
+import {NavigationSidebarComponent} from "@dota/components/sidebar";
 
 
 bootstrap([
@@ -85,6 +86,9 @@ bootstrap([
   ResourcePathComponent,
   ResourceContentComponent,
   ResourceSectionComponent,
+
+  // sidebar components
+  NavigationSidebarComponent,
 
   // community component
   CommunityComponent,

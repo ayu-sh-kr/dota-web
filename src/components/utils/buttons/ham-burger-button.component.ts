@@ -1,4 +1,5 @@
-import { BaseElement, Component } from "@ayu-sh-kr/dota-core";
+import {BaseElement, Component, HostListener} from "@ayu-sh-kr/dota-core";
+import {NavigationSidebarComponent} from "@dota/components/sidebar";
 
 @Component({
   selector: "ham-burger-button",
@@ -8,6 +9,14 @@ export class HamBurgerButtonComponent extends BaseElement {
 
   constructor() {
     super();
+  }
+
+  @HostListener({event:'click'})
+  handleToggle(){
+    const sidebar = document.querySelector<NavigationSidebarComponent>('navigation-sidebar');
+    if(sidebar){
+      sidebar.visible=!sidebar.visible
+    }
   }
 
   render() {

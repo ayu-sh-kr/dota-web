@@ -29,7 +29,6 @@ export class HomePage extends BaseElement {
            <device-section></device-section>
            <our-tools></our-tools>
            <client-section></client-section>
-           <navigation-sidebar></navigation-sidebar>
            <footer-component></footer-component>
         `
     }

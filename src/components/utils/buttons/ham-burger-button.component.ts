@@ -10,13 +10,13 @@ export class HamBurgerButtonComponent extends BaseElement {
   constructor() {
     super();
   }
+
   @HostListener({event:'click'})
   handleToggle(){
     const sidebar = document.querySelector<NavigationSidebarComponent>('navigation-sidebar');
     if(sidebar){
       sidebar.visible=!sidebar.visible
     }
-
   }
 
   render() {

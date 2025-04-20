@@ -24,6 +24,7 @@
     ::-moz-selection {
         @apply bg-purple-500 dark:bg-purple-600 text-white;
     }
+
 }
 
 @layer utilities {

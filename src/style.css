@@ -87,6 +87,10 @@
     code {
         @apply custom-scrollbar
     }
+    .community-card{
+        @apply bg-white dark:bg-slate-800 dark:text-white shadow-lg dark:shadow-purple-600
+        rounded-2xl hover:scale-110 ease-in duration-300 transition-all p-4
+    }
 
 }
 

@@ -1,3 +1,1 @@
-import {NavigationSidebarComponent} from "@dota/components/sidebar/navigation-sidebar.component.ts";
-
-export {NavigationSidebarComponent}
+export {NavigationSidebarComponent} from "@dota/components/sidebar/navigation-sidebar.component.ts";

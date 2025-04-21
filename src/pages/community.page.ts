@@ -23,7 +23,7 @@ export class CommunityPage extends BaseElement {
       <page-wrapper>
         <community-component></community-component>
       </page-wrapper>
-      <footer-component></footer-component>
+      <app-footer></app-footer>
     `
   }
 }

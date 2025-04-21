@@ -2,7 +2,16 @@ import './style.css'
 
 import {AppComponent} from "@dota/app.component.ts";
 import {bootstrap} from "@ayu-sh-kr/dota-core";
-import {BlogPage, ChatPage, CommunityPage, DocPage, ErrorPage, HomePage} from "@dota/pages";
+import {
+  BlogContentPage,
+  BlogPage,
+  ChatPage,
+  CommunityPage,
+  DocPage,
+  ErrorPage,
+  HomePage,
+  ResourcePage
+} from "@dota/pages";
 import {
   ClientSectionComponent,
   CodeSectionComponent, DevicePreviewComponent, DeviceSectionComponent, EmitterSectionComponent,
@@ -32,7 +41,6 @@ import {CounterComponent} from "@dota/components/example/CounterComponent.ts";
 import {AiFormComponent, MessageBoxComponent, MessageCardComponent} from "@dota/components/chat";
 import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
 import {routesConfig} from "@dota/configs/routes.config.ts";
-import {ResourcePage} from "@dota/pages/resource.page.ts";
 import {ResourceSectionComponent, ResourcePathComponent, ResourceContentComponent} from "@dota/components/resource";
 import {BlogIconComponent, BlogPreviewComponent, BlogSectionComponent} from "@dota/components/blogs";
 import {CommunityCardComponent, CommunityComponent} from "@dota/components/community";
@@ -116,7 +124,8 @@ bootstrap([
   BlogPage,
   ChatPage,
   ResourcePage,
-  CommunityPage
+  CommunityPage,
+  BlogContentPage
 ])
 
 new DomNavigationRouter(

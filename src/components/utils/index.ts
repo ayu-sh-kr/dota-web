@@ -1,31 +1,14 @@
-import {HeaderComponent} from "@dota/components/utils/header.component.ts";
-import {NotificationComponent} from "@dota/components/utils/notification/notification.component.ts";
-import {NotificationHolderComponent} from "@dota/components/utils/notification/notification-holder.component.ts";
-import {GithubButtonComponent} from "@dota/components/utils/buttons/github-button.component.ts";
-import {DarkModeButtonComponent} from "@dota/components/utils/buttons/dark-mode-button.component.ts";
-import {FooterComponent} from "@dota/components/utils/footer.component.ts";
-import {AiButtonComponent} from "@dota/components/utils/buttons/ai-button.component.ts";
-import {LoaderComponent} from "@dota/components/utils/loader.component.ts";
-import {LoaderSectionComponent} from "@dota/components/utils/loader-section.component.ts";
-import {ScrollBottomButtonComponent} from "@dota/components/utils/buttons/scroll-bottom-button.component.ts";
-import {HamBurgerButtonComponent} from "@dota/components/utils/buttons/ham-burger-button.component.ts";
-import {SelfEndComponent} from "@dota/components/utils/self-end.component.ts";
-import {PageWrapperComponent} from "@dota/components/utils/page-wrapper.component.ts";
-import {SectionHeaderComponent} from "@dota/components/utils/section-header.component.ts";
-
-export {
-  HeaderComponent,
-  AiButtonComponent,
-  GithubButtonComponent,
-  DarkModeButtonComponent,
-  NotificationComponent,
-  NotificationHolderComponent,
-  FooterComponent,
-  LoaderComponent,
-  LoaderSectionComponent,
-  ScrollBottomButtonComponent,
-  HamBurgerButtonComponent,
-  SelfEndComponent,
-  PageWrapperComponent,
-  SectionHeaderComponent
-}
+export {HeaderComponent} from "@dota/components/utils/header.component.ts";
+export {NotificationComponent} from "@dota/components/utils/notification/notification.component.ts";
+export {NotificationHolderComponent} from "@dota/components/utils/notification/notification-holder.component.ts";
+export {GithubButtonComponent} from "@dota/components/utils/buttons/github-button.component.ts";
+export {DarkModeButtonComponent} from "@dota/components/utils/buttons/dark-mode-button.component.ts";
+export {FooterComponent} from "@dota/components/utils/footer.component.ts";
+export {AiButtonComponent} from "@dota/components/utils/buttons/ai-button.component.ts";
+export {LoaderComponent} from "@dota/components/utils/loader.component.ts";
+export {LoaderSectionComponent} from "@dota/components/utils/loader-section.component.ts";
+export {ScrollBottomButtonComponent} from "@dota/components/utils/buttons/scroll-bottom-button.component.ts";
+export {HamBurgerButtonComponent} from "@dota/components/utils/buttons/ham-burger-button.component.ts";
+export {SelfEndComponent} from "@dota/components/utils/self-end.component.ts";
+export {PageWrapperComponent} from "@dota/components/utils/page-wrapper.component.ts";
+export {SectionHeaderComponent} from "@dota/components/utils/section-header.component.ts";

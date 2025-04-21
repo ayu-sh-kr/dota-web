@@ -1,4 +1,2 @@
-import {CommunityComponent} from "@dota/components/community/community.component.ts";
-import {CommunityCardComponent} from "@dota/components/community/community-card.component.ts";
-
-export {CommunityComponent, CommunityCardComponent}
+export {CommunityComponent} from "@dota/components/community/community.component.ts";
+export {CommunityCardComponent} from "@dota/components/community/community-card.component.ts";

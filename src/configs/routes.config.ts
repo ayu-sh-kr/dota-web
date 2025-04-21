@@ -1,5 +1,14 @@
 import 'reflect-metadata';
-import {BlogPage, ChatPage, CommunityPage, DocPage, ErrorPage, HomePage, ResourcePage} from "@dota/pages";
+import {
+  BlogContentPage,
+  BlogPage,
+  ChatPage,
+  CommunityPage,
+  DocPage,
+  ErrorPage,
+  HomePage,
+  ResourcePage
+} from "@dota/pages";
 import {AppComponent} from "@dota/app.component.ts";
 import {BaseElement} from "@ayu-sh-kr/dota-core/dist";
 import {RouteConfig} from "@ayu-sh-kr/dota-router";
@@ -36,7 +45,13 @@ export const routesConfig: RouteConfig<BaseElement>[] = [
 
   {
     path: '/blogs',
-    component: BlogPage
+    component: BlogPage,
+    children: [
+      {
+        path: '/content',
+        component: BlogContentPage
+      }
+    ]
   },
 
   {

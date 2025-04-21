@@ -21,7 +21,7 @@ export class ResourcePage extends BaseElement {
     return `
       <app-header></app-header>
       <resource-section></resource-section>
-      <footer-component></footer-component>
+      <app-footer></app-footer>
 `
   }
 }

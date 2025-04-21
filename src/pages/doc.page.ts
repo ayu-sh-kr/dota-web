@@ -22,7 +22,7 @@ export class DocPage extends BaseElement {
     return HTML`
       <app-header></app-header>
       <doc-section></doc-section>
-      <footer-component></footer-component>
+      <app-footer></app-footer>
       <scroll-bottom-button></scroll-bottom-button>
     `;
   }

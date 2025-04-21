@@ -29,7 +29,7 @@ export class HomePage extends BaseElement {
            <device-section></device-section>
            <our-tools></our-tools>
            <client-section></client-section>
-           <footer-component></footer-component>
+           <app-footer></app-footer>
         `
     }
 

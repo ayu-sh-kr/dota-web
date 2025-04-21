@@ -60,9 +60,7 @@ export class ChatPage extends BaseElement {
             </div>
           </div>
       </main>
-      <footer-component></footer-component>
-      <notification-holder id="dota-notification" position="bottom-right"></notification-holder>
-      <loader-section is-loader="false"></loader-section>
+      <app-footer></app-footer>
     `;
   }
 }

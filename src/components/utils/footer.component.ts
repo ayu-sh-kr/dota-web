@@ -1,7 +1,7 @@
 import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
 
 @Component({
-    selector: "footer-component",
+    selector: "app-footer",
     shadow:false
 })
 export class FooterComponent extends BaseElement{

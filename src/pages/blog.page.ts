@@ -23,7 +23,7 @@ export class BlogPage extends BaseElement {
             <page-wrapper>
               <blog-section></blog-section>
             </page-wrapper>
-            <footer-component></footer-component>
+            <app-footer></app-footer>
         `
     }
 

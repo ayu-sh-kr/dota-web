@@ -42,7 +42,7 @@ import {AiFormComponent, MessageBoxComponent, MessageCardComponent} from "@dota/
 import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
 import {routesConfig} from "@dota/configs/routes.config.ts";
 import {ResourceSectionComponent, ResourcePathComponent, ResourceContentComponent} from "@dota/components/resource";
-import {BlogIconComponent, BlogPreviewComponent, BlogSectionComponent} from "@dota/components/blogs";
+import {BlogIconComponent, BlogPreviewComponent, BlogSectionComponent, BlogViewComponent} from "@dota/components/blogs";
 import {CommunityCardComponent, CommunityComponent} from "@dota/components/community";
 import {NavigationSidebarComponent} from "@dota/components/sidebar";
 
@@ -107,6 +107,7 @@ bootstrap([
   BlogSectionComponent,
   BlogPreviewComponent,
   BlogIconComponent,
+  BlogViewComponent,
 
   // example components
   CounterComponent,

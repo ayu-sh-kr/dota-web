@@ -19,7 +19,9 @@ export class BlogContentPage extends BaseElement {
     // language=html
     return `
       <app-header></app-header>
-      <page-wrapper></page-wrapper>
+      <page-wrapper>
+        <blog-view></blog-view>
+      </page-wrapper>
       <app-footer></app-footer>
     `
   }

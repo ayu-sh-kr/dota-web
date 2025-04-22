@@ -51,7 +51,7 @@ export class BlogPreviewComponent extends BaseElement {
 
     @HostListener({event: 'click'})
     handClickEvent() {
-      DomNavigationRouter.route(`blogs/content?blog=${this.path}`)
+      DomNavigationRouter.route(`/blogs/content?blog=${this.path}&category=${this.category}`);
     }
 
     render(): string {

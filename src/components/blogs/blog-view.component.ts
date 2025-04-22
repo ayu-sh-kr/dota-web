@@ -21,8 +21,9 @@ export class BlogViewComponent extends BaseElement {
     const params = new URLSearchParams(window.location.search);
 
     const blog = params.get("blog");
-    if (blog) {
-      const content = await this.docLoader.loadBlog(blog);
+    const category = params.get("category");
+    if (blog && category) {
+      const content = await this.docLoader.loadBlog(`${category.toLowerCase()}/${blog}`);
       this.content = MarkdownService.renderMarkdown(content)
       this.updateHTML();
     }

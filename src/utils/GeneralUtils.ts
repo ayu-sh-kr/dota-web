@@ -12,6 +12,13 @@ export class GeneralUtils {
     const isDarkMode = document.documentElement.classList.toggle('dark');
     document.documentElement.classList.toggle('bg-slate-950', isDarkMode);
     LocalStorageService.add('theme', isDarkMode ? 'dark' : 'light');
+    window.dispatchEvent(new CustomEvent('themeChange', {
+      detail: { isDarkMode: GeneralUtils.isDarkMode() }
+    }))
+  }
+
+  static isDarkMode() {
+    return document.documentElement.classList.contains('dark');
   }
 
   static getBrowserTheme() {

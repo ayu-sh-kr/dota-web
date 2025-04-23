@@ -4,19 +4,22 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@ayu-sh-kr/dota-core': 1.7.0
+
 importers:
 
   .:
     dependencies:
       '@ayu-sh-kr/dota-core':
-        specifier: ^1.6.16
-        version: 1.6.16
+        specifier: 1.7.0
+        version: 1.7.0
       '@ayu-sh-kr/dota-rest':
         specifier: 1.1.3
         version: 1.1.3
       '@ayu-sh-kr/dota-router':
-        specifier: 0.0.8
-        version: 0.0.8
+        specifier: 0.0.10
+        version: 0.0.10
       '@ayu-sh-kr/dota-ui':
         specifier: 0.0.7
         version: 0.0.7
@@ -67,14 +70,14 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@ayu-sh-kr/dota-core@1.6.16':
-    resolution: {integrity: sha512-e0vpKY2cQW2nmhfqTnFLnaN9LAzKn7SDTCXRg6C5POCU3eta3nKkc5fb92d60ABUwg3Vx8dFQ/I//j/MdjSnCw==}
+  '@ayu-sh-kr/dota-core@1.7.0':
+    resolution: {integrity: sha512-15xIMxzrLyOfh4S7qFmt4vbiRBQX1CsXZn5vuZR+IjRiOOMj6aZ4Hlmc8CC0FNVmWWx7GC+o3Umq/jzZSvFhtA==}
 
   '@ayu-sh-kr/dota-rest@1.1.3':
     resolution: {integrity: sha512-WpPgXX7fR4QH9l2vwi4xJxhdbH7x3qUhv1x06hRM4km5DpWmmhwY7IMSoeuCCQYvBPF37uZeFXAgxrruBZ1cUg==}
 
-  '@ayu-sh-kr/dota-router@0.0.8':
-    resolution: {integrity: sha512-+cLIPuruK0OwiQ8PCQbUEjj/WoieU6ZGvJReCHHmj15R/zTMT3ms4KqhSMfL3NcNnUsWgmYfv6l0bTYBOjY6Pw==}
+  '@ayu-sh-kr/dota-router@0.0.10':
+    resolution: {integrity: sha512-Cdbal/AT6FcE1rtsQhujXGb++wpREF22n+yeNT1wZYTRKtgqKebONsuNuIqD8pYPFuamE/wVYWGIyp60BB1iGA==}
 
   '@ayu-sh-kr/dota-ui@0.0.7':
     resolution: {integrity: sha512-Ttr7ZE/p7Up11kiGb5BGE4Sr0EXTcmbCllzCf7YuklLBRRJ6+xUMJjKR6WbJbWFmSXzJ4m1NZUOzUMl0ZXUrVw==}
@@ -929,20 +932,20 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@ayu-sh-kr/dota-core@1.6.16':
+  '@ayu-sh-kr/dota-core@1.7.0':
     dependencies:
       reflect-metadata: 0.2.2
 
   '@ayu-sh-kr/dota-rest@1.1.3': {}
 
-  '@ayu-sh-kr/dota-router@0.0.8':
+  '@ayu-sh-kr/dota-router@0.0.10':
     dependencies:
-      '@ayu-sh-kr/dota-core': 1.6.16
+      '@ayu-sh-kr/dota-core': 1.7.0
       reflect-metadata: 0.2.2
 
   '@ayu-sh-kr/dota-ui@0.0.7':
     dependencies:
-      '@ayu-sh-kr/dota-core': 1.6.16
+      '@ayu-sh-kr/dota-core': 1.7.0
 
   '@esbuild/aix-ppc64@0.25.2':
     optional: true

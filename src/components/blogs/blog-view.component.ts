@@ -1,4 +1,4 @@
-import {AfterInit, BaseElement, Component} from "@ayu-sh-kr/dota-core";
+import {AfterInit, BaseElement, Component, Param, State} from "@ayu-sh-kr/dota-core";
 import {DocLoaderService} from "@dota/service/doc-loader.service.ts";
 import {MarkdownService} from "@dota/service/markdown.service.ts";
 
@@ -9,7 +9,15 @@ import {MarkdownService} from "@dota/service/markdown.service.ts";
 export class BlogViewComponent extends BaseElement {
 
   docLoader!: DocLoaderService;
+
+  @State()
   content!: string;
+
+  @Param('blog')
+  blog!: string;
+
+  @Param('category')
+  category!: string;
 
   constructor() {
     super();
@@ -18,14 +26,9 @@ export class BlogViewComponent extends BaseElement {
 
   @AfterInit()
   async afterViewInit() {
-    const params = new URLSearchParams(window.location.search);
-
-    const blog = params.get("blog");
-    const category = params.get("category");
-    if (blog && category) {
-      const content = await this.docLoader.loadBlog(`${category.toLowerCase()}/${blog}`);
-      this.content = MarkdownService.renderMarkdown(content)
-      this.updateHTML();
+    if (this.blog && this.category) {
+      const content = await this.docLoader.loadBlog(`${this.category.toLowerCase()}/${this.blog}`);
+      this.content = MarkdownService.renderMarkdown(content);
     }
 
   }

@@ -1,5 +1,6 @@
 import {DocPage} from "@dota/pages";
 import {RouteConfig} from "@ayu-sh-kr/dota-router";
+import {BaseElement} from "@ayu-sh-kr/dota-core/dist";
 
 
 export interface DocConfig {
@@ -35,7 +36,7 @@ export const docConfigs: DocConfig[] = [
   }
 ]
 
-export const docRoutes: RouteConfig<any>[]  = [
+export const docRoutes: RouteConfig<BaseElement>[]  = [
   {
     path: '/Getting-Started.md',
     component: DocPage,

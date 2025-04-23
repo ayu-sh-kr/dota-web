@@ -10,7 +10,7 @@ import {
   ResourcePage
 } from "@dota/pages";
 import {AppComponent} from "@dota/app.component.ts";
-import {BaseElement} from "@ayu-sh-kr/dota-core/dist";
+import {BaseElement} from "@ayu-sh-kr/dota-core";
 import {RouteConfig} from "@ayu-sh-kr/dota-router";
 import {docRoutes} from "@dota/configs/doc.config.ts";
 

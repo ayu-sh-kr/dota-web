@@ -1,5 +1,4 @@
-import {BaseElement, BindEvent, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
-import {AfterInit, Boolean, Property} from "@ayu-sh-kr/dota-core";
+import {AfterInit, BaseElement, BindEvent, Component, HTML, Property, Boolean} from "@ayu-sh-kr/dota-core";
 import {LocalStorageService} from "@dota/service/local-storage.service.ts";
 
 @Component({

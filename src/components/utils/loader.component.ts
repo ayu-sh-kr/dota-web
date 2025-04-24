@@ -1,5 +1,4 @@
-import {BaseElement, Component} from "@ayu-sh-kr/dota-core/dist";
-import {Property,Number} from "@ayu-sh-kr/dota-core";
+import {BaseElement, Component, Property, Number} from "@ayu-sh-kr/dota-core";
 
 @Component({
   selector:"app-loader",

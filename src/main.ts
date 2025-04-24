@@ -57,18 +57,15 @@ bootstrap([
   NotificationHolderComponent,
   DarkModeButtonComponent,
   GithubButtonComponent,
-  IconsComponent,
   PopoverComponent,
   AiButtonComponent,
   LoaderComponent,
   LoaderSectionComponent,
   ScrollBottomButtonComponent,
   DevicePreviewComponent,
-  ButtonComponent,
   HamBurgerButtonComponent,
   SelfEndComponent,
   PageWrapperComponent,
-  AvatarComponent,
 
   // home-page components
   OfferComponent,
@@ -170,5 +167,8 @@ declare global {
     'blog-page': BlogPage,
     'chat-page': ChatPage,
     'counter-component': CounterComponent,
+    "dota-button": ButtonComponent,
+    "d-avatar": AvatarComponent,
+    "dota-icon": IconsComponent
   }
 }

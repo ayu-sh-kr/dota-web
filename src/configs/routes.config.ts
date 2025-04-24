@@ -11,7 +11,7 @@ import {
 } from "@dota/pages";
 import {AppComponent} from "@dota/app.component.ts";
 import {BaseElement} from "@ayu-sh-kr/dota-core";
-import {RouteConfig} from "@ayu-sh-kr/dota-router";
+import {DomHistoryRouter, DomNavigationRouter, DotaRouterService, RouteConfig} from "@ayu-sh-kr/dota-router";
 import {docRoutes} from "@dota/configs/doc.config.ts";
 
 export const routesConfig: RouteConfig<BaseElement>[] = [
@@ -64,3 +64,10 @@ export const routesConfig: RouteConfig<BaseElement>[] = [
     component: ErrorPage,
   }
 ];
+
+export const routerService = DotaRouterService.of({
+  router: DomHistoryRouter,
+  routes: routesConfig,
+  errorRoute: { path: '/error', component: ErrorPage },
+  defaultRoute: { path: '/', component: HomePage }
+});

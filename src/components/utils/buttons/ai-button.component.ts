@@ -1,5 +1,5 @@
 import {BaseElement, Component, HostListener} from "@ayu-sh-kr/dota-core";
-import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
+import {routerService} from "@dota/configs/routes.config.ts";
 
 
 @Component({
@@ -14,7 +14,7 @@ export class AiButtonComponent extends BaseElement {
 
   @HostListener({event: 'click'})
   hostClickListener() {
-    DomNavigationRouter.route('/chat');
+    routerService.route('/chat');
   }
 
   render(): string {

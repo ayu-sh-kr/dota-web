@@ -1,7 +1,7 @@
 // blog-preview.component.ts
 import {BaseElement, Component, HostListener, Property, String} from "@ayu-sh-kr/dota-core";
 import {type BlogCategory} from "@dota/configs/blogs.config.ts";
-import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
+import {routerService} from "@dota/configs/routes.config.ts";
 
 @Component({
     selector: 'blog-preview',
@@ -51,7 +51,7 @@ export class BlogPreviewComponent extends BaseElement {
 
     @HostListener({event: 'click'})
     handClickEvent() {
-      DomNavigationRouter.route(`/blogs/content?blog=${this.path}&category=${this.category}`);
+      routerService.route(`/blogs/content?blog=${this.path}&category=${this.category}`);
     }
 
     render(): string {

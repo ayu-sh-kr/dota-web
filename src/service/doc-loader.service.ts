@@ -1,5 +1,5 @@
 import {RestClient} from "@ayu-sh-kr/dota-rest";
-import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
+import {routerService} from "@dota/configs/routes.config.ts";
 
 
 export class DocLoaderService {
@@ -11,7 +11,7 @@ export class DocLoaderService {
       .timeout(10000)
       .handler((response) => {
         if(!response.ok) {
-          DomNavigationRouter.route('/error')
+          routerService.route('/error')
         }
       })
       .build();

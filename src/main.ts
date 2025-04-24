@@ -39,8 +39,7 @@ import {LoaderComponent} from "@dota/components/utils"
 import {DocContentComponent, DocPathComponent, DocSectionComponent} from "@dota/components/docs";
 import {CounterComponent} from "@dota/components/example/CounterComponent.ts";
 import {AiFormComponent, MessageBoxComponent, MessageCardComponent} from "@dota/components/chat";
-import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
-import {routesConfig} from "@dota/configs/routes.config.ts";
+import {routerService} from "@dota/configs/routes.config.ts";
 import {ResourceSectionComponent, ResourcePathComponent, ResourceContentComponent} from "@dota/components/resource";
 import {BlogIconComponent, BlogPreviewComponent, BlogSectionComponent, BlogViewComponent} from "@dota/components/blogs";
 import {CommunityCardComponent, CommunityComponent} from "@dota/components/community";
@@ -126,17 +125,7 @@ bootstrap([
   BlogContentPage
 ])
 
-new DomNavigationRouter(
-  routesConfig,
-  {
-    path: '/error',
-    component: ErrorPage,
-  },
-  {
-    path: '/',
-    component: HomePage,
-  }
-)
+routerService.init();
 
 
 declare global {

@@ -1,7 +1,7 @@
 import { BaseElement, Component, Property, String } from "@ayu-sh-kr/dota-core";
 import { docConfigs } from "@dota/configs/doc.config.ts";
-import { RouteUtils } from "@dota/utils/RouteUtils.ts";
-import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
+import { RouterUtils } from "@ayu-sh-kr/dota-router";
+import {routerService} from "@dota/configs/routes.config.ts";
 
 @Component({
   selector: "doc-section",
@@ -16,11 +16,11 @@ export class DocSectionComponent extends BaseElement {
 
   constructor() {
     super();
-    const currentEntry = RouteUtils.getCurrentEntry();
+    const currentEntry = RouterUtils.getCurrentPath();
     if (currentEntry.includes("/docs")) {
       const path = currentEntry.replace("/docs", "");
       if (path === "") {
-        DomNavigationRouter.route("/docs/Getting-Started.md");
+        routerService.route("/docs/Getting-Started.md");
       }
       this.contentPath = path;
     }

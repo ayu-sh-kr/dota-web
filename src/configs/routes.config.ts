@@ -11,7 +11,7 @@ import {
 } from "@dota/pages";
 import {AppComponent} from "@dota/app.component.ts";
 import {BaseElement} from "@ayu-sh-kr/dota-core";
-import {DomHistoryRouter, DomNavigationRouter, DotaRouterService, RouteConfig} from "@ayu-sh-kr/dota-router";
+import {DomHistoryRouter, DotaRouterService, RouteConfig} from "@ayu-sh-kr/dota-router";
 import {docRoutes} from "@dota/configs/doc.config.ts";
 
 export const routesConfig: RouteConfig<BaseElement>[] = [

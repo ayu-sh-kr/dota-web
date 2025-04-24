@@ -1,6 +1,5 @@
-import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
+import {BaseElement, Component, HTML, Property, String} from "@ayu-sh-kr/dota-core";
 import '@dota/components/utils/notification/notification.component.ts'
-import {Property, String} from "@ayu-sh-kr/dota-core";
 import {NotificationComponent} from "@dota/components/utils/notification/notification.component.ts";
 
 const PositionConfig = {

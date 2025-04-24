@@ -1,5 +1,4 @@
-import {BaseElement, Component} from "@ayu-sh-kr/dota-core/dist";
-import {HostListener} from "@ayu-sh-kr/dota-core";
+import {BaseElement, Component, HostListener} from "@ayu-sh-kr/dota-core";
 import {DomNavigationRouter} from "@ayu-sh-kr/dota-router";
 
 

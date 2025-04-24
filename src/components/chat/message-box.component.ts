@@ -1,6 +1,5 @@
-import {BaseElement, Component} from "@ayu-sh-kr/dota-core/dist";
+import {BaseElement, Component, Object, Property} from "@ayu-sh-kr/dota-core";
 import {MessageRecord} from "@dota/pages/chat.page.ts";
-import {Object, Property} from "@ayu-sh-kr/dota-core";
 
 @Component({
   selector: "message-box",

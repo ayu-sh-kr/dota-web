@@ -1,4 +1,4 @@
-import {BaseElement, Component} from "@ayu-sh-kr/dota-core/dist";
+import {BaseElement, Component} from "@ayu-sh-kr/dota-core";
 
 
 @Component({

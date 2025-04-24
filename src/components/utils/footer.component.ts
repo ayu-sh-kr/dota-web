@@ -1,4 +1,4 @@
-import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core/dist";
+import {BaseElement, Component, HTML} from "@ayu-sh-kr/dota-core";
 
 @Component({
     selector: "app-footer",

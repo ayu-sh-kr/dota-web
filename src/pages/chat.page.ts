@@ -45,8 +45,8 @@ export class ChatPage extends BaseElement {
     // language=html
     return `
       <app-header></app-header>
-      <main id="chat-main" class="flex-1 min-h-screen">
-        <div class="container mx-auto px-4 py-6 ">
+      <main id="chat-main" class="flex-1  min-h-screen">
+        <div class="container mx-auto px-4 py-6 mt-8 ">
           <div id="welcome-message" class="text-center mb-8">
             <h2 class="text-2xl md:text-4xl font-semibold text-neutral-800 dark:text-neutral-200 mb-3">Welcome to <span class="text-purple-500">Dota AI</span> Chat</h2>
             <p class="text-neutral-600 text-lg font-medium">Convert your Ideas into Code with our Dota AI </p>

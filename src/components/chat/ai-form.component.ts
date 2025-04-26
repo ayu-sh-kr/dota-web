@@ -64,8 +64,8 @@ export class AiFormComponent extends BaseElement {
         <form id="chat-form" class="relative flex items-center gap-2  w-full bg-white dark:bg-slate-900 rounded-lg p-2 shadow-sm  dark:shadow-[0px_0px_12px_rgba(147,51,234,0.8)]">
 
           <div class="w-12 h-12 rounded-full bg-gray-50 dark:bg-slate-800 flex items-center justify-center">
-            <img src="https://icon-library.com/images/bot-icon/bot-icon-29.jpg" alt="dota-bot"
-                 class="size-7"/>
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/bcdeaf163021985.63df4524e42bb.jpg" alt="dota-bot"
+                 class="size-12 rounded-full "/>
           </div>
           <input name="user-input" type="text" autocomplete="off"   class="disabled:pointer-events-none disabled:opacity-70 w-full dark:text-gray-400  outline-none bg-transparent focus:border-purple-600 border-2  p-4 rounded-lg border-transparent "
                  placeholder="Hello! How can I assist you today?"/>

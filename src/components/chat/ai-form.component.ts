@@ -24,6 +24,7 @@ export class AiFormComponent extends BaseElement {
     super();
     this.openApiService = new OpenAIService("deepseek/deepseek-r1-distill-llama-8b")
   }
+
   @BindEvent({event: 'submit', id: '#chat-form'})
   async userInputEvent(event: SubmitEvent) {
     this.isLoading = true;
@@ -43,7 +44,7 @@ export class AiFormComponent extends BaseElement {
         this.messageEvent.emit({
           message: message,
           type: 'SERVER',
-        }, this);
+        });
         form.reset();
       }
     }

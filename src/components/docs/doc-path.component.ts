@@ -1,6 +1,6 @@
 import { BaseElement, Component, HostListener, Property, String } from "@ayu-sh-kr/dota-core";
-import { RouteUtils } from "@dota/utils/RouteUtils.ts";
 import {routerService} from "@dota/configs/routes.config.ts";
+import {RouterUtils} from "@ayu-sh-kr/dota-router";
 
 @Component({
   selector: "doc-path",
@@ -23,7 +23,7 @@ export class DocPathComponent extends BaseElement {
   }
 
   render(): string {
-    const includes = RouteUtils.getCurrentEntry().includes(this.filePath);
+    const includes = RouterUtils.getCurrentPath().includes(this.filePath);
     // language=html
     return `
     <div class="cursor-pointer text-sm text-[#67676c] dark:text-gray-300 py-2 px-2 transition-all hover:text-purple-500 duration-300 ease-in-out font-medium ${

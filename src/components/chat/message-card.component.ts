@@ -33,7 +33,7 @@ export class MessageCardComponent extends BaseElement {
 
   @AfterInit()
   afterViewInit() {
-    const result = this.type === "USER" ? ["self-end", ""] : ["self-start","w-full"];
+    const result = this.type === "USER" ? ["self-end", "w-2/3"] : ["self-start","w-full"];
     this.classList.add(...result);
   }
 

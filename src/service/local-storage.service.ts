@@ -54,4 +54,8 @@ export class LocalStorageService {
     return item;
   }
 
+  static replaceList<T>(key: string, values: T[]) {
+    localStorage.setItem(key, JSON.stringify(values));
+  }
+
 }

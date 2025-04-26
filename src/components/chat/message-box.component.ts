@@ -1,5 +1,10 @@
-import {BaseElement, Component, Object, Property} from "@ayu-sh-kr/dota-core";
+import {
+  AfterInit, BaseElement,
+  Component, Element,
+  State, WindowListener
+} from "@ayu-sh-kr/dota-core";
 import {MessageRecord} from "@dota/pages/chat.page.ts";
+import {LocalStorageService} from "@dota/service/local-storage.service.ts";
 
 @Component({
   selector: "message-box",
@@ -7,45 +12,54 @@ import {MessageRecord} from "@dota/pages/chat.page.ts";
 })
 export class MessageBoxComponent extends BaseElement {
 
-  content: string
-
-  @Property({
-    name: "messages",
-    type: Object
-  })
+  @State()
   messages: MessageRecord[] = [];
+
+  @Element({
+    selector: 'card-section',
+    by: 'id'
+  })
+  cardSection!: HTMLElement
 
   constructor() {
     super()
-    this.content = this.innerHTML
   }
 
-  encodeHtmlAttribute(value: string): string {
-    return value
-      .replace(/&/g, '&amp;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
+  @AfterInit()
+  afterViewInit() {
+    requestAnimationFrame(() => {
+      this.messages = LocalStorageService.getList<MessageRecord>('message')
+      this.messages.forEach((message, index) => {
+        const messageCardEl = document.createElement('message-card');
+        messageCardEl.setAttribute('message-type', message.type);
+        messageCardEl.setAttribute('message', message.message);
+        messageCardEl.setAttribute('key', index.toString());
+
+        this.cardSection.appendChild(messageCardEl);
+        this.cardSection.scrollTop = this.cardSection.scrollHeight;
+      })
+    })
+  }
+
+  @WindowListener({event: 'onMessageEvent'})
+  handleNewMessages(event: CustomEvent<MessageRecord>) {
+    this.messages.push(event.detail);
+    requestAnimationFrame(() => {
+        const messageCardEl = document.createElement('message-card');
+        messageCardEl.setAttribute('message-type', event.detail.type);
+        messageCardEl.setAttribute('message', event.detail.message);
+        messageCardEl.setAttribute('key', this.messages.length.toString());
+
+        this.cardSection.appendChild(messageCardEl);
+      this.cardSection.scrollTop = this.cardSection.scrollHeight;
+    });
   }
 
   render() {
     // language=html
     return `
-      <section class="h-[55vh] w-full shadow-md dark:shadow-[0px_0px_12px_rgba(147,51,234,0.8)] overflow-y-auto custom-scrollbar p-4 bg-slate-100 dark:bg-slate-900 rounded-lg flex flex-col gap-4 ">
-        ${this.messages.map(({type, message}, index) => {
-          // language=html
-          return `
-                <message-card 
-                    message-type="${type}" 
-                    message="${this.encodeHtmlAttribute(message)}"
-                    key="${index}"
-                >
-                </message-card>
-            `
-        }).join(" ")}
-        ${this.messages.length===0?
-      "<div class='h-full flex items-center justify-center'> <p class='text-4xl font-medium text-center !leading-[3rem] dark:text-gray-400 !font-montserrat'>Explore the true power of Our Dota library with Our <span class='text-purple-500 underline underline-offset-4'>Dota AI</span></p> </div>":""}
+      <section id="card-section" class="h-[55vh] w-full shadow-md dark:shadow-[0px_0px_12px_rgba(147,51,234,0.8)] overflow-y-auto custom-scrollbar p-4 bg-slate-100 dark:bg-slate-900 rounded-lg flex flex-col gap-4">
+        
       </section>
     `
   }

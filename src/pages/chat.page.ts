@@ -1,6 +1,5 @@
-import {AfterInit, BaseElement, BindEvent, Component} from "@ayu-sh-kr/dota-core";
+import {AfterInit, BaseElement, Component} from "@ayu-sh-kr/dota-core";
 import {OpenAIService} from "@dota/service/OpenAIService.ts";
-import {MessageBoxComponent} from "@dota/components/chat";
 import {LocalStorageService} from "@dota/service/local-storage.service.ts";
 import {GeneralUtils} from "@dota/utils/GeneralUtils.ts";
 
@@ -24,21 +23,6 @@ export class ChatPage extends BaseElement {
   afterViewInit() {
     GeneralUtils.scrollToTop('instant');
     this.messages = LocalStorageService.getList<MessageRecord>("message");
-    this.updateMessageBox();
-  }
-
-  @BindEvent({event: 'onMessageEvent', id: '#ai-form'})
-  listenUserMessage(event: CustomEvent<MessageRecord>) {
-    this.messages = LocalStorageService.pushToList<MessageRecord>("message", event.detail);
-    this.updateMessageBox();
-  }
-
-  private updateMessageBox() {
-    const messageBox = this.querySelector<MessageBoxComponent>("#message-box");
-    if (messageBox) {
-      messageBox.messages = this.messages;
-      messageBox.updateHTML();
-    }
   }
 
   render(): string {

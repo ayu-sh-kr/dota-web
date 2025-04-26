@@ -1,6 +1,7 @@
 import {BaseElement, BindEvent, Boolean, Component, Emitter, EventEmitter, Property} from "@ayu-sh-kr/dota-core";
 import {OpenAIService} from "@dota/service/OpenAIService.ts";
 import {MessageRecord} from "@dota/pages/chat.page.ts";
+import {LocalStorageService} from "@dota/service/local-storage.service.ts";
 
 
 @Component({
@@ -24,6 +25,7 @@ export class AiFormComponent extends BaseElement {
     super();
     this.openApiService = new OpenAIService("deepseek/deepseek-r1-distill-llama-8b")
   }
+
   @BindEvent({event: 'submit', id: '#chat-form'})
   async userInputEvent(event: SubmitEvent) {
     this.isLoading = true;
@@ -34,17 +36,22 @@ export class AiFormComponent extends BaseElement {
       const userMessage = formData.get('user-input')?.toString().trim() || '';
 
       if (userMessage) {
-        this.messageEvent.emit({
+        const userMessageRecord: MessageRecord = {
           message: userMessage,
           type: 'USER',
-        }, this);
+        };
+        this.messageEvent.emit(userMessageRecord);
+        const user = Promise.resolve(LocalStorageService.pushToList('message', userMessageRecord));
         const message = await this.openApiService.chatCompletion(userMessage);
-        console.log(message);
-        this.messageEvent.emit({
+        const chatMessageRecord: MessageRecord = {
           message: message,
           type: 'SERVER',
-        }, this);
+        };
+        this.messageEvent.emit(chatMessageRecord);
+        const chat = Promise.resolve(LocalStorageService.pushToList('message', chatMessageRecord));
         form.reset();
+
+        await Promise.all([chat, user])
       }
     }
     finally {

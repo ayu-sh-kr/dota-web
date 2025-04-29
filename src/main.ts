@@ -27,7 +27,7 @@ import {
   FooterComponent,
   GithubButtonComponent,
   HamBurgerButtonComponent,
-  LoaderSectionComponent,
+  LoaderSectionComponent, NoContentComponent,
   NotificationComponent,
   NotificationHolderComponent,
   PageWrapperComponent,
@@ -65,6 +65,7 @@ bootstrap([
   HamBurgerButtonComponent,
   SelfEndComponent,
   PageWrapperComponent,
+  NoContentComponent,
 
   // home-page components
   OfferComponent,

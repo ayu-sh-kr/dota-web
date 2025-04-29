@@ -7,7 +7,7 @@ import {
   Watcher,
   WindowListener, BindEvent
 } from "@ayu-sh-kr/dota-core";
-import {Link} from "@dota/components/utils/header.component.ts";
+import {Link} from "@dota/components/utils/header/header.component.ts";
 
 
 

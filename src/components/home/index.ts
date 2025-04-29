@@ -1,5 +1,5 @@
 export { HeroSectionComponent } from "@dota/components/home/hero-section.component.ts";
-export { HeaderComponent } from "@dota/components/utils/header.component.ts";
+export { HeaderComponent } from "@dota/components/utils/header/header.component.ts";
 export { OfferComponent } from "@dota/components/home/offer.component.ts";
 export { FeatureComponent } from "@dota/components/home/feature.component.ts";
 export { CodeSectionComponent } from "@dota/components/home/code-section.component.ts";

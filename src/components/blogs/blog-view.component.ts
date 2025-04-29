@@ -37,7 +37,7 @@ export class BlogViewComponent extends BaseElement {
     // language=html
     return `
       <article class="prose dark:prose-invert mx-auto max-w-6xl px-3 py-8">
-        ${this.content || ''}
+        ${this.content || '<no-content></no-content>'}
       </article>
     `
   }

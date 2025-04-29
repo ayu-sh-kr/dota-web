@@ -37,17 +37,17 @@ export class HeaderComponent extends BaseElement {
                 <nav class="flex py-3 justify-between items-center shadow-sm backdrop-blur-lg backdrop-brightness-125 dark:backdrop-brightness-110 
                     dark:shadow-purple-400 max-w-5xl rounded-full mx-auto">
                      <div class="font-extrabold text-2xl w-1/6 px-5 text-gray-900 dark:text-gray-100">
-                        <a href="/public">Dota</a>
+                        <a href="/">Dota</a>
                      </div>
                     <div class="md:flex justify-center items-center hidden w-4/6">
                         <ul class="flex justify-between items-center gap-x-5 w-1/2">
                                 ${this.items.map((item) => {
-        return `
+                                    return `
                                              <li class="text-sm font-semibold hover:text-purple-600 dark:hover:text-purple-500 text-gray-700 dark:text-gray-100">
                                                 <a href="${item.url}">${item.name}</a>
                                              </li>
                                     `;
-    }).join("")}
+                                }).join("")}
                          </ul>
                       </div>
                       <div class="flex items-center px-5 gap-x-3 justify-end">

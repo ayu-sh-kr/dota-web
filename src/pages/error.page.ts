@@ -44,10 +44,8 @@ export class ErrorPage extends BaseElement {
             <dota-icon name="mdi:home" variant="ghost" size="md"></dota-icon>
             Go Home
           </a>
-          <source src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/error-404-14393877-11613454.mp4"
-                  type="video/mp4">
 
-          <a href="/docs"
+          <a href="/docs/Getting-Started.md"
              class="bg-gray-200 dark:bg-slate-800 dark:text-white px-5 py-3 rounded-lg flex items-center gap-1">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="24" viewBox="0 0 24 24">
               <path fill="currentColor"

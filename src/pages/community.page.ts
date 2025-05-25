@@ -22,6 +22,7 @@ export class CommunityPage extends BaseElement {
       <app-header></app-header>
       <page-wrapper>
         <community-component></community-component>
+        <social-section></social-section>
       </page-wrapper>
       <app-footer></app-footer>
     `

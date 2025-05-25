@@ -32,7 +32,7 @@ import {
   NotificationHolderComponent,
   PageWrapperComponent,
   ScrollBottomButtonComponent,
-  SectionHeaderComponent,
+  SectionHeaderComponent, SectionWrapperComponent,
   SelfEndComponent
 } from "@dota/components/utils";
 import {LoaderComponent} from "@dota/components/utils"
@@ -42,7 +42,12 @@ import {AiFormComponent, MessageBoxComponent, MessageCardComponent} from "@dota/
 import {routerService} from "@dota/configs/routes.config.ts";
 import {ResourceSectionComponent, ResourcePathComponent, ResourceContentComponent} from "@dota/components/resource";
 import {BlogIconComponent, BlogPreviewComponent, BlogSectionComponent, BlogViewComponent} from "@dota/components/blogs";
-import {CommunityCardComponent, CommunityComponent} from "@dota/components/community";
+import {
+  CommunityCardComponent,
+  CommunityComponent,
+  SocialButtonComponent,
+  SocialSectionComponent
+} from "@dota/components/community";
 import {NavigationSidebarComponent} from "@dota/components/sidebar";
 
 
@@ -66,6 +71,7 @@ bootstrap([
   SelfEndComponent,
   PageWrapperComponent,
   NoContentComponent,
+  SectionWrapperComponent,
 
   // home-page components
   OfferComponent,
@@ -99,6 +105,8 @@ bootstrap([
   // community component
   CommunityComponent,
   CommunityCardComponent,
+  SocialSectionComponent,
+  SocialButtonComponent,
 
   // blog components
   BlogSectionComponent,

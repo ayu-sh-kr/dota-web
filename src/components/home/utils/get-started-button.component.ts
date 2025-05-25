@@ -14,7 +14,7 @@ export class GetStartedButtonComponent extends BaseElement {
 
   @HostListener({event: 'click'})
   onClickListener() {
-    routerService.route('/docs/getting-started');
+    routerService.route("/docs/Getting-Started.md");
   }
 
   render(): string {
